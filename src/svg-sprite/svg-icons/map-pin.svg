@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.364" height="22" viewBox="0 0 18.364 22">
+  <g id="map-pin" transform="translate(-3.5 -0.5)">
+    <path id="Контур_23" data-name="Контур 23" d="M20.864,9.682c0,6.364-8.182,11.818-8.182,11.818S4.5,16.045,4.5,9.682a8.182,8.182,0,1,1,16.364,0Z" transform="translate(0 0)" fill="none" stroke="#003668" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Контур_24" data-name="Контур 24" d="M18.955,13.227A2.727,2.727,0,1,1,16.227,10.5a2.727,2.727,0,0,1,2.727,2.727Z" transform="translate(-3.545 -3.545)" fill="none" stroke="#003668" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+   // style.scss
+
+// Style
+
+// Common
+
+@import './fonts.scss';
+@import './reset.scss';
+@import './params.scss';
+
+// Plugins
+@import './plugins/swiper.min.scss';
+
+//Blocks
+@import './blocks/grid.scss';
+@import './blocks/settings.scss';
+
+// Footer/header
+
+@import './blocks/header.scss';
+@import './blocks/footer.scss';

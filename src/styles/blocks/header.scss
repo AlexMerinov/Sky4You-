@@ -1,0 +1,397 @@
+.header {
+   &-top {
+      padding: 5px 0;
+      border-bottom: 1px solid $background;
+      &__wrapper {
+         display: flex;
+         align-items: center;
+      }
+
+      &__logo.logo {
+         display: none;
+      }
+
+      &__contacts {
+         display: flex;
+         align-items: center;
+         margin-left: auto;
+      }
+      @media screen and (min-width: 768px) {
+         background-color: $primary;
+         padding: 10px 0;
+      }
+
+      @media screen and (min-width: 1360px) {
+         padding: 10px 0;
+      }
+   }
+
+   &-bot {
+      padding: 10px 0;
+      &__wrapper {
+         display: flex;
+         align-items: center;
+      }
+
+      &__logo {
+         margin-right: 26px;
+      }
+
+      &__catalog {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         padding: 12px 32px;
+         margin-right: 30px;
+         background-color: $secondary;
+
+         font-size: 16px;
+         color: #FFF;
+         font-weight: 500;
+         transition: all 0.3s linear;
+
+         .icon {
+            width: 20px;
+            height: 20px;
+            fill: #FFF;
+
+            &--catalog {
+               margin-right: 10px;
+            }
+         }
+
+         &:hover {
+            background-color: $primary;
+         }
+      }
+   }
+}
+
+.burger {
+   width: 33px;
+   height: 22px;
+   span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $primary;
+      position: relative;
+      transition: all 0.2s linear;
+      &::after, &::before {
+         content: '';
+         display: block;
+         width: 100%;
+         height: 2px;
+         background-color: $primary;
+         left: 0;
+         transition: all 0.2s linear;
+      }
+
+      &::after {
+         bottom: -8px;
+      }
+
+      &::before {
+         top: -8px;
+      }
+   }
+
+   &--active {
+      background-color: $background;
+      span {
+         height: 0;
+      }
+
+      &::after {
+         transform: rotate(45deg);
+         width: 21px;
+      }
+
+      &::before {
+         transform: rotate(-45deg);
+         width: 21px;
+      }
+
+      &:active {
+         background-color: $primary;
+         span {
+            &::after, &::before {
+               background-color: #FFF;
+            }
+         }
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      width: 40px;
+      height: 26px;
+
+      span {
+         &::after {
+            bottom: -10px;
+         }
+   
+         &::before {
+            top: -10px;
+         }
+      }
+   }
+
+   @media screen and (min-width: 1360px) {
+      display: none;
+   }
+}
+
+.logo {
+   display: block;
+   width: 80px;
+   height: 34px;
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+   }
+
+   @media screen and (min-width: 768px) {
+      width: 75px;
+      height: 32px;
+   }
+
+   @media screen and (min-width: 1360px) {
+      width: 130px;
+      height: 56px;
+   }
+}
+
+.address {
+   display: none;
+   @media screen and (min-width: 768px) {
+      display: block;
+      font-size: 16px;
+      color: $primary;
+      line-height: 1;
+      font-weight: 400;
+   }
+
+   @media screen and (min-width: 1360px) {
+      color: #FFF;
+   }
+}
+
+.phone {
+   font-size: 14px;
+   line-height: 19px;
+   font-weight: 500;
+   color: $primary;
+   transition: color 0.3s linear;
+   &:hover {
+      color: $hover;
+   }
+
+   @media screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 22px;
+   }
+
+   @media screen and (min-width: 1360px) {
+      color: #FFF;
+   }
+}
+
+.nav-menu {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #00000033;
+   @media screen and (min-width: 1360px) {
+      position: static;
+      background-color: transparent;
+      width: auto;
+   }
+}
+
+.nav-list {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   &__item {
+      border-bottom: 1px solid $background;
+   }
+
+   &__link {
+      padding: 14px 12px;
+      font-size: 14px;
+      line-height: 20px;
+      color: $primary;
+      background-color: #FFF;
+      transition: all 0.3s linear;
+      &:active {
+         background-color: $background;
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      width: 300px;
+
+      &__link {
+         padding: 13px 22px;
+         font-size: 15px;
+      }
+   }
+
+   @media screen and (min-width: 1360px) {
+      flex-direction: row;
+      position: static;
+      width: auto;
+
+      &__item {
+         border-bottom: none;
+      }
+
+      &__link {
+         font-size: 16px;
+         line-height: 22px;
+         padding: 0 15px;
+         background-color: transparent;
+         color: #FFF;
+         &:hover {
+            color: $hover;
+         }
+      }
+
+      &__item:first-child {
+         &__link {
+            padding-left: 0;
+         }
+      }
+
+      &__item:last-child {
+         &__link {
+            padding-right: 0;
+         }
+      }
+   }
+}
+
+.contacts-h {
+   &__phone {
+      margin-left: 30px;
+   }
+}
+
+.search-form {
+   position: relative;
+   width: 100%;
+
+   &__input {
+      width: 100%;
+      height: 44px;
+      padding: 9px 30px 9px 10px;
+      background-color: $background;
+      font-size: 14px;
+      border: 2px solid $background;
+      transition: all 0.3s linear;
+
+      &::placeholder {
+         color: $text2;
+      }
+
+      @media screen and (min-width: 1360px) {
+         padding: 11px 50px 11px 20px;
+      }
+   }
+
+   &__btn {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      z-index: 2;
+
+      .icon {
+         width: 15px;
+         height: 15px;
+         fill: $primary;
+         cursor: pointer;
+         transition: all 0.3s linear;
+      }
+
+      @media screen and (min-width: 1360px) {
+         right: 20px;
+         .icon {
+            width: 18px;
+            height: 18px;
+         }
+      }
+   }
+
+   &:hover {
+      .search-form__input {
+         border: 2px solid $background-active;
+      }
+
+      .search-form__btn {
+         .icon {
+            fill: $hover;
+         }
+      }
+   }
+}
+
+.activities {
+   display: none;
+   @media screen and (min-width: 1360px) {
+      display: flex;
+      margin-left: 30px;
+      &__item {
+         margin-right: 15px;
+         &:last-child {
+            margin-right: 0;
+         }
+      }
+   
+      &__btn {
+         width: 44px;
+         height: 44px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         padding: 13px;
+         transition: all 0.2s linear;
+
+         .icon {
+            width: 18px;
+            height: 18px;
+            fill: $primary;
+         }
+
+         &:hover {
+            background-color: $background;
+         }
+      }
+
+      &__counter {
+         position: absolute;
+         top: 7px;
+         right: 7px;
+
+         width: 15px;
+         height: 15px;
+         background-color: $secondary;
+         text-align: center;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: 100%;
+
+         font-size: 11px;
+         color: #FFF;
+      }
+   }
+}
