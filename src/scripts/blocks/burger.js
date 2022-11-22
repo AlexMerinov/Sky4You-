@@ -1,17 +1,19 @@
-// window.app.openBurger = () => {
+window.app.openBurger = () => {
 
-//    // Open menu burger
-//    const burger = document.querySelector('.go-js-burger');
+   // Open menu burger
+   const burger = document.querySelector('.go-js-burger');
+   const menuClose = document.querySelector('.go-js-close-menu');
 
-//    if (burger) {
-//       burger.addEventListener('click', () => {
-//          let menu   = document.querySelector('.menu__list');
-//          let burger = document.querySelector('.burger');
-//          menu.classList.toggle('menu__list--active');
-//          burger.classList.toggle('burger--active');
-//       });
-//   }
+   if (burger) {
+      let menu   = document.querySelector('.nav-menu');
+      burger.addEventListener('click', () => {
+         menu.classList.toggle('nav-menu--active');
+      });
+      menuClose.addEventListener('click', () => {
+         menu.classList.remove('nav-menu--active');
+      });
+  }
 
-// };
+};
 
-// window.app.openBurger();
+window.app.openBurger();

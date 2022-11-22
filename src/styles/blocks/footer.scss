@@ -1,0 +1,463 @@
+.footer {
+   &-main {
+      border-top: 1px solid #CCD7E1;
+      padding-top: 20px;
+      &__nav {
+         display: flex;
+         flex-wrap: wrap;
+         margin-left: -8px;
+         margin-right: -8px;
+         margin-bottom: 30px;
+      }
+
+      &__subheader {
+         margin-bottom: 15px;
+      }
+
+      @media screen and (min-width: 768px) {
+         padding-top: 30px;
+         padding-bottom: 30px;
+         border-bottom: 1px solid #CCD7E1;
+         &__nav {
+            margin-left: -10px;
+            margin-right: -10px;
+         }
+
+         &__subheader {
+            margin-bottom: 21px;
+         }
+      }
+
+      @media screen and (min-width: 1360px) {
+         padding-top: 40px;
+         padding-bottom: 20px;
+         &__nav {
+            margin-left: -15px;
+            margin-right: -15px;
+         }
+      }
+   }
+
+   &-bot {
+      padding: 20px 0;
+      &__wrapper {
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: column;
+
+         font-size: 16px;
+         line-height: 22px;
+         color: $text2;
+         font-weight: 400;
+         @media screen and (min-width: 768px) {
+            flex-direction: row;
+         }
+
+         @media screen and (min-width: 1360px) {
+            align-items: center;
+         }
+      }
+
+      &__item {
+         margin-bottom: 10px;
+         @media screen and (min-width: 768px) {
+            &:nth-child(2) {
+               margin-left: 20px;
+            }
+         }
+
+         @media screen and (min-width: 1360px) {
+            margin-bottom: 0;
+         }
+      }
+
+      &__plastilin {
+         a {
+            color: inherit;
+            transition: all 0.2s linear;
+            &:hover {
+               color: $hover;
+               text-decoration: underline;
+            }
+         }
+
+         @media screen and (min-width: 768px) {
+            width: 100%;
+         }
+
+         @media screen and (min-width: 1360px) {
+            margin-left: auto;
+            width: auto;
+         }
+      }
+   }
+}
+
+.footer-nav {
+   &__col {
+      width: 50%;
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-bottom: 30px;
+      &:last-child {
+         width: 100%;
+         margin-bottom: 0;
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      &__col {
+         width: 33.333%;
+         padding-left: 10px;
+         padding-right: 10px;
+         margin-bottom: 0;
+         &:last-child {
+            width: 33.333%;
+         }
+      }
+   }
+
+   @media screen and (min-width: 1360px) {
+      &__col {
+         padding-left: 15px;
+         padding-right: 15px;
+      }
+   }
+}
+
+.social-nav {
+   display: flex;
+   flex-direction: column;
+   min-width: 192px;
+   &__col {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+      @media screen and (min-width: 768px) {
+         flex-direction: column;
+      }
+   }
+
+   &__male {
+      margin-bottom: 30px;
+      width: 100%;
+   }
+
+   @media screen and (min-width: 768px) {
+      flex-direction: row;
+   }
+}
+
+.contact-list {
+   &__item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      &:last-child {
+         margin-bottom: 0;
+      }
+
+      a {
+         font-size: 16px;
+         line-height: 22px;
+         color: $primary;
+         transition: color 0.3s linear;
+         &:hover {
+            color: $hover;
+         }
+      }
+   }
+
+   &__icon {
+      margin-right: 15px;
+      flex: 0 0 46px;
+   }
+}
+
+.male-form {
+   position: relative;
+   display: inline-block;
+   &__input {
+      width: 296px;
+      height: 46px;
+      padding: 12px 40px 12px 14px;
+      background-color: $background;
+      border: 1px solid $background;
+      transition: all 0.3s linear;
+
+      font-size: 16px;
+      font-weight: 400;
+      color: $primary;
+      &::placeholder {
+         color: $primary;
+      }
+
+      @media screen and (min-width: 768px) {
+         width: 309px;
+      }
+   }
+   &__btn {
+      position: absolute;
+      top: 50%;
+      right: 14px;
+      transform: translateY(-50%);
+      .icon {
+         width: 18px;
+         height: 14px;
+         fill: none;
+         stroke: $primary;
+         transition: all 0.3s linear;
+      }
+   }
+
+   &__error {
+      position: absolute;
+      left: 0;
+      top: calc(100% + 14px);
+   }
+
+   &:hover {
+      .male-form__input {
+         border: 1px solid $background-active;
+      }
+      .male-form__btn {
+         .icon {
+            stroke: $hover;
+         }
+      }
+   }
+
+   .male-form__input:focus {
+      border: 1px solid $background-active;
+   }
+   .male-form__input:focus~.male-form__btn {
+      .icon {
+         stroke: $hover;
+      }
+   }
+}
+
+.error {
+   display: none;
+   width: 100%;
+   min-height: 94px;
+   padding: 15px;
+   background-color: $background-active;
+   position: absolute;
+   &__header {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-size: 16px;
+      line-height: 22px;
+      color: $primary;
+      font-weight: 500;
+
+      .icon {
+         width: 14px;
+         height: 14px;
+         fill: $primary;
+      }
+   }
+
+   &__info {
+      font-size: 16px;
+      line-height: 22px;
+      color: $primary;
+      font-weight: 400;
+   }
+
+   &::before {
+      content: '';
+
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 14px solid $background-active;
+
+      position: absolute;
+      left: 50%;
+      top: -14px;
+      transform: translateX(-50%);
+   }
+}
+
+.social-list {
+   display: flex;
+   flex-wrap: wrap;
+   width: 50%;
+
+   &__item {
+      margin-right: 5px;
+   }
+
+   .footer-subheader {
+      width: 100%;
+   }
+
+   .icon-item {
+      width: 40px;
+      height: 40px;
+      transition: all 0.2s linear;
+      .icon {
+         transition: fill 0.2s linear;
+      }
+      &:hover {
+         transform: scale(1.15);
+         background-color: $primary;
+         .icon {
+            fill: #FFF;
+         }
+      }
+
+      @media screen and (min-width: 768px) {
+         width: 46px;
+         height: 46px;
+         &:hover {
+            transform: scale(1);
+         }
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      width: auto;
+   }
+}
+
+.social-inst {
+   width: 50%;
+   a {
+      display: inline-block;
+   }
+   .icon-item {
+      width: 40px;
+      height: 40px;
+      transition: all 0.3s linear;
+      .icon {
+         transition: all 0.3s linear;
+      }
+
+      &:hover {
+         background-color: $primary;
+         transform: scale(1.1);
+         .icon {
+            fill: #FFF;
+         }
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      .icon-item {
+         width: 46px;
+         height: 46px;
+         &:hover {
+            transform: scale(1);
+         }
+      }
+   }
+}
+
+.footer-list {
+   &__item {
+      margin-bottom: 10px;
+      a {
+         font-size: 14px;
+         line-height: 19px;
+         color: $primary;
+         transition: color 0.3s linear;
+         &:hover {
+            color: $hover;
+         }
+      }
+
+      @media screen and (min-width: 768px) {
+         margin-bottom: 12px;
+         a {
+            font-size: 16px;
+            line-height: 22px;
+         }
+      }
+   }
+}
+
+.footer-subheader {
+   font-size: 14px;
+   line-height: 18px;
+   text-transform: uppercase;
+   color: $text2;
+}
+
+.icon-item {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   width: 46px;
+   height: 46px;
+   background-color: $background;
+
+   .icon {
+      fill: none;
+      stroke: $primary;
+      &--pin {
+         width: 16px;
+         height: 20px;
+      }
+
+      &--male {
+         width: 18px;
+         height: 14px;
+      }
+
+      &--phone {
+         width: 18px;
+         height: 18px;
+      }
+
+      &--vb {
+         stroke: none;
+         fill: $primary;
+         width: 26px;
+         height: 27px;
+      }
+
+      &--ws {
+         stroke: none;
+         fill: $primary;
+         width: 26px;
+         height: 26px;
+      }
+
+      &--tg {
+         stroke: none;
+         fill: $primary;
+         width: 26px;
+         height: 22px;
+      }
+
+      &--inst {
+         stroke: none;
+         fill: $primary;
+         width: 26px;
+         height: 26px;
+      }
+   }
+}
+
+.footer-web {
+   &__logo {
+      display: none;
+      @media screen and (min-width: 768px) {
+         display: block;
+         width: 140px;
+         height: 60px;
+      }
+   }
+}
