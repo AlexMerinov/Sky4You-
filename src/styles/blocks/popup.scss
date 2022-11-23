@@ -1,0 +1,103 @@
+.body {
+   &__popup {
+      display: none;
+      position: fixed;
+      overflow: auto;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(000, 000, 000, 0.33);
+      z-index: 100;
+      transition: all 0.2s linear;
+      &--active {
+         transition: all 0.2s linear;
+         display: block;
+      }
+   }
+}
+
+.popup {
+   &__box {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      min-height: 100%;
+   }
+
+   &__window {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      background-color: $primary;
+      position: relative;
+   }
+
+
+   &__close {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      padding: 0;
+      &::before,
+      &::after {
+         content: '';
+         display: block;
+         width: 100%;
+         height: 2px;
+         background-color: $secondary;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transition: background-color 0.2s linear;
+      }
+
+      &::before {
+         transform: translateX(-50%) rotate(45deg);
+      }
+      &::after {
+         transform: translateX(-50%) rotate(-45deg);
+      }
+
+      &:hover {
+         &::before,
+         &::after {
+            background-color: $background;
+         }
+      }
+   }
+}
+
+.popup {
+   &__window {
+      background-color: #FFF;
+   }
+}
+
+.popup-window-h {
+   padding: 15px 12px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   &__title {
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: 700;
+      color: $primary;
+   }
+
+   @media screen and (min-width: 768px) {
+      padding: 15px 22px 20px 22px;
+
+      &__title {
+         font-size: 30px;
+         line-height: 40px;
+      }
+   }
+}

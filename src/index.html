@@ -20,10 +20,7 @@
             <nav class="header-top__nav-menu nav-menu">
               <ul class="nav-list nav-menu__list">
                 <li class="nav-list__header">
-                  <button
-                    type="button"
-                    class="nav-list__close go-js-close-menu"
-                  >
+                  <button type="button" class="close-btn go-js-close-menu">
                     <svg class="icon">
                       <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
                     </svg>
@@ -107,9 +104,158 @@
     <!-- / Header -->
     <!-- Main -->
     <main class="page__main main">
-      <!--Sections-->
+      <div class="container">
+        <div class="main__row">
+          <div class="main__col-l"></div>
+          <div class="main__col-r sections">
+            <!--Sections-->
 
-      <!--/ Sections-->
+            <!--Section banner-->
+            <div class="sections__section section banner">
+              <!-- Slider main container -->
+              <div class="swiper banner-slider">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper banner-slider__wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide banner-slider__slide">
+                    <picture class="banner-slider__content">
+                      <img src="images/content/баннер.png" alt="banner" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide banner-slider__slide">
+                    <picture class="banner-slider__content">
+                      <img src="images/content/баннер.png" alt="banner" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide banner-slider__slide">
+                    <picture class="banner-slider__content">
+                      <img src="images/content/баннер.png" alt="banner" />
+                    </picture>
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination banner-slider__pagination"></div>
+              </div>
+            </div>
+            <!-- / Section banner-->
+
+            <!--Section best-->
+            <section class="sections__section section best">
+              <div class="section__header">
+                <h2 class="section__title">Лучшие предложения</h2>
+              </div>
+              <div class="swiper slider-best">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper slider-best__wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide slider-best__slide">
+                    <div class="product-card">
+                      <picture class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </picture>
+                      <div class="product-card__box">
+                        <span class="product-card__title"
+                          >Фильтр масла 08-01269 - AA48109 TEMPEST</span
+                        >
+                        <div class="product-card__desc">
+                          <span>Номер производителя AA48112</span>
+                          Проверьте совместимость
+                          <a href="#">по этой ссылке</a>
+                        </div>
+                        <span class="product-card__price">6 900 ₽</span>
+                        <div class="product-card__activities"></div>
+                      </div>
+                      <span class="product-card__label product-card__label--yes"
+                        >В наличии</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slider-best__slide">
+                    <div class="product-card">
+                      <picture class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </picture>
+                      <div class="product-card__box">
+                        <span class="product-card__title"
+                          >Фильтр масла 08-01269 - AA48109 TEMPEST</span
+                        >
+                        <div class="product-card__desc">
+                          <span>Номер производителя AA48112</span>
+                          Проверьте совместимость
+                          <a href="#">по этой ссылке</a>
+                        </div>
+                        <span class="product-card__price">6 900 ₽</span>
+                        <div class="product-card__activities"></div>
+                      </div>
+                      <span class="product-card__label product-card__label--no"
+                        >под заказ</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slider-best__slide">
+                    <div class="product-card">
+                      <picture class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </picture>
+                      <div class="product-card__box">
+                        <span class="product-card__title"
+                          >Фильтр масла 08-01269 - AA48109 TEMPEST</span
+                        >
+                        <div class="product-card__desc">
+                          <span>Номер производителя AA48112</span>
+                          Проверьте совместимость
+                          <a href="#">по этой ссылке</a>
+                        </div>
+                        <span class="product-card__price">6 900 ₽</span>
+                        <div class="product-card__activities"></div>
+                      </div>
+                      <span class="product-card__label product-card__label--yes"
+                        >В наличии</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slider-best__slide">
+                    <div class="product-card">
+                      <picture class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </picture>
+                      <div class="product-card__box">
+                        <span class="product-card__title"
+                          >Фильтр масла 08-01269 - AA48109 TEMPEST</span
+                        >
+                        <div class="product-card__desc">
+                          <span>Номер производителя AA48112</span>
+                          Проверьте совместимость
+                          <a href="#">по этой ссылке</a>
+                        </div>
+                        <span class="product-card__price">6 900 ₽</span>
+                        <div class="product-card__activities"></div>
+                      </div>
+                      <span class="product-card__label product-card__label--yes"
+                        >В наличии</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div
+                  class="swiper-button-prev slider-best__btn slider-best__btn--prev"
+                ></div>
+                <div
+                  class="swiper-button-next slider-best__btn slider-best__btn--next"
+                ></div>
+              </div>
+            </section>
+            <!-- / Section best-->
+
+            <!--/ Sections-->
+          </div>
+        </div>
+      </div>
     </main>
     <!-- / Main -->
 
@@ -193,7 +339,7 @@
             </nav>
             <div class="footer-main__social social-nav">
               <div class="social-nav__col">
-                <ul class="social-list">
+                <ul class="social-list social-nav__list">
                   <li class="footer-subheader footer-main__subheader">
                     МЕССЕНДЖЕРЫ
                   </li>
@@ -294,6 +440,7 @@
           </div>
         </div>
       </div>
+
       <div class="footer-bot">
         <div class="container">
           <div class="footer-bot__wrapper">
@@ -314,7 +461,173 @@
 </div>
 <!-- / Page -->
 <!--Popup-->
+<div class="body__popup popup go-js-popup" data-popup-name="popup_1">
+  <div class="popup__box">
+    <div class="popup__window popup-user">
+      <div class="popup-window-h">
+        <span class="popup-window-h__title">Авторизация</span>
+        <button type="button" class="close-btn go-js-close-modal">
+          <svg class="icon">
+            <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="popup-user__desc">
+        Пожалуйста, заполните все обязательные поля для входа
+      </div>
+      <form action="" class="popup-user__form form-box">
+        <div class="field form-box__field">
+          <input type="text" id="male" class="field__input" placeholder="" />
+          <label for="male" class="field__label">E-MAIL *</label>
+        </div>
+        <div class="field form-box__field">
+          <input type="text" id="pas" class="field__input" placeholder="" />
+          <label for="pas" class="field__label">ПАРОЛЬ</label>
+        </div>
+        <a href="#" class="form-box__link-pas">Забыли пароль?</a>
+        <div class="form-box__buttons">
+          <a href="#" class="form-box__link">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
+          <button class="form-box__btn">ВОЙТИ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
+<div class="body__popup popup go-js-popup" data-popup-name="popup_2">
+  <div class="popup__box">
+    <div class="popup__window popup-favorite">
+      <div class="popup-window-h">
+        <span class="popup-window-h__title">Избранное</span>
+        <button type="button" class="close-btn go-js-close-modal">
+          <svg class="icon">
+            <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="popup-favorite__filter filter">
+        <button type="button"></button>
+        <div class="filter__choise filter-choise">
+          <div class="filter-choise__header">
+            <span class="filter-choise__name"></span>
+            <svg class="icon">
+              <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+            </svg>
+          </div>
+          <ul class="filter-choise__list filter-choise__list">
+            <li class="go-js-choice-item">
+              <label class="filter-choise__label choice-element">
+                <span class="filter-choise__name">Сначала дешевле</span>
+                <input
+                  class="filter-choise__input"
+                  name="filter"
+                  type="radio"
+                />
+              </label>
+            </li>
+            <li class="go-js-choice-item">
+              <label class="filter-choise__label choice-element">
+                <span class="filter-choise__name">Сначала дешевле</span>
+                <input
+                  class="filter-choise__input"
+                  name="filter"
+                  type="radio"
+                />
+              </label>
+            </li>
+            <li class="go-js-choice-item">
+              <label class="filter-choise__label choice-element">
+                <span class="filter-choise__name">Популярные</span>
+                <input
+                  class="filter-choise__input"
+                  name="filter"
+                  type="radio"
+                />
+              </label>
+            </li>
+            <li class="go-js-choice-item">
+              <label class="filter-choise__label choice-element">
+                <span class="filter-choise__name">По рейтингу</span>
+                <input
+                  class="filter-choise__input"
+                  name="filter"
+                  type="radio"
+                />
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popups">
+  <!--Popup btn pagination-->
+  <div class="popups__activities">
+    <div class="container">
+      <ul class="activities activities--popups">
+        <!--Popup btn item-->
+        <li class="activities__item">
+          <a href="/" class="activities__btn">
+            <svg class="icon activities__icon">
+              <use xlink:href="svg-sprite/svg-sprite.svg#home"></use>
+            </svg>
+            <span>Главная</span>
+          </a>
+        </li>
+        <!-- / Popup btn item-->
+
+        <!--Popup btn item-->
+        <li class="activities__item">
+          <button type="button" class="activities__btn">
+            <svg class="icon activities__icon">
+              <use xlink:href="svg-sprite/svg-sprite.svg#katalog"></use>
+            </svg>
+            <span>Каталог</span>
+          </button>
+        </li>
+        <!-- / Popup btn item-->
+
+        <!--Popup btn item-->
+        <li class="activities__item">
+          <button type="button" class="activities__btn">
+            <svg class="icon activities__icon">
+              <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+            </svg>
+            <span>Войти</span>
+          </button>
+        </li>
+        <!-- / Popup btn item-->
+
+        <!--Popup btn item-->
+        <li class="activities__item">
+          <button type="button" class="activities__btn">
+            <svg class="icon activities__icon">
+              <use xlink:href="svg-sprite/svg-sprite.svg#favorite"></use>
+            </svg>
+            <span class="activities__counter">0</span>
+            <span>Избранное</span>
+          </button>
+        </li>
+        <!-- / Popup btn item-->
+
+        <!--Popup btn item-->
+        <li class="activities__item">
+          <button type="button" class="activities__btn">
+            <svg class="icon activities__icon">
+              <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+            </svg>
+            <span class="activities__counter">0</span>
+            <span>Корзина</span>
+          </button>
+        </li>
+        <!-- / Popup btn item-->
+      </ul>
+    </div>
+  </div>
+  <!-- / Popup btn pagination-->
+</div>
 <!--/ Popup-->
 
 @@include('includes/footer.html')

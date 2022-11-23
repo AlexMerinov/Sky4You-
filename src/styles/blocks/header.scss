@@ -260,42 +260,6 @@
       }
    }
 
-   &__close {
-      width: 30px;
-      height: 30px;
-      background-color: $background;
-      position: relative;
-      transition: background-color 0.3s linear;
-
-      .icon {
-         position: absolute;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-
-         width: 15px;
-         height: 15px;
-         fill: $primary;
-         transition: fill 0.3s linear;
-      }
-
-      &:active {
-         background-color: $primary;
-         .icon {
-            fill: #FFF;
-         }
-      }
-
-      @media screen and (min-width: 768px) {
-         width: 40px;
-         height: 40px;
-         .icon {
-            width: 20px;
-            height: 20px;
-         }
-      }
-   }
-
    @media screen and (min-width: 768px) {
       width: 300px;
 
@@ -431,6 +395,29 @@
 
 .activities {
    display: none;
+
+   &__btn {
+      position: relative;
+   }
+
+   &__counter {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+
+      width: 15px;
+      height: 15px;
+      background-color: $secondary;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+
+      font-size: 11px;
+      color: #FFF;
+   }
+   
    @media screen and (min-width: 1360px) {
       display: flex;
       margin-left: 30px;
@@ -460,24 +447,6 @@
          &:hover {
             background-color: $background;
          }
-      }
-
-      &__counter {
-         position: absolute;
-         top: 7px;
-         right: 7px;
-
-         width: 15px;
-         height: 15px;
-         background-color: $secondary;
-         text-align: center;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         border-radius: 100%;
-
-         font-size: 11px;
-         color: #FFF;
       }
    }
 }

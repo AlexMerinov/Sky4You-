@@ -1,4 +1,5 @@
 .footer {
+   padding-bottom: 60px;
    &-main {
       border-top: 1px solid #CCD7E1;
       padding-top: 20px;
@@ -12,6 +13,12 @@
 
       &__subheader {
          margin-bottom: 15px;
+      }
+
+      &__wrapper {
+         @media screen and (min-width: 1360px) {
+            display: flex;
+         }
       }
 
       @media screen and (min-width: 768px) {
@@ -91,6 +98,14 @@
          }
       }
    }
+
+   @media screen and (min-width: 768px) {
+      padding-bottom: 80px;
+   }
+
+   @media screen and (min-width: 1360px) {
+      padding-bottom: 0;
+   }
 }
 
 .footer-nav {
@@ -144,6 +159,12 @@
    &__male {
       margin-bottom: 30px;
       width: 100%;
+   }
+
+   &__list {
+      @media screen and (min-width: 768px) {
+         margin-bottom: 30px;
+      }
    }
 
    @media screen and (min-width: 768px) {

@@ -39,6 +39,7 @@ button {
 
 .main {
    flex: 1 1 auto;
+   padding-top: 20px;
    &__section {
       margin-bottom: 30px;
       @media screen and (min-width: 768px) {
@@ -49,7 +50,27 @@ button {
          margin-bottom: 56px;
       } 
    }
+
+   &__row {
+      display: flex;
+   }
+
+   &__col-l {
+      display: none;
+
+      @media screen and (min-width: 1360px) {
+         width: 309px;
+         display: flex;
+         flex-direction: column;
+         margin-right: 30px;
+      }
+   }
+
+   &__col-r {
+      max-width: 987px;
+   }
 }
+
 .section {
    &__title {
       margin-bottom: 15px; 
@@ -78,4 +99,40 @@ button {
    font-size: 12px;
    line-height: 14px;
    font-weight: 500;
+}
+
+.close-btn {
+   width: 30px;
+   height: 30px;
+   background-color: $background;
+   position: relative;
+   transition: background-color 0.3s linear;
+
+   .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 15px;
+      height: 15px;
+      fill: $primary;
+      transition: fill 0.3s linear;
+   }
+
+   &:active {
+      background-color: $primary;
+      .icon {
+         fill: #FFF;
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      width: 40px;
+      height: 40px;
+      .icon {
+         width: 20px;
+         height: 20px;
+      }
+   }
 }
