@@ -41,6 +41,7 @@ window.app.Sliders = () => {
                new Swiper(sliderBest, {
                   slidesPerView: 2.2,
                   spaceBetween: 10,
+                  watchSlidesProgress: true,
                   breakpoints: {
                      768: {
                         slidesPerView: 2.6,
@@ -61,6 +62,7 @@ window.app.Sliders = () => {
                new Swiper(sliderView, {
                   slidesPerView: 1.2,
                   spaceBetween: 10,
+                  watchSlidesProgress: true,
                   loop: true,
                   breakpoints: {
                      768: {
@@ -83,69 +85,6 @@ window.app.Sliders = () => {
    };
 
    initSliders();
-
-
-
-   // const sliders = document.querySelectorAll('.section .slider-best');
-
-   // if (sliders) {
-   //    sliders.forEach(function (slider) {
-   //       const navArrows = {
-   //          navigation: {
-   //             nextEl: slider.closest('.section').querySelector('.slider-best__btn--next'),
-   //             prevEl: slider.closest('.section').querySelector('.slider-best__btn--prev'),
-   //          }
-   //       }
-
-   //       new Swiper(slider, {
-
-   //          slidesPerView: 2.2,
-   //          spaceBetween: 10,
-         
-   //          breakpoints: {
-   //             768: {
-   //                slidesPerView: 2.6,
-   //                spaceBetween: 20,
-   //             },
-         
-   //             1360: {
-   //                slidesPerView: 3,
-   //                spaceBetween: 30,
-
-   //                navigation: {
-   //                   nextEl: navArrows.navigation.nextEl,
-   //                   prevEl: navArrows.navigation.prevEl,
-   //                },
-   //             },
-   //          },
-         
-   //       });      
-
-   //    });
-   // }
-
-   // const sliderView = new Swiper('.slider-view', {
-   //    slidesPerView: 1.1,
-   //    spaceBetween: 10,
-   //    loop: true,
-
-   //    breakpoints: {
-   //       768: {
-   //          slidesPerView: 2.5,
-   //          spaceBetween: 20,
-   //       },
-
-   //       1360: {
-   //          slidesPerView: 3,
-   //          spaceBetween: 30,
-   //          navigation: {
-   //             nextEl: '.slider-best__btn--next',
-   //             prevEl: '.slider-best__btn--prev',
-   //          }
-   //       },
-   //    }
-   // });
-
 };
 
 window.app.Sliders();
