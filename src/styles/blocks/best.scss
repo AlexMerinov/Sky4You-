@@ -1,3 +1,68 @@
+.section {
+   &__navigation {
+      @media screen and (min-width: 1360px) {
+         .go-js-slider__btn {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $background;
+            cursor: pointer;
+            transition: background-color 0.3s linear;
+   
+            .icon {
+               width: 18px;
+               height: 14px;
+               stroke: $primary;
+               fill: none;
+               transition: fill 0.3s linear;
+            }
+
+            &--prev {
+               .icon {
+                  transform: rotate(180deg);
+               }
+            }
+
+            &:hover {
+               background-color: $primary;
+               .icon {
+                  stroke: #FFF;
+               }
+            }
+         }
+
+         .swiper-button-disabled.go-js-slider__btn {
+            .icon {
+               stroke: $text2;
+               fill: none;
+            }
+
+            &:hover {
+               background-color: $background;
+               .icon {
+                  stroke: $text2;
+                  fill: none;
+               }
+            }
+         }
+      }
+   }
+}
+
+.swiper.slider-best {
+   * {
+      box-sizing: border-box;
+   }
+}
+
+.swiper.slider-view {
+   * {
+      box-sizing: border-box;
+   }
+}
+
 .product-card {
    display: flex;
    flex-direction: column;
@@ -13,6 +78,23 @@
          height: 100%;
          object-fit: cover;
       }
+
+      @media screen and (min-width: 768px) {
+         height: 219px;
+         margin-bottom: 15px;
+      }
+
+      @media screen and (min-width: 1360px) {
+         height: 269px;
+         margin-bottom: 20px;
+      }
+   }
+
+   &__favorite {
+      margin-bottom: 10px;
+      @media screen and (min-width: 1360px) {
+         margin-bottom: 0;
+      }
    }
 
    &__title {
@@ -22,6 +104,22 @@
       color: $primary;
       font-weight: 500;
       margin-bottom: 5px;
+
+      @media screen and (min-width: 768px) {
+         font-size: 20px;
+         line-height: 26px;
+         margin-bottom: 10px;
+      }
+   }
+
+   &__desc {
+      display: none;
+      @media screen and (min-width: 1360px) {
+         display: block;
+         font-size: 16px;
+         line-height: 24px;
+         color: $primary;
+      }
    }
 
    &__price {
@@ -30,6 +128,30 @@
       line-height: 27px;
       font-weight: 700;
       color: $primary;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: 768px) {
+         font-size: 24px;
+         line-height: 32px;
+         margin-bottom: 15px;
+      }
+   }
+
+   &__activities {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: 1360px) {
+         flex-direction: row;
+         align-items: center;
+      }
+   }
+
+   &__btn {
+      padding: 7px;
+      width: 100%;
+      line-height: 17px;
+      color: #FFF;
    }
 
    &__label {
@@ -44,13 +166,149 @@
       font-size: 12px;
       font-weight: 500;
       color: #FFF;
+   }
 
-      &--yes {
+   &--cart {
+      .product-card__btn {
          background-color: $secondary;
+         &:active {
+            background-color: $primary;
+         }
+
+         @media screen and (min-width: 1360px) {
+            &:hover {
+               background-color: $primary;
+            }
+         }
       }
 
-      &--no {
+      .product-card__label {
+         background-color: $secondary;
+      }
+   }
+
+   &--order {
+      .product-card__btn {
+         background-color: $primary;
+         &:active {
+            background-color: $hover;
+         }
+
+         @media screen and (min-width: 1360px) {
+            &:hover {
+               background-color: $hover;
+            }
+         }
+      }
+
+      .product-card__label {
          background-color: $text2;
+      }
+   }
+
+   &--little {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .product-card__preview {
+         margin-bottom: 0;
+         margin-right: 15px;
+         flex: 0 0 89px;
+         height: 89px;
+
+         @media screen and (min-width: 768px) {
+            margin-left: 10px;
+            flex: 0 0 100px;
+            height: 100px;
+         }
+      }
+
+      .product-card__title {
+         @media screen and (min-width: 768px) {
+            font-size: 14px;
+            line-height: 20px;
+         }
+      }
+      
+      .product-card__price {
+         margin-bottom: 0;
+      }
+   }
+
+   @media screen and (min-width: 1360px) {
+      padding: 20px;
+   }
+}
+
+.product-favorite {
+   width: 25px;
+   height: 25px;
+   position: relative;
+
+   input[type=checkbox] {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      position: absolute;
+   }
+
+   label {
+      display: block;
+      width: 100%;
+      height: 100%;
+   }
+
+   span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-color: #FFF;
+      border: 2px solid $primary;
+      transition: background-color 0.3s linear;
+
+      .icon {
+         width: 15px;
+         height: 14px;
+         fill: none;
+         stroke: $primary;
+         transition: fill 0.3s linear;
+      }
+   }
+
+   &:hover {
+      span {
+         background-color: $primary;
+         .icon {
+            stroke: #FFF;
+         }
+      }
+   }
+
+   input[type=checkbox]:checked ~ span {
+      .icon {
+         fill: $primary;
+      }
+
+      &:hover {
+         background-color: #FFF;
+         .icon {
+            stroke: $primary;
+         }
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      width: 40px;
+      height: 40px;
+
+      span {
+         .icon {
+            width: 20px;
+            height: 19px;
+         }
       }
    }
 }
