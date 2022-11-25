@@ -1,0 +1,147 @@
+.popup__window.popup-catalog {
+   height: auto;
+   padding-bottom: 60px;
+
+   @media screen and (min-width: 768px) {
+      padding-bottom: 80px;
+   }
+}
+
+.popup-catalog {
+   &__all {
+      padding: 15px 22px;
+      display: flex;
+      align-items: center;
+
+      font-size: 14px;
+      line-height: 19px;
+      color: $primary;
+      text-transform: uppercase;
+      transition: .3s;
+      border-bottom: 1px solid $decor;
+
+      .icon {
+         width: 19px;
+         height: 15px;
+         fill: none;
+         stroke: $primary;
+         transition: .3s;
+         margin-left: 15px;
+      }
+
+      &:active {
+         color: $hover;
+
+         .icon {
+            stroke: $hover;
+         }
+      }
+   }
+}
+
+.catalog {
+   &-item {
+      border-bottom: 1px solid $decor;
+      &--sub-none {
+         .cat-header__btn {
+            display: none;
+         }
+      }
+   }
+
+}
+
+.cat-header {
+   display: flex;
+   align-items: center;
+   padding: 13px 55px 13px 22px;
+   position: relative;
+   border-bottom: 1px solid transparent;
+   transition: .3s;
+
+   &__icon {
+      width: 17px;
+      flex: 0 0 17px;
+      height: 17px;
+      fill: $primary;
+      margin-right: 21px;
+      transition: .3s;
+   }
+
+   &__name {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 400;
+      color: $primary;
+      transition: .3s;
+   }
+
+   &__btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 2;
+      transition: .3s;
+
+      &--active {
+         .cat-header__icon-btn {
+            transform: rotate(180deg);
+         }
+      }
+   }
+
+   &__icon-btn {
+      width: 12px;
+      height: 6px;
+      fill: none;
+      stroke: $primary;
+      margin: auto;
+      transition: .3s;
+   }
+
+   &:active {
+      .cat-header__name {
+         color: $hover;
+      }
+
+      .cat-header__icon {
+         fill: $hover;
+      }
+   }
+
+   &--active {
+      background-color: $background;
+      border-color: $decor;
+   }
+}
+
+.sub-catalog {
+   max-height: 0;
+   overflow: hidden;
+   transition: .2s;
+   &__item {
+      margin-bottom: 15px;
+      &:first-child {
+         margin-top: 15px;
+      }
+   }
+
+   &__link {
+      padding: 0 62px;
+      font-size: 15px;
+      line-height: 21px;
+      font-weight: 400;
+      color: $primary;
+      transition: .3s;
+
+      &:active {
+         color: $hover;
+      }
+   }
+}

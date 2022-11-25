@@ -138,6 +138,10 @@
       }
    }
 
+   @media screen and (min-width: 768px) {
+      padding: 20px;
+   }
+
    &--cart {
       .product-card__btn {
          background-color: $secondary;
@@ -209,10 +213,6 @@
       @media screen and (min-width: 768px) {
          padding: 10px;
       }
-   }
-
-   @media screen and (min-width: 768px) {
-      padding: 20px;
    }
 
 }

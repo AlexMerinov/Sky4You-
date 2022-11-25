@@ -719,7 +719,11 @@
 </div>
 <!-- / Page -->
 <!--Popup-->
-<div class="body__popup popup go-js-popup" data-popup-name="popup_1">
+<div
+  class="body__popup popup go-js-popup"
+  id="popup-user"
+  data-popup-name="popup_1"
+>
   <div class="popup__box">
     <div class="popup__window popup-user">
       <div class="popup-window-h">
@@ -752,74 +756,270 @@
   </div>
 </div>
 
-<div class="body__popup popup go-js-popup" data-popup-name="popup_2">
+<div
+  class="body__popup popup go-js-popup"
+  id="popup-cat"
+  data-popup-name="popup_2"
+>
   <div class="popup__box">
-    <div class="popup__window popup-favorite">
+    <div class="popup__window popup-catalog">
       <div class="popup-window-h">
-        <span class="popup-window-h__title">Избранное</span>
+        <span class="popup-window-h__title">Каталог</span>
         <button type="button" class="close-btn go-js-close-modal">
           <svg class="icon">
             <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
           </svg>
         </button>
       </div>
-      <div class="popup-favorite__filter filter">
-        <button type="button"></button>
-        <div class="filter__choise filter-choise">
-          <div class="filter-choise__header">
-            <span class="filter-choise__name"></span>
-            <svg class="icon">
-              <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
-            </svg>
-          </div>
-          <ul class="filter-choise__list filter-choise__list">
-            <li class="go-js-choice-item">
-              <label class="filter-choise__label choice-element">
-                <span class="filter-choise__name">Сначала дешевле</span>
-                <input
-                  class="filter-choise__input"
-                  name="filter"
-                  type="radio"
-                />
-              </label>
-            </li>
-            <li class="go-js-choice-item">
-              <label class="filter-choise__label choice-element">
-                <span class="filter-choise__name">Сначала дешевле</span>
-                <input
-                  class="filter-choise__input"
-                  name="filter"
-                  type="radio"
-                />
-              </label>
-            </li>
-            <li class="go-js-choice-item">
-              <label class="filter-choise__label choice-element">
-                <span class="filter-choise__name">Популярные</span>
-                <input
-                  class="filter-choise__input"
-                  name="filter"
-                  type="radio"
-                />
-              </label>
-            </li>
-            <li class="go-js-choice-item">
-              <label class="filter-choise__label choice-element">
-                <span class="filter-choise__name">По рейтингу</span>
-                <input
-                  class="filter-choise__input"
-                  name="filter"
-                  type="radio"
-                />
-              </label>
-            </li>
-          </ul>
-        </div>
+      <div class="popup-catalog">
+        <a href="#" class="popup-catalog__all">
+          <span>СМОТРЕТЬ ВСЕ</span>
+          <svg class="icon">
+            <use xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"></use>
+          </svg>
+        </a>
+        <ul class="catalog">
+          <li class="catalog-item">
+            <a href="#" class="catalog-item__header cat-header">
+              <svg class="icon cat-header__icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+              </svg>
+              <span class="cat-header__name">Категория 1</span>
+              <button type="button" class="cat-header__btn go-js-drop-catalog">
+                <svg class="icon cat-header__icon-btn">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </a>
+            <ul class="sub-catalog catalog-item__sub">
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 1</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 2</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-item catalog-item--sub-none">
+            <a href="#" class="catalog-item__header cat-header">
+              <svg class="icon cat-header__icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+              </svg>
+              <span class="cat-header__name"
+                >Длинное название категории занимает несколько строк</span
+              >
+              <button type="button" class="cat-header__btn go-js-drop-catalog">
+                <svg class="icon cat-header__icon-btn">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </a>
+            <ul class="sub-catalog catalog-item__sub">
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 1</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 2</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-item__header cat-header">
+              <svg class="icon cat-header__icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+              </svg>
+              <span class="cat-header__name">Категория 3</span>
+              <button type="button" class="cat-header__btn go-js-drop-catalog">
+                <svg class="icon cat-header__icon-btn">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </a>
+            <ul class="sub-catalog catalog-item__sub">
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 1</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 2</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-item catalog-item--sub-none">
+            <a href="#" class="catalog-item__header cat-header">
+              <svg class="icon cat-header__icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+              </svg>
+              <span class="cat-header__name">Категория 4</span>
+              <button type="button" class="cat-header__btn go-js-drop-catalog">
+                <svg class="icon cat-header__icon-btn">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </a>
+            <ul class="sub-catalog catalog-item__sub"></ul>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-item__header cat-header">
+              <svg class="icon cat-header__icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+              </svg>
+              <span class="cat-header__name">Категория 5</span>
+              <button type="button" class="cat-header__btn go-js-drop-catalog">
+                <svg class="icon cat-header__icon-btn">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </a>
+            <ul class="sub-catalog catalog-item__sub">
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 1</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 2</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-item__header cat-header">
+              <svg class="icon cat-header__icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+              </svg>
+              <span class="cat-header__name">Категория 6</span>
+              <button type="button" class="cat-header__btn go-js-drop-catalog">
+                <svg class="icon cat-header__icon-btn">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </a>
+            <ul class="sub-catalog catalog-item__sub">
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 1</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 2</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-item__header cat-header">
+              <svg class="icon cat-header__icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+              </svg>
+              <span class="cat-header__name"
+                >Длинное название категории занимает несколько строк</span
+              >
+              <button type="button" class="cat-header__btn go-js-drop-catalog">
+                <svg class="icon cat-header__icon-btn">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </a>
+            <ul class="sub-catalog catalog-item__sub">
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 1</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 2</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-item__header cat-header">
+              <svg class="icon cat-header__icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+              </svg>
+              <span class="cat-header__name">Категория 8</span>
+              <button type="button" class="cat-header__btn go-js-drop-catalog">
+                <svg class="icon cat-header__icon-btn">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </a>
+            <ul class="sub-catalog catalog-item__sub">
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 1</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 2</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-item__header cat-header">
+              <svg class="icon cat-header__icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+              </svg>
+              <span class="cat-header__name">Категория 9</span>
+              <button type="button" class="cat-header__btn go-js-drop-catalog">
+                <svg class="icon cat-header__icon-btn">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </a>
+            <ul class="sub-catalog catalog-item__sub">
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 1</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 2</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 3</a>
+              </li>
+            </ul>
+          </li>
+          <li class="catalog-item">
+            <a href="#" class="catalog-item__header cat-header">
+              <svg class="icon cat-header__icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+              </svg>
+              <span class="cat-header__name">Категория 10</span>
+              <button type="button" class="cat-header__btn go-js-drop-catalog">
+                <svg class="icon cat-header__icon-btn">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </a>
+            <ul class="sub-catalog catalog-item__sub">
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 1</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 2</a>
+              </li>
+              <li class="sub-catalog__item">
+                <a href="#" class="sub-catalog__link">Раздел 3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </div>
 
+<!--Popup pagination-->
 <div class="popups">
   <!--Popup btn pagination-->
   <div class="popups__activities">
@@ -860,13 +1060,13 @@
 
         <!--Popup btn item-->
         <li class="activities__item">
-          <button type="button" class="activities__btn">
+          <a href="#" class="activities__btn">
             <svg class="icon activities__icon">
               <use xlink:href="svg-sprite/svg-sprite.svg#favorite"></use>
             </svg>
             <span class="activities__counter">0</span>
             <span>Избранное</span>
-          </button>
+          </a>
         </li>
         <!-- / Popup btn item-->
 
@@ -886,6 +1086,8 @@
   </div>
   <!-- / Popup btn pagination-->
 </div>
+<!-- / Popup pagination-->
+
 <!--/ Popup-->
 
 @@include('includes/footer.html')

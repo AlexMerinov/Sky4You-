@@ -10,4 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
    @@include('./blocks/burger.js');
    @@include('./blocks/sliders.js');
    @@include('./blocks/init.js');
+   @@include('./blocks/catalog.js');
 }); 
