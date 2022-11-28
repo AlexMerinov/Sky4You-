@@ -537,7 +537,7 @@
     <!-- / Main -->
 
     <!-- Footer -->
-    <footer id="section-4" class="page__footer footer section">
+    <footer id="section-footer" class="page__footer footer section">
       <div class="footer-main">
         <div class="container">
           <div class="footer-main__wrapper">
@@ -741,7 +741,7 @@
 <div
   class="body__popup popup go-js-popup"
   id="popup-user"
-  data-popup-name="popup_1"
+  data-popup-name="popup_user"
 >
   <div class="popup__box">
     <div class="popup__window popup-user">
@@ -778,7 +778,7 @@
 <div
   class="body__popup popup go-js-popup"
   id="popup-cat"
-  data-popup-name="popup_2"
+  data-popup-name="popup_cat"
 >
   <div class="popup__box">
     <div class="popup__window popup-catalog">
@@ -1038,6 +1038,95 @@
   </div>
 </div>
 
+<div
+  class="body__popup popup go-js-popup"
+  id="popup-user"
+  data-popup-name="popup_cart"
+>
+  <div class="popup__box">
+    <div class="popup__window popup-cart">
+      <div class="popup-window-h">
+        <span class="popup-window-h__title">Корзина</span>
+        <button type="button" class="close-btn go-js-close-modal">
+          <svg class="icon">
+            <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="popup-cart__box">
+        <div class="cart-card">
+          <a href="#" class="cart-card__preview">
+            <img src="images/content/product.png" alt="product">
+          </a>
+          <div class="cart-card__content">
+            <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112</a>
+            <div class="cart-card__price value-price">
+              <div class="count value-price__count">
+                <button type="button" class="count__btn count__btn--down">
+                  <span></span>
+                </button>
+                <input type="text" class="count__input" min="1" max="100" value="1">
+                <button type="button" class="count__btn count__btn--up">
+                  <span></span>
+                </button>
+              </div>
+              <div class="value-price__result">6 900 ₽</div>
+            </div>
+          </div>
+          <button type="button" class="cart-card__delete">
+            <svg class="icon">
+              <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="cart-card">
+          <a href="#" class="cart-card__preview">
+            <img src="images/content/product.png" alt="product">
+          </a>
+          <div class="cart-card__content">
+            <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112</a>
+            <div class="cart-card__price value-price">
+              <div class="count value-price__count">
+                <button type="button" class="count__btn count__btn--down">
+                  <span></span>
+                </button>
+                <input type="text" class="count__input" min="1" max="100" value="1">
+                <button type="button" class="count__btn count__btn--up">
+                  <span></span>
+                </button>
+              </div>
+              <div class="value-price__result">6 900 ₽</div>
+            </div>
+          </div>
+          <button type="button" class="cart-card__delete">
+            <svg class="icon">
+              <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="save-draft">
+        <svg class="icon save-draft__icon">
+          <use xlink:href="svg-sprite/svg-sprite.svg#draft"></use>
+        </svg>
+        <span class="save-draft__text">СОХРАНИТЬ В ЧЕРНОВИКИ</span>
+      </div>
+      <div class="popup-cart__footer">
+        <div class="value-sum">
+          <span>Итого:</span>
+          <div class="value-sum__count">16 350 ₽</div>
+        </div>
+        <button type="button" class="design-btn">
+          <svg class="icon">
+            <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+          </svg>
+          оформить ЗАКАЗ
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!--Popup pagination-->
 <div class="popups">
   <!--Popup btn pagination-->
@@ -1056,7 +1145,7 @@
         <!-- / Popup btn item-->
 
         <!--Popup btn item-->
-        <li class="activities__item">
+        <li class="activities__item go-js-open-popup" data-popup-name="popup_cat">
           <button type="button" class="activities__btn">
             <svg class="icon activities__icon">
               <use xlink:href="svg-sprite/svg-sprite.svg#katalog"></use>
@@ -1067,7 +1156,7 @@
         <!-- / Popup btn item-->
 
         <!--Popup btn item-->
-        <li class="activities__item">
+        <li class="activities__item go-js-open-popup" data-popup-name="popup_user">
           <button type="button" class="activities__btn">
             <svg class="icon activities__icon">
               <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
@@ -1090,7 +1179,7 @@
         <!-- / Popup btn item-->
 
         <!--Popup btn item-->
-        <li class="activities__item">
+        <li class="activities__item go-js-open-popup" data-popup-name="popup_cart">
           <button type="button" class="activities__btn">
             <svg class="icon activities__icon">
               <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
