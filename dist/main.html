@@ -1,4 +1,23 @@
-@@include('includes/header.html', { 'title' : 'New Project' })
+<!DOCTYPE html>
+<html lang="ru">
+  <!-- Head -->
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New Project</title>
+    <!-- / Meta -->
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.min.css" />
+    <!-- / Styles -->
+  </head>
+  <!-- / Head -->
+
+  <!-- Body -->
+  <body class="body"></body>
+</html>
+
 
 <!-- Page -->
 <div class="page" id="top">
@@ -103,16 +122,462 @@
     </header>
     <!-- / Header -->
     <!-- Main -->
-    <main class="page__main main">
+    <main class="page__main main row-box">
       <div class="container">
-        <ul class="list-pages">
-          <li class="list-pages__item"><a href="main.html"># Главная</a></li>
-          <li class="list-pages__item"><a href="catalog.html"># Каталог</a></li>
-          <li class="list-pages__item"><a href="category.html"># Категории</a></li>
-          <li class="list-pages__item"><a href=""></a></li>
-          <li class="list-pages__item"><a href=""></a></li>
-        </ul>
+        <div class="row-box__row">
+          <div class="row-box__col-l">.catalog</div>
+          <div class="row-box__col-r sections">
+            <!--Sections-->
+
+            <!--Section banner-->
+            <div class="sections__section section banner">
+              <!-- Slider main container -->
+              <div class="swiper banner-slider">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper banner-slider__wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide banner-slider__slide">
+                    <picture class="banner-slider__content">
+                      <img src="images/content/баннер.png" alt="banner" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide banner-slider__slide">
+                    <picture class="banner-slider__content">
+                      <img src="images/content/баннер.png" alt="banner" />
+                    </picture>
+                  </div>
+                  <div class="swiper-slide banner-slider__slide">
+                    <picture class="banner-slider__content">
+                      <img src="images/content/баннер.png" alt="banner" />
+                    </picture>
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination banner-slider__pagination"></div>
+              </div>
+            </div>
+            <!-- / Section banner-->
+
+            <!--Section best-->
+            <section
+              class="sections__section section go-js-slider"
+              data-slider-name="best"
+            >
+              <!-- header section -->
+              <div class="section__header">
+                <h2 class="section__title">Лучшие предложения</h2>
+                <div class="section__navigation">
+                  <!-- If we need navigation buttons -->
+                  <div
+                    class="swiper-button-prev go-js-slider__btn go-js-slider__btn--prev"
+                  >
+                    <svg class="icon">
+                      <use
+                        xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div
+                    class="swiper-button-next go-js-slider__btn go-js-slider__btn--next"
+                  >
+                    <svg class="icon">
+                      <use
+                        xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- / header section -->
+
+              <div class="swiper slider-best">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper slider-best__wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide slider-best__slide">
+                    <div class="product-card product-card--order">
+                      <a href="#" class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </a>
+                      <div class="product-card__box">
+                        <a href="#" class="product-card__title"
+                          >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                        >
+                        <div class="product-card__desc">
+                          <span>Номер производителя AA48112</span>
+                          Проверьте совместимость
+                          <a href="#">по этой ссылке</a>
+                        </div>
+                        <span class="product-card__price">6 900 ₽</span>
+                        <div class="product-card__activities">
+                          <div class="product-card__elem">
+                            <div class="product-favorite product-card__favorite">
+                              <label>
+                                <input type="checkbox" name="favorite" />
+                                <span>
+                                  <svg class="icon">
+                                    <use
+                                      xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                    ></use>
+                                  </svg>
+                                </span>
+                              </label>
+                            </div>
+                            <button type="button" class="product-card__i">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="svg-sprite/svg-sprite.svg#info"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <button
+                            type="button"
+                            class="product-card__btn btn product-card__btn--order"
+                          >
+                            ПОД ЗАКАЗ
+                          </button>
+                        </div>
+                      </div>
+                      <span class="product-card__label">Нет в наличии</span>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slider-best__slide">
+                    <div class="product-card product-card--cart">
+                      <a href="#" class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </a>
+                      <div class="product-card__box">
+                        <a href="#" class="product-card__title"
+                          >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                        >
+                        <div class="product-card__desc">
+                          <span>Номер производителя AA48112</span>
+                          Проверьте совместимость
+                          <a href="#">по этой ссылке</a>
+                        </div>
+                        <span class="product-card__price">6 900 ₽</span>
+                        <div class="product-card__activities">
+                          <div class="product-card__elem">
+                            <div class="product-favorite product-card__favorite">
+                              <label>
+                                <input type="checkbox" name="favorite" />
+                                <span>
+                                  <svg class="icon">
+                                    <use
+                                      xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                    ></use>
+                                  </svg>
+                                </span>
+                              </label>
+                            </div>
+                            <button type="button" class="product-card__i">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="svg-sprite/svg-sprite.svg#info"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <button type="button" class="product-card__btn btn">
+                            в корзину
+                          </button>
+                        </div>
+                      </div>
+                      <span class="product-card__label">В наличии</span>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slider-best__slide">
+                    <div class="product-card product-card--order">
+                      <a href="#" class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </a>
+                      <div class="product-card__box">
+                        <a href="#" class="product-card__title"
+                          >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                        >
+                        <div class="product-card__desc">
+                          <span>Номер производителя AA48112</span>
+                          Проверьте совместимость
+                          <a href="#">по этой ссылке</a>
+                        </div>
+                        <span class="product-card__price">6 900 ₽</span>
+                        <div class="product-card__activities">
+                          <div class="product-card__elem">
+                            <div class="product-favorite product-card__favorite">
+                              <label>
+                                <input type="checkbox" name="favorite" />
+                                <span>
+                                  <svg class="icon">
+                                    <use
+                                      xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                    ></use>
+                                  </svg>
+                                </span>
+                              </label>
+                            </div>
+                            <button type="button" class="product-card__i">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="svg-sprite/svg-sprite.svg#info"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <button
+                            type="button"
+                            class="product-card__btn btn product-card__btn--order"
+                          >
+                            ПОД ЗАКАЗ
+                          </button>
+                        </div>
+                      </div>
+                      <span class="product-card__label">Нет в наличии</span>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slider-best__slide">
+                    <div class="product-card product-card--order">
+                      <a href="#" class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </a>
+                      <div class="product-card__box">
+                        <a href="#" class="product-card__title"
+                          >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                        >
+                        <div class="product-card__desc">
+                          <span>Номер производителя AA48112</span>
+                          Проверьте совместимость
+                          <a href="#">по этой ссылке</a>
+                        </div>
+                        <span class="product-card__price">6 900 ₽</span>
+                        <div class="product-card__activities">
+                          <div class="product-card__elem">
+                            <div class="product-favorite product-card__favorite">
+                              <label>
+                                <input type="checkbox" name="favorite" />
+                                <span>
+                                  <svg class="icon">
+                                    <use
+                                      xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                    ></use>
+                                  </svg>
+                                </span>
+                              </label>
+                            </div>
+                            <button type="button" class="product-card__i">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="svg-sprite/svg-sprite.svg#info"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <button
+                            type="button"
+                            class="product-card__btn btn product-card__btn--order"
+                          >
+                            ПОД ЗАКАЗ
+                          </button>
+                        </div>
+                      </div>
+                      <span class="product-card__label">Нет в наличии</span>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slider-best__slide">
+                    <div class="product-card product-card--order">
+                      <a href="#" class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </a>
+                      <div class="product-card__box">
+                        <a href="#" class="product-card__title"
+                          >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                        >
+                        <div class="product-card__desc">
+                          <span>Номер производителя AA48112</span>
+                          Проверьте совместимость
+                          <a href="#">по этой ссылке</a>
+                        </div>
+                        <span class="product-card__price">6 900 ₽</span>
+                        <div class="product-card__activities">
+                          <div class="product-card__elem">
+                            <div class="product-favorite product-card__favorite">
+                              <label>
+                                <input type="checkbox" name="favorite" />
+                                <span>
+                                  <svg class="icon">
+                                    <use
+                                      xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                    ></use>
+                                  </svg>
+                                </span>
+                              </label>
+                            </div>
+                            <button type="button" class="product-card__i">
+                              <svg class="icon">
+                                <use
+                                  xlink:href="svg-sprite/svg-sprite.svg#info"
+                                ></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <button
+                            type="button"
+                            class="product-card__btn btn product-card__btn--order"
+                          >
+                            ПОД ЗАКАЗ
+                          </button>
+                        </div>
+                      </div>
+                      <span class="product-card__label">Нет в наличии</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div
+                  class="swiper-button-prev slider-best__btn slider-best__btn--prev"
+                ></div>
+                <div
+                  class="swiper-button-next slider-best__btn slider-best__btn--next"
+                ></div>
+              </div>
+            </section>
+            <!-- / Section best-->
+
+            <!-- Promo -->
+            <div class="promo sections__section">
+              <picture class="promo__preview">
+                <img src="images/content/promo.png" alt="promo" />
+              </picture>
+            </div>
+            <!-- / Promo -->
+
+            <!--Section best-->
+            <section
+              class="sections__section section go-js-slider"
+              data-slider-name="view"
+            >
+              <!--header section-->
+              <div class="section__header">
+                <h2 class="section__title">Вы смотрели</h2>
+                <div class="section__navigation">
+                  <!-- If we need navigation buttons -->
+                  <div
+                    class="swiper-button-prev go-js-slider__btn go-js-slider__btn--prev"
+                  >
+                    <svg class="icon">
+                      <use
+                        xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"
+                      ></use>
+                    </svg>
+                  </div>
+                  <div
+                    class="swiper-button-next go-js-slider__btn go-js-slider__btn--next"
+                  >
+                    <svg class="icon">
+                      <use
+                        xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"
+                      ></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- / header section-->
+
+              <div class="swiper slider-view">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper slider-view__wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide slider-view__slide">
+                    <a href="#" class="product-card product-card--little">
+                      <picture class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </picture>
+                      <div class="product-card__box">
+                        <span class="product-card__title">
+                          Фильтр масла 08-01269 - AA48109 TEMPEST
+                        </span>
+                        <span class="product-card__price">6 900 ₽</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide slider-view__slide">
+                    <a href="#" class="product-card product-card--little">
+                      <picture class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </picture>
+                      <div class="product-card__box">
+                        <span class="product-card__title">
+                          Фильтр масла 08-01269 - AA48109 TEMPEST
+                        </span>
+                        <span class="product-card__price">6 900 ₽</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide slider-view__slide">
+                    <a href="#" class="product-card product-card--little">
+                      <picture class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </picture>
+                      <div class="product-card__box">
+                        <span class="product-card__title">
+                          Фильтр масла 08-01269 - AA48109 TEMPEST
+                        </span>
+                        <span class="product-card__price">6 900 ₽</span>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide slider-view__slide">
+                    <a href="#" class="product-card product-card--little">
+                      <picture class="product-card__preview">
+                        <img src="images/content/product.png" alt="product" />
+                      </picture>
+                      <div class="product-card__box">
+                        <span class="product-card__title">
+                          Фильтр масла 08-01269 - AA48109 TEMPEST
+                        </span>
+                        <span class="product-card__price">6 900 ₽</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- / Section best-->
+
+            <!--/ Sections-->
+          </div>
+        </div>
       </div>
+
+      <!-- Questions -->
+      <section class="sections__section questions">
+        <div class="container">
+          <div
+            class="questions__wrapper"
+            style="background-image: url('images/content/question.png')"
+          >
+            <div class="questions__box">
+              <h2 class="questions__title">Остались вопросы? Пишите!</h2>
+              <span class="questions__desc">
+                Оставьте свою заявку и наши специалисты свяжутся с Вами в
+                ближайшее время
+              </span>
+            </div>
+            <button type="button" class="btn questions__btn">
+              ОСТАВИТЬ ЗАЯВКУ
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- / Questions -->
     </main>
     <!-- / Main -->
 
@@ -778,7 +1243,15 @@
 
 <!--/ Popup-->
 
-@@include('includes/footer.html')
+
+        <!-- Scripts -->
+        <script src="scripts/script.min.js"></script>
+        <!-- / Scripts -->
+
+    </body>
+    <!-- / Body -->
+
+</html>
 
 <!-- <svg class="icon">
 	<use xlink:href="svg-sprite/svg-sprite.svg#user"></use>

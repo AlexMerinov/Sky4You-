@@ -1,4 +1,23 @@
-@@include('includes/header.html', { 'title' : 'New Project' })
+<!DOCTYPE html>
+<html lang="ru">
+  <!-- Head -->
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New Project</title>
+    <!-- / Meta -->
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.min.css" />
+    <!-- / Styles -->
+  </head>
+  <!-- / Head -->
+
+  <!-- Body -->
+  <body class="body"></body>
+</html>
+
 
 <!-- Page -->
 <div class="page" id="top">
@@ -103,16 +122,464 @@
     </header>
     <!-- / Header -->
     <!-- Main -->
-    <main class="page__main main">
+    <main class="page__category row-box category-page">
       <div class="container">
-        <ul class="list-pages">
-          <li class="list-pages__item"><a href="main.html"># Главная</a></li>
-          <li class="list-pages__item"><a href="catalog.html"># Каталог</a></li>
-          <li class="list-pages__item"><a href="category.html"># Категории</a></li>
-          <li class="list-pages__item"><a href=""></a></li>
-          <li class="list-pages__item"><a href=""></a></li>
-        </ul>
+        <div class="row-box__row">
+          <div class="row-box__col-l">.catalog</div>
+          <div class="row-box__col-r sections">
+            <!--Sections-->
+
+            <!--Section banner-->
+            <div class="sections__section section">
+                <h2 class="title section__title">Категория</h2>
+                <div class="category-box">
+                    <div class="category-box__header">
+                      <button type="button" class="category-box__filter">
+                        <svg class="icon">
+                          <use xlink:href="svg-sprite/svg-sprite.svg#filter"></use>
+                        </svg>
+                        Фильтры
+                      </button>
+                      <div class="choice-box js-choice-box category-box__choice-box">
+                        <div class="choice-box__header">
+                          <span class="choice-box__title">
+                            Сначала дешевле
+                          </span>
+                          <button type="button" class="choice-box__btn">
+                            <svg class="icon">
+                              <use
+                              xlink:href="svg-sprite/svg-sprite.svg#arrow-down"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <ul class="choice-box__list choice-box__list--absolute">
+                            <li class="go-js-choice-item choice-box__item">
+                              <label class="choice-box__label choice-element">
+                                <span class="choice-box__name">Сначала дешевле</span>
+                                <input
+                                  class="choice-box__input"
+                                  name="count"
+                                  type="radio"
+                                />
+                              </label>
+                          </li>
+                          <li class="go-js-choice-item choice-box__item">
+                            <label class="choice-box__label choice-element">
+                            <span class="choice-box__name">Сначала дороже</span>
+                            <input
+                              class="choice-box__input"
+                              name="count"
+                              type="radio"
+                            />
+                            </label>
+                          </li>
+                          <li class="go-js-choice-item choice-box__item">
+                            <label class="choice-box__label choice-element">
+                            <span class="choice-box__name">Сначала популярные</span>
+                            <input
+                              class="choice-box__input"
+                              name="count"
+                              type="radio"
+                            />
+                            </label>
+                          </li>
+                          <li class="go-js-choice-item choice-box__item">
+                            <label class="choice-box__label choice-element">
+                            <span class="choice-box__name">Сначала с высоким рейтингом</span>
+                            <input
+                              class="choice-box__input"
+                              name="count"
+                              type="radio"
+                            />
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="choice-box js-choice-box category-box__choice-box">
+                        <div class="choice-box__header">
+                          <span class="choice-box__title">
+                            Показывать по 9
+                          </span>
+                          <button type="button" class="choice-box__btn">
+                            <svg class="icon">
+                              <use
+                              xlink:href="svg-sprite/svg-sprite.svg#arrow-down"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <ul class="choice-box__list choice-box__list--absolute">
+                          <li class="go-js-choice-item choice-box__item">
+                            <label class="choice-box__label choice-element">
+                              <span class="choice-box__name">Показывать по 9</span>
+                              <input
+                                class="choice-box__input"
+                                name="count"
+                                type="radio"
+                              />
+                            </label>
+                          </li>
+                          <li class="go-js-choice-item choice-box__item">
+                            <label class="choice-box__label choice-element">
+                            <span class="choice-box__name">Показывать по 12</span>
+                            <input
+                              class="choice-box__input"
+                              name="count"
+                              type="radio"
+                            />
+                            </label>
+                          </li>
+                          <li class="go-js-choice-item choice-box__item">
+                            <label class="choice-box__label choice-element">
+                            <span class="choice-box__name">Показывать по 27</span>
+                            <input
+                              class="choice-box__input"
+                              name="count"
+                              type="radio"
+                            />
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="category-box__row row row-cols-2 row-cols-sm-3">
+                        <div class="col">
+                            <div class="product-card product-card--order">
+                                <a href="#" class="product-card__preview">
+                                  <img src="images/content/product.png" alt="product" />
+                                </a>
+                                <div class="product-card__box">
+                                  <a href="#" class="product-card__title"
+                                    >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                                  >
+                                  <div class="product-card__desc">
+                                    <span>Номер производителя AA48112</span>
+                                    Проверьте совместимость
+                                    <a href="#">по этой ссылке</a>
+                                  </div>
+                                  <span class="product-card__price">6 900 ₽</span>
+                                  <div class="product-card__activities">
+                                    <div class="product-card__elem">
+                                      <div class="product-favorite product-card__favorite">
+                                        <label>
+                                          <input type="checkbox" name="favorite" />
+                                          <span>
+                                            <svg class="icon">
+                                              <use
+                                                xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                              ></use>
+                                            </svg>
+                                          </span>
+                                        </label>
+                                      </div>
+                                      <button type="button" class="product-card__i">
+                                        <svg class="icon">
+                                          <use
+                                            xlink:href="svg-sprite/svg-sprite.svg#info"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <button
+                                      type="button"
+                                      class="product-card__btn btn product-card__btn--order"
+                                    >
+                                      ПОД ЗАКАЗ
+                                    </button>
+                                  </div>
+                                </div>
+                                <span class="product-card__label">Нет в наличии</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="product-card product-card--cart">
+                                <a href="#" class="product-card__preview">
+                                  <img src="images/content/product.png" alt="product" />
+                                </a>
+                                <div class="product-card__box">
+                                  <a href="#" class="product-card__title"
+                                    >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                                  >
+                                  <div class="product-card__desc">
+                                    <span>Номер производителя AA48112</span>
+                                    Проверьте совместимость
+                                    <a href="#">по этой ссылке</a>
+                                  </div>
+                                  <span class="product-card__price">6 900 ₽</span>
+                                  <div class="product-card__activities">
+                                    <div class="product-card__elem">
+                                      <div class="product-favorite product-card__favorite">
+                                        <label>
+                                          <input type="checkbox" name="favorite" />
+                                          <span>
+                                            <svg class="icon">
+                                              <use
+                                                xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                              ></use>
+                                            </svg>
+                                          </span>
+                                        </label>
+                                      </div>
+                                      <button type="button" class="product-card__i">
+                                        <svg class="icon">
+                                          <use
+                                            xlink:href="svg-sprite/svg-sprite.svg#info"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <button type="button" class="product-card__btn btn">
+                                      в корзину
+                                    </button>
+                                  </div>
+                                </div>
+                                <span class="product-card__label">В наличии</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="product-card product-card--cart">
+                                <a href="#" class="product-card__preview">
+                                  <img src="images/content/product.png" alt="product" />
+                                </a>
+                                <div class="product-card__box">
+                                  <a href="#" class="product-card__title"
+                                    >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                                  >
+                                  <div class="product-card__desc">
+                                    <span>Номер производителя AA48112</span>
+                                    Проверьте совместимость
+                                    <a href="#">по этой ссылке</a>
+                                  </div>
+                                  <span class="product-card__price">6 900 ₽</span>
+                                  <div class="product-card__activities">
+                                    <div class="product-card__elem">
+                                      <div class="product-favorite product-card__favorite">
+                                        <label>
+                                          <input type="checkbox" name="favorite" />
+                                          <span>
+                                            <svg class="icon">
+                                              <use
+                                                xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                              ></use>
+                                            </svg>
+                                          </span>
+                                        </label>
+                                      </div>
+                                      <button type="button" class="product-card__i">
+                                        <svg class="icon">
+                                          <use
+                                            xlink:href="svg-sprite/svg-sprite.svg#info"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <button type="button" class="product-card__btn btn">
+                                      в корзину
+                                    </button>
+                                  </div>
+                                </div>
+                                <span class="product-card__label">В наличии</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="product-card product-card--cart">
+                                <a href="#" class="product-card__preview">
+                                  <img src="images/content/product.png" alt="product" />
+                                </a>
+                                <div class="product-card__box">
+                                  <a href="#" class="product-card__title"
+                                    >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                                  >
+                                  <div class="product-card__desc">
+                                    <span>Номер производителя AA48112</span>
+                                    Проверьте совместимость
+                                    <a href="#">по этой ссылке</a>
+                                  </div>
+                                  <span class="product-card__price">6 900 ₽</span>
+                                  <div class="product-card__activities">
+                                    <div class="product-card__elem">
+                                      <div class="product-favorite product-card__favorite">
+                                        <label>
+                                          <input type="checkbox" name="favorite" />
+                                          <span>
+                                            <svg class="icon">
+                                              <use
+                                                xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                              ></use>
+                                            </svg>
+                                          </span>
+                                        </label>
+                                      </div>
+                                      <button type="button" class="product-card__i">
+                                        <svg class="icon">
+                                          <use
+                                            xlink:href="svg-sprite/svg-sprite.svg#info"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <button type="button" class="product-card__btn btn">
+                                      в корзину
+                                    </button>
+                                  </div>
+                                </div>
+                                <span class="product-card__label">В наличии</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="product-card product-card--cart">
+                                <a href="#" class="product-card__preview">
+                                  <img src="images/content/product.png" alt="product" />
+                                </a>
+                                <div class="product-card__box">
+                                  <a href="#" class="product-card__title"
+                                    >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                                  >
+                                  <div class="product-card__desc">
+                                    <span>Номер производителя AA48112</span>
+                                    Проверьте совместимость
+                                    <a href="#">по этой ссылке</a>
+                                  </div>
+                                  <span class="product-card__price">6 900 ₽</span>
+                                  <div class="product-card__activities">
+                                    <div class="product-card__elem">
+                                      <div class="product-favorite product-card__favorite">
+                                        <label>
+                                          <input type="checkbox" name="favorite" />
+                                          <span>
+                                            <svg class="icon">
+                                              <use
+                                                xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                              ></use>
+                                            </svg>
+                                          </span>
+                                        </label>
+                                      </div>
+                                      <button type="button" class="product-card__i">
+                                        <svg class="icon">
+                                          <use
+                                            xlink:href="svg-sprite/svg-sprite.svg#info"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <button type="button" class="product-card__btn btn">
+                                      в корзину
+                                    </button>
+                                  </div>
+                                </div>
+                                <span class="product-card__label">В наличии</span>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="product-card product-card--cart">
+                                <a href="#" class="product-card__preview">
+                                  <img src="images/content/product.png" alt="product" />
+                                </a>
+                                <div class="product-card__box">
+                                  <a href="#" class="product-card__title"
+                                    >Фильтр масла 08-01269 - AA48109 TEMPEST</a
+                                  >
+                                  <div class="product-card__desc">
+                                    <span>Номер производителя AA48112</span>
+                                    Проверьте совместимость
+                                    <a href="#">по этой ссылке</a>
+                                  </div>
+                                  <span class="product-card__price">6 900 ₽</span>
+                                  <div class="product-card__activities">
+                                    <div class="product-card__elem">
+                                      <div class="product-favorite product-card__favorite">
+                                        <label>
+                                          <input type="checkbox" name="favorite" />
+                                          <span>
+                                            <svg class="icon">
+                                              <use
+                                                xlink:href="svg-sprite/svg-sprite.svg#favorite2"
+                                              ></use>
+                                            </svg>
+                                          </span>
+                                        </label>
+                                      </div>
+                                      <button type="button" class="product-card__i">
+                                        <svg class="icon">
+                                          <use
+                                            xlink:href="svg-sprite/svg-sprite.svg#info"
+                                          ></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                    <button type="button" class="product-card__btn btn">
+                                      в корзину
+                                    </button>
+                                  </div>
+                                </div>
+                                <span class="product-card__label">В наличии</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-box__footer">
+                      <button type="button" class="category-box__more">
+                        <svg class="icon">
+                          <use xlink:href="svg-sprite/svg-sprite.svg#repeat"></use>
+                        </svg>
+                        ПОКАЗАТЬ ЕЩЕ
+                      </button>
+                      <div class="category-box__pagination pagination-box">
+                        <a href="#" class="pagination-box__btn pagination-box__btn--prev pagination-box__btn--disable">
+                          <svg class="icon">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"></use>
+                          </svg>
+                        </a>
+                        <ul class="pagination-box__list">
+                          <li class="pagination-box__item"><a href="#" class="pagination-box__link">1</a></li>
+                          <li class="pagination-box__item"><a href="#" class="pagination-box__link">2</a></li>
+                          <li class="pagination-box__item"><span class="pagination-box__link">...</span></li>
+                          <li class="pagination-box__item"><a href="#" class="pagination-box__link">16</a></li>
+                        </ul>
+                        <a href="#" class="pagination-box__btn pagination-box__btn--next">
+                          <svg class="icon">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / Section banner-->
+
+            <!--/ Sections-->
+          </div>
+        </div>
       </div>
+
+      <!-- Questions -->
+      <section class="sections__section questions">
+        <div class="container">
+          <div
+            class="questions__wrapper"
+            style="background-image: url('images/content/question.png')"
+          >
+            <div class="questions__box">
+              <h2 class="questions__title">Остались вопросы? Пишите!</h2>
+              <span class="questions__desc">
+                Оставьте свою заявку и наши специалисты свяжутся с Вами в
+                ближайшее время
+              </span>
+            </div>
+            <button type="button" class="btn questions__btn">
+              ОСТАВИТЬ ЗАЯВКУ
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- / Questions -->
     </main>
     <!-- / Main -->
 
@@ -778,7 +1245,15 @@
 
 <!--/ Popup-->
 
-@@include('includes/footer.html')
+
+        <!-- Scripts -->
+        <script src="scripts/script.min.js"></script>
+        <!-- / Scripts -->
+
+    </body>
+    <!-- / Body -->
+
+</html>
 
 <!-- <svg class="icon">
 	<use xlink:href="svg-sprite/svg-sprite.svg#user"></use>

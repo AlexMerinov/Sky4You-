@@ -1,0 +1,16 @@
+.list-pages {
+    &__item {
+        padding: 10px 20px;
+        a {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            color: $primary;
+            transition: 0.3s;
+            &:hover, &:active {
+                color: $hover;
+                padding-left: 5px;
+            }
+        }
+    }
+}

@@ -62,6 +62,7 @@ window.app.Sliders = () => {
                new Swiper(sliderView, {
                   slidesPerView: 1.2,
                   spaceBetween: 10,
+                  allowTouchMove: true, 
                   watchSlidesProgress: true,
                   loop: true,
                   breakpoints: {

@@ -26,10 +26,46 @@
    }
 
    &__favorite {
-      margin-bottom: 10px;
-      flex: 0 0 auto;
+      margin-right: 10px;
+   }
+
+   &__i {
+     width: 25px;
+     height: 25px;
+     border: 2px solid $primary;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all .3s linear;
+      .icon {
+         width: 5px;
+         height: 11px;
+         fill: $primary;
+      } 
+      &:active {
+         background-color: $primary;
+         .icon {
+            fill: #FFF;
+         }
+      }
+
+
+      @media screen and (min-width: 768px) {
+            width: 40px;
+            height: 40px;
+            .icon {
+               width: 7px;
+               height: 16px;
+            }
+      }
+
       @media screen and (min-width: 1360px) {
-         margin-bottom: 0;
+         &:hover {
+            background-color: $primary;
+            .icon {
+               fill: #FFF;
+            }
+         }
       }
    }
 
@@ -55,6 +91,15 @@
          &:hover {
             color: $secondary;
          }
+      }
+   }
+
+   &__elem {
+      display: flex;
+      margin-bottom: 10px;
+      flex: 0 0 auto;
+      @media screen and (min-width: 1360px) {
+         margin-bottom: 0;
       }
    }
 

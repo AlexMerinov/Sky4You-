@@ -13,4 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
    @@include('./blocks/popup.js');
    @@include('./blocks/counter.js');
    @@include('./blocks/catalog.js');
+   @@include('./blocks/choice.js');
 }); 

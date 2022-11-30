@@ -50,7 +50,7 @@ button {
    }
 }
 
-.main {
+.row-box {
    flex: 1 1 auto;
    padding-top: 20px;
 
@@ -80,13 +80,21 @@ button {
 
 .section {
    &__title {
-      margin-bottom: 15px; 
+      color: $primary;
+      margin-bottom: 20px;
+      @media screen and (min-width: 1360px) {
+         margin-bottom: 30px;
+      }
    }
 
    &__header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 15px;
+      .section__title {
+         margin-bottom: 0;
+      }
    }
 
    &__navigation {
@@ -94,13 +102,13 @@ button {
    }
 
    @media screen and (min-width: 768px) {
-      &__title {
+      &__header {
          margin-bottom: 20px; 
       }
    }
 
    @media screen and (min-width: 1360px) {
-      &__title {
+      &__header {
          margin-bottom: 30px; 
       }
 
