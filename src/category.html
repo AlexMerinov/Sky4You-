@@ -154,11 +154,51 @@
                             <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
                           </svg>
                         </span>
-                        <span class="label-choice__text">Раздел 1</span>
+                        <span class="label-choice__text">Длинное название категории занимает несколько строк</span>
                       </label>
                       <span class="chapter__count">120</span>
                     </li>
                   </ul>
+                </li>
+                <li class="catalog-item">
+                  <div href="#" class="catalog-item__header cat-header">
+                    <svg class="icon cat-header__icon">
+                      <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
+                    </svg>
+                    <span class="cat-header__name">НАЗВАНИЕ КАТЕГОРИИ</span>
+                    <button type="button" class="cat-header__btn go-js-drop-catalog">
+                      <svg class="icon cat-header__icon-btn">
+                        <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="sub-catalog catalog-item__sub">
+                    <div class="sub-catalog__item range-slider">
+                      <div class="range-slider__fields">
+                        <input
+                          class="range-slider__value range-slider__value--start"
+                          type="number"
+                          value="80"
+                          min="80"
+                          max="8000000"
+                          id="input-0"
+                          placeholder="80"
+                        >
+                        </input>
+                        <input 
+                          class="range-slider__value range-slider__value--end"
+                          type="number"
+                          value="800000"
+                          min="80"
+                          max="8000000"
+                          id="input-1"
+                          placeholder="8000000"
+                        >
+                        </input>
+                      </div>
+                      <div class="range-slider__box" id="range-slider"></div>
+                    </div>
+                  </div>
                 </li>
                 <li class="catalog-item">
                   <div href="#" class="catalog-item__header cat-header">
@@ -169,46 +209,86 @@
                       </svg>
                     </button>
                   </div>
+                  <form action="" class="search-form">
+                    <input type="text" class="search-form__input"  placeholder="Поиск значений"/>
+                    <button type="button" class="search-form__btn">
+                      <svg class="icon">
+                        <use xlink:href="svg-sprite/svg-sprite.svg#search"></use>
+                      </svg>
+                    </button>
+                  </form>
                   <ul class="sub-catalog catalog-item__sub">
                     <li class="sub-catalog__item chapter">
                       <label class="label-choice chapter__label">
-                        <span class="label-choice__custom"></span>
                         <input type="checkbox" class="label-choice__input">
+                        <span class="label-choice__custom">
+                          <svg class="icon">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+                          </svg>
+                        </span>
                         <span class="label-choice__text">Tempest</span>
                       </label>
-                      <span class="chapter__count">120</span>
+                      <span class="chapter__count">123</span>
                     </li>
                     <li class="sub-catalog__item chapter">
                       <label class="label-choice chapter__label">
-                        <span class="label-choice__custom"></span>
                         <input type="checkbox" class="label-choice__input">
+                        <span class="label-choice__custom">
+                          <svg class="icon">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+                          </svg>
+                        </span>
                         <span class="label-choice__text">Champion</span>
                       </label>
-                      <span class="chapter__count">12</span>
+                      <span class="chapter__count">34</span>
                     </li>
                     <li class="sub-catalog__item chapter">
                       <label class="label-choice chapter__label">
-                        <span class="label-choice__custom"></span>
                         <input type="checkbox" class="label-choice__input">
+                        <span class="label-choice__custom">
+                          <svg class="icon">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+                          </svg>
+                        </span>
                         <span class="label-choice__text">Tempest</span>
                       </label>
-                      <span class="chapter__count">120</span>
+                      <span class="chapter__count">123</span>
                     </li>
                     <li class="sub-catalog__item chapter">
                       <label class="label-choice chapter__label">
-                        <span class="label-choice__custom"></span>
                         <input type="checkbox" class="label-choice__input">
+                        <span class="label-choice__custom">
+                          <svg class="icon">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+                          </svg>
+                        </span>
                         <span class="label-choice__text">Champion</span>
                       </label>
-                      <span class="chapter__count">120</span>
+                      <span class="chapter__count">34</span>
                     </li>
                     <li class="sub-catalog__item chapter">
                       <label class="label-choice chapter__label">
-                        <span class="label-choice__custom"></span>
                         <input type="checkbox" class="label-choice__input">
+                        <span class="label-choice__custom">
+                          <svg class="icon">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+                          </svg>
+                        </span>
                         <span class="label-choice__text">Tempest</span>
                       </label>
-                      <span class="chapter__count">120</span>
+                      <span class="chapter__count">123</span>
+                    </li>
+                    <li class="sub-catalog__item chapter">
+                      <label class="label-choice chapter__label">
+                        <input type="checkbox" class="label-choice__input">
+                        <span class="label-choice__custom">
+                          <svg class="icon">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+                          </svg>
+                        </span>
+                        <span class="label-choice__text">Champion</span>
+                      </label>
+                      <span class="chapter__count">34</span>
                     </li>
                   </ul>
                 </li>
