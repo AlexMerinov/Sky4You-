@@ -15,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
    @@include('./blocks/counter.js');
    @@include('./blocks/catalog.js');
    @@include('./blocks/choice.js');
+   @@include('./blocks/range-slider.js');
 }); 
