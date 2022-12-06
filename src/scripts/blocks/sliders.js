@@ -20,6 +20,37 @@ window.app.Sliders = () => {
       }
    });
 
+   const sliderParent = new Swiper('.db-sl-parent', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+
+      thumbs: {
+         swiper: {
+            el: '.db-sl-child',
+            slidesPerView: 3,
+            spaceBetween: 40,
+            mousewheel: {
+               senstivity: 1,
+            },
+            navigation: {
+               nextEl: '.db-sl-child__btn--next',
+               prevEl: '.db-sl-child__btn--prev',
+            },
+         }
+      },
+
+      pagination: {
+         el: '.db-sl-parent-pagination',
+         clickable: true,
+      },
+
+      breakpoints: {
+         1360: {
+            pagination: false,
+         },
+      }
+   });
+
    const initSliders = () => {
 
       const sliders = document.querySelectorAll('.go-js-slider');
@@ -27,8 +58,8 @@ window.app.Sliders = () => {
 
       sliders.forEach((slider) => {
          
-         const sliderBest = slider.querySelector('.slider-best');
-         const sliderView = slider.querySelector('.slider-view');
+         const sliderBest   = slider.querySelector('.slider-best');
+         const sliderView   = slider.querySelector('.slider-view');
          const navArrows = {
             navigation: {
                nextEl: slider.closest('.section').querySelector('.go-js-slider__btn--next'),

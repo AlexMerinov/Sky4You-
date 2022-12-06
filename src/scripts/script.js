@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
    // Plugins
    @@include('./plugins/swiper.js');
    @@include('./plugins/nouislider.min.js');
+   @@include('./plugins/cookie.min.js');
+   @@include('./plugins/fancybox.umd.js');
 
    //Blocks
 
@@ -16,4 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
    @@include('./blocks/catalog.js');
    @@include('./blocks/choice.js');
    @@include('./blocks/range-slider.js');
+   @@include('./blocks/cookie.js');
+   
 }); 

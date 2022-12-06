@@ -1,7 +1,7 @@
-// window.app.Init = () => {
-//    const lightbox = GLightbox({
-   
-//    });
-// };
+window.app.Init = () => {
+    vFancybox.bind("[data-fancybox]", {
+        // Your options go here
+    });
+};
 
-// window.app.Init();
+window.app.Init();

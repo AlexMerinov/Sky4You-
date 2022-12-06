@@ -105,6 +105,25 @@
     <!-- Main -->
     <main class="page__category row-box category-page">
       <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Каталог</a>
+          </li>  
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Категория</a>
+          </li>    
+        </ul>
+        <h1 class="title page__title">Категория</h1>
+        <ul class="page__categories list-links">
+          <li class="list-links__item"><a href="#">Фильтр масла</a></li>
+          <li class="list-links__item"><a href="#">Свеча зажигания</a></li>
+          <li class="list-links__item"><a href="#">Tempest</a></li>
+          <li class="list-links__item"><a href="#">Champion</a></li>
+          <li class="list-links__item"><a href="#">Моторное масло</a></li>
+        </ul>
         <div class="row-box__row">
           <div class="row-box__col-l">
             <div class="filters">
@@ -393,7 +412,39 @@
                     </div>
                   </div>
                 </li>
+                <li class="catalog-item filters__catalog-item">
+                  <div href="#" class="catalog-item__header cat-header">
+                    <span class="cat-header__name">УПАКОВКА</span>
+                    <button type="button" class="cat-header__btn go-js-drop-catalog">
+                      <svg class="icon cat-header__icon-btn">
+                        <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <ul class="sub-catalog catalog-item__sub">
+                    <li class="sub-catalog__item chapter">
+                      <label class="label-choice label-choice--round chapter__label">
+                        <input type="radio" name="package" class="label-choice__input">
+                        <span class="label-choice__custom">
+                        </span>
+                        <span class="label-choice__text">Да</span>
+                      </label>
+                    </li>
+                    <li class="sub-catalog__item chapter">
+                      <label class="label-choice label-choice--round chapter__label">
+                        <input type="radio" name="package" class="label-choice__input">
+                        <span class="label-choice__custom">
+                        </span>
+                        <span class="label-choice__text">Нет</span>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
               </ul>
+              <div class="filters__buttons filters-btn">
+                <button type="button" class="btn filters-btn__on">ПРИМЕНИТЬ</button>
+                <button type="button" class="btn filters-btn__off">СБРОСИТЬ</button>
+              </div>
             </div>
           </div>
           <div class="row-box__col-r sections">
@@ -401,7 +452,6 @@
 
             <!--Section banner-->
             <div class="sections__section section">
-                <h2 class="title section__title">Категория</h2>
                 <div class="category-box">
                     <div class="category-box__header">
                       <button type="button" class="category-box__filter">
@@ -1510,6 +1560,20 @@
     </div>
   </div>
   <!-- / Popup btn pagination-->
+</div>
+
+<div class="cookie-alert cookie-alert--js">
+  <div class="cookie-alert__container">
+      <div class="cookie-alert__left">
+          <p>
+              При использовании данного сайта, вы подтверждаете свое согласие на использование файлов cookie и других похожих технологий в соответствии с настоящим Уведомлением. 
+          </p>
+      </div>
+      <div class="cookie-alert__right">
+          <a href="https://ru.wikipedia.org/wiki/Cookie" target="_blank">Подробнее</a>
+          <button type="button" class="cookie-alert__btn cookie-alert__btn--js">Ок. Согласен!</button>
+      </div>
+  </div>
 </div>
 <!-- / Popup pagination-->
 

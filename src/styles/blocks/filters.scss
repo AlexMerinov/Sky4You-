@@ -107,6 +107,44 @@
     }
 }
 
+.label-choice.label-choice--round {
+    .label-choice__custom {
+        border-radius: 100%;
+        transition: .3s;
+        position: relative;
+        cursor: pointer;
+        &::after {
+            content: '';
+            display: block;
+            width: 0px;
+            height: 0px;
+            border-radius: 100%;
+            background-color: $primary;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s;
+        }
+    }
+    &:hover {
+        .label-choice__custom {
+            border: 2px solid $hover;
+        }
+    }
+
+    .label-choice__input:checked ~ .label-choice__custom {
+        border: 2px solid $hover;
+        background-color: #FFF;
+    }
+
+    .label-choice__input:checked ~ .label-choice__custom::after {
+        width: 12px;
+        height: 12px;
+    }
+}
+
 .range-slider {
     padding-bottom: 20px;
     border-bottom: 1px solid $background-active;
@@ -358,3 +396,47 @@
     }
 }
 
+.filters-btn {
+    &__on {
+        width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFF;
+        font-weight: 500;
+        background-color: $secondary;
+        margin-bottom: 10px;
+        padding: 14px;
+        &:active {
+            background-color: $primary;
+        }
+    }
+
+    &__off {
+        font-size: 16px;
+        line-height: 22px;
+        width: 100%;
+        color: $primary;
+        font-weight: 500;
+        background-color: $background;
+        padding: 14px;
+        &:active {
+            background-color: $hover;
+            color: #FFF;
+        }
+    }
+
+    @media screen and (min-width: 1360px) {
+        &__on {
+            &:hover {
+                background-color: $primary;
+            }
+        }
+    
+        &__off {
+            &:hover {
+                background-color: $hover;
+                color: #FFF;
+            }
+        }
+    }
+}

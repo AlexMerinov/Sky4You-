@@ -12,8 +12,8 @@ window.app.Catalog = () => {
          btnOpenCatalog.classList.toggle('cat-header__btn--active');
 
          let subList = listHeader.closest('.catalog-item').querySelector('.sub-catalog');
-
          subList.classList.toggle('active');
+
 
          if (subList.classList.contains('active')) {
             subList.style.maxHeight = subList.scrollHeight + "px";

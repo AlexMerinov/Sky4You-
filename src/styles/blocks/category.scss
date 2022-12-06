@@ -5,8 +5,14 @@
     }
     &__choice-box {
         margin-left: 50px;
-        &:first-child {
+        &:nth-child(2) {
             margin-left: auto;
+        }
+        &:nth-child(3) {
+            display: none;
+            @media screen and (min-width: 768px) {
+                display: block;
+            }
         }
     }
 

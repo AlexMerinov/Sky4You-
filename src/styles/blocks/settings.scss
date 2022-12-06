@@ -13,6 +13,28 @@ body {
       display: flex;
       flex-direction: column;
    }
+
+   &__title {
+      margin-bottom: 10px;
+      @media screen and (min-width: 1360px) {
+         margin-bottom: 30px;
+      }
+   }
+
+   &__categories {
+      margin-bottom: 30px;
+      @media screen and (min-width: 1360px) {
+         margin-bottom: 80px;
+      }
+   }
+
+   &__categories.list-links {
+      flex-wrap: nowrap;
+      overflow: auto;
+      .list-links__item {
+         margin-top: 0;
+      }
+   }
 }
 
 body.lock {
@@ -188,5 +210,69 @@ button {
 
    @media screen and (min-width: 1360px) {
       display: none;
+   }
+}
+
+.breadcrumbs {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+   &__item {
+      position: relative;
+      margin-right: 20px;
+      &::after {
+         content: '';
+         display: block;
+         width: 10px;
+         height: 1px;
+         background-color: $text2;
+
+         position: absolute;
+         right: -15px;
+         top: 50%;
+         transform: translateY(-50%);
+      }
+
+      &:last-child {
+         margin-right: 0;
+         &::after {
+            display: none;
+         }
+      }
+   }
+
+   &__link {
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      color: $text2;
+      transition: .3s;
+      &:active {
+         color: $hover;
+      }
+
+      &--active {
+         color: $primary;
+      }
+   }
+
+   @media screen and (min-width: 1360px) {
+      margin-bottom: 20px;
+      &__item {
+         position: relative;
+         margin-right: 25px;
+         &::after {
+            width: 15px;
+            right: -20px;
+         }
+      }
+   
+      &__link {
+         font-size: 16px;
+         line-height: 22px;
+         &:hover {
+            color: $hover;
+         }
+      }
    }
 }

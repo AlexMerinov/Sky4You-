@@ -1,0 +1,50 @@
+.details-row {
+    &__slide {
+        margin-right: 50px;
+        max-width: 534px;
+    }
+}
+.duble-slides {
+    display: flex;
+    flex-direction: column;
+    &__parent {
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 20px;
+            padding: 23px 23px 32px 23px;
+        }
+    }
+}
+
+.db-sl-child {
+    &__btn {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $background;
+        cursor: pointer;
+        transition: background-color 0.3s linear;
+    
+        .icon {
+           width: 18px;
+           height: 14px;
+           stroke: $primary;
+           fill: none;
+           transition: fill 0.3s linear;
+        }
+    
+        &--prev {
+           .icon {
+              transform: rotate(180deg);
+           }
+        }
+    
+        &:hover {
+           background-color: $primary;
+           .icon {
+              stroke: #FFF;
+           }
+        }
+    }
+}

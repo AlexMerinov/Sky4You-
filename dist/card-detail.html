@@ -122,16 +122,113 @@
     </header>
     <!-- / Header -->
     <!-- Main -->
-    <main class="page__main main">
+    <main class="page__details row-box details-page">
       <div class="container">
-        <ul class="list-pages">
-          <li class="list-pages__item"><a href="main.html"># Главная</a></li>
-          <li class="list-pages__item"><a href="catalog.html"># Каталог</a></li>
-          <li class="list-pages__item"><a href="category.html"># Категории</a></li>
-          <li class="list-pages__item"><a href="card-detail.html"># Карточка товара</a></li>
-          <li class="list-pages__item"><a href=""></a></li>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Каталог</a>
+          </li>  
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Категория</a>
+          </li>    
         </ul>
+        <h1 class="title page__title">Фильтр масла AA48112 TEMPEST (Robinson)</h1>
+        <div class="details-page__row details-row">
+          <div class="details-row__slide">
+            <div class="duble-slides">
+              <!-- Slider main container -->
+              <div class="duble-slides__parent">
+                <div class="swiper db-sl-parent">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <a href="images/content/product.png" data-fancybox="gallery" class="db-sl-parent__item">
+                        <img src="images/content/product.png" alt="alt-text">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/content/product.png" data-fancybox="gallery" class="db-sl-parent__item">
+                        <img src="images/content/product.png" alt="alt-text">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="images/content/product.png" data-fancybox="gallery" class="db-sl-parent__item">a>
+                        <img src="images/content/product.png" alt="alt-text">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="db-sl-parent-pagination"></div>
+              </div>
+
+              <!-- Slider main container -->
+              <div class="duble-slides__child">
+                <div class="swiper db-sl-child">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <picture class="db-sl-child__item">
+                        <img src="images/content/product.png" alt="alt-text">
+                      </picture>
+                    </div>
+                    <div class="swiper-slide">
+                      <picture class="db-sl-child__item">
+                        <img src="images/content/product.png" alt="alt-text">
+                      </picture>
+                    </div>
+                    <div class="swiper-slide">
+                      <picture class="db-sl-child__item">
+                        <img src="images/content/product.png" alt="alt-text">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <button type="button" class="db-sl-child__btn db-sl-child__btn--prev">
+                  <svg class="icon">
+                    <use xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"></use>
+                  </svg>
+                </button>
+                <button type="button" class="db-sl-child__btn db-sl-child__btn--next">
+                  <svg class="icon">
+                    <use xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="details-row__desc"></div>
+          <div class="details-row__cart">
+          </div>
+        </div>
       </div>
+
+      <!-- Questions -->
+      <section class="sections__section questions">
+        <div class="container">
+          <div
+            class="questions__wrapper"
+            style="background-image: url('images/content/question.png')"
+          >
+            <div class="questions__box">
+              <h2 class="questions__title">Остались вопросы? Пишите!</h2>
+              <span class="questions__desc">
+                Оставьте свою заявку и наши специалисты свяжутся с Вами в
+                ближайшее время
+              </span>
+            </div>
+            <button type="button" class="btn questions__btn">
+              ОСТАВИТЬ ЗАЯВКУ
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- / Questions -->
     </main>
     <!-- / Main -->
 
@@ -792,6 +889,20 @@
     </div>
   </div>
   <!-- / Popup btn pagination-->
+</div>
+
+<div class="cookie-alert cookie-alert--js">
+  <div class="cookie-alert__container">
+      <div class="cookie-alert__left">
+          <p>
+              При использовании данного сайта, вы подтверждаете свое согласие на использование файлов cookie и других похожих технологий в соответствии с настоящим Уведомлением. 
+          </p>
+      </div>
+      <div class="cookie-alert__right">
+          <a href="https://ru.wikipedia.org/wiki/Cookie" target="_blank">Подробнее</a>
+          <button type="button" class="cookie-alert__btn cookie-alert__btn--js">Ок. Согласен!</button>
+      </div>
+  </div>
 </div>
 <!-- / Popup pagination-->
 
