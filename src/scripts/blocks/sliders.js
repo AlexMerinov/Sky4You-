@@ -111,6 +111,27 @@ window.app.Sliders = () => {
                   }
                });
                break;
+            case slider.dataset.sliderName == 'similar':
+               new Swiper(sliderBest, {
+                  slidesPerView: 2.2,
+                  spaceBetween: 10,
+                  watchSlidesProgress: true,
+                  breakpoints: {
+                     768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                     },
+                     1360: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                        navigation: {
+                           nextEl: navArrows.navigation.nextEl,
+                           prevEl: navArrows.navigation.prevEl,
+                        },
+                     },
+                  }
+               }); 
+               break;
          }
       });
 

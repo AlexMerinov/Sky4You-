@@ -60,30 +60,6 @@ const markup = () => {
     .pipe(browserSync.stream());
 };
 
-
-// Styles
-
-// const styles = () => {
-//     return gulp.src([
-//         srcFolder + '/styles/fonts.scss',
-//         srcFolder + '/styles/reset.scss',
-//         srcFolder + '/styles/params.scss',
-//         srcFolder + '/styles/plugins/*.scss',
-//         srcFolder + '/styles/blocks/*.scss',
-//         srcFolder + '/styles/style.scss',
-//     ])
-//     .pipe(gulpConcat('style.min.css'))
-//     .pipe(gulpSass())
-//     .pipe(gulpAutoprefixer({
-//         overrideBrowserslist:  ['last 5 versions'],
-//         cascade: true,
-//     }))
-//     .pipe(gulpGroupCSSMediaQueries())
-//     .pipe(gulpCleanCSS())
-//     .pipe(gulp.dest(distFolder + '/styles/'))
-//     .pipe(browserSync.stream());
-// };
-
 const styles = () => {
    return gulp.src([
        srcFolder + '/styles/style.scss',
@@ -108,26 +84,14 @@ const scripts = () => {
        srcFolder + '/scripts/script.js',
    ])
    .pipe(gulpFileInclude())
-   .pipe(gulpBabel({
-       presets: ['@babel/env'],
-   }))
+//    .pipe(gulpBabel({
+//        presets: ['@babel/env'],
+//    }))
    .pipe(gulpUglify())
    .pipe(gulpRename('script.min.js'))
    .pipe(gulp.dest(distFolder + '/scripts/'))
    .pipe(browserSync.stream());
 };
-
-// const scripts = () => {
-//     return gulp.src([
-//         srcFolder + '/scripts/plugins/*.js',
-//         srcFolder + '/scripts/blocks/*.js',
-//         srcFolder + '/scripts/script.js',
-//     ])
-//     .pipe(gulpConcat('script.min.js'))
-//     .pipe(gulpTerser())
-//     .pipe(gulp.dest(distFolder + '/scripts/'))
-//     .pipe(browserSync.stream());
-// };
 
 
 // Images

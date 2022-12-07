@@ -1,21 +1,115 @@
-.details-row {
-    &__slide {
-        margin-right: 50px;
-        max-width: 534px;
+.details-page {
+    &__row {
+        margin-bottom: 30px;
+        @media screen and (min-width: 1360px) {
+            margin-bottom: 50px;
+        }
     }
 }
+
+.details-row {
+    display: grid;
+    grid-template-columns: minmax(1fr, 576px);
+    width: 100%;
+
+    &__slide {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    &__desc {
+        margin-right: 40px;
+    }
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, auto);
+        &__slide {
+            margin-right: 20px;
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+
+        &__cart {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+    }
+
+    @media screen and (min-width: 1360px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        &__slide {
+            width: 534px;
+            margin-right: 50px;
+        }
+        &__desc {
+            width: 400px;
+        }
+        &__cart {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+    }
+}
+
 .duble-slides {
     display: flex;
     flex-direction: column;
+    min-width: 0;
+    max-width: 100%;
     &__parent {
-        @media screen and (min-width: 1024px) {
+        @media screen and (min-width: 1360px) {
             margin-bottom: 20px;
             padding: 23px 23px 32px 23px;
+        }
+    }
+
+    &__child {
+        display: none;
+        @media screen and (min-width: 576px) {
+            display: block;
+            position: relative;
+            padding: 0 40px;
+        }
+        @media screen and (min-width: 1360px) {
+            padding: 0 90px;
+        }
+    }
+}
+
+.db-sl-parent {
+    max-width: 100%;
+    min-width: 0; 
+    &__item {
+        display: block;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
 }
 
 .db-sl-child {
+    max-width: 100%;
+    min-width: 0; 
+    &__item {
+        display: block;
+        cursor: pointer;
+        border: 1px solid #FFF;
+        transition: .3s;
+        &:hover {
+            border-color: $hover;
+        }
+    }
+
+    .swiper-slide-thumb-active {
+        .db-sl-child__item {
+            border-color: $secondary;
+        }
+    }
+
     &__btn {
         width: 50px;
         height: 50px;
@@ -25,6 +119,11 @@
         background-color: $background;
         cursor: pointer;
         transition: background-color 0.3s linear;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
     
         .icon {
            width: 18px;
@@ -33,8 +132,13 @@
            fill: none;
            transition: fill 0.3s linear;
         }
+
+        &--next {
+            right: 0;
+        }
     
         &--prev {
+            left: 0;
            .icon {
               transform: rotate(180deg);
            }
@@ -45,6 +149,289 @@
            .icon {
               stroke: #FFF;
            }
+        }
+    }
+}
+
+.col-desc {
+    &__subtitle {
+        font-size: 16px;
+        line-height: 22px;
+        color: $primary;
+        font-weight: 700;
+        margin-bottom: 15px;
+        @media screen and (min-width: 1360px) {
+            font-size: 20px;
+            line-height: 27px;
+
+            margin-bottom: 21px;
+        }
+    }
+
+    &__list {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        @media screen and (min-width: 1360px) {
+            margin-bottom: 38px;
+        }
+    }
+
+    &__show-btn {
+        @media screen and (min-width: 768px) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.char-list {
+    &__item {
+        padding-bottom: 12px;
+        margin-bottom: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $background-active;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    &__name {
+        color: $text2;
+    }
+
+    &__mean {
+        color: $primary;
+        margin-left: 30px;
+        white-space: nowrap;
+    }
+
+    @media screen and (min-width: 1360px) {
+        &__item {
+            font-size: 16px;
+            line-height: 22px;
+            padding-bottom: 6px;
+            margin-bottom: 6px;
+        }
+    }
+}
+
+.add-cart {
+    padding: 13px 20px;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    &__price {
+        display: block;
+        font-size: 40px;
+        line-height: 54px;
+        font-weight: 700;
+        color: $primary;
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        margin-right: 10px;
+    }
+
+    &__elem {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.tabs-box {
+    &__list {
+        padding-top: 20px;
+    }
+}
+
+.tabs-list {
+    &__item {
+        .char-list {
+            &__item {
+                &:nth-child(2n) {
+                    background-color: $background;
+                }
+            }
+        }
+
+        p {
+
+        }
+    }
+}
+
+.tabs-btn {
+    display: flex;
+    &__item {
+        margin-right: 20px;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #9BAAB9;
+        transition: .3s;
+        cursor: pointer;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        input {
+            width: 0;
+            height: 0;
+            position: absolute;
+            opacity: 0;
+        }
+
+        span {
+            position: relative;
+            transition: .3s;
+            &::after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: $secondary;
+                transition: .3s;
+                opacity: 0;
+
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+            }
+        }
+
+        input:checked ~ span {
+            color: $primary;
+        }
+
+        input:checked ~ span::after {
+            width: 100%;
+            opacity: 1;
+        }
+
+        @media screen and (min-width: 1360px) {
+            font-size: 16px;
+            line-height: 22px;
+            margin-right: 40px;
+            &:hover {
+                color: $hover;
+            }
+        }
+    }
+}
+
+.doc-list {
+    margin-left: -15px;
+    margin-right: -15px;
+    &__item {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 768px) {
+        column-count: 2;
+        &__item {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.doc-link {
+    position: relative;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    transition: .3s;
+    &__icon {
+        display: block;
+        flex: 0 0 auto;
+        width: 33px;
+        height: 40px;
+        margin-right: 10px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @media screen and (min-width: 1360px) {
+            width: 58px;
+            height: 61px;
+            margin-right: 12px;
+        }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        display: block;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        color: $primary;
+        margin-bottom: 5px;
+
+        @media screen and (min-width: 1360px) {
+            font-size: 20px;
+            line-height: 27px;
+        }
+    }
+
+    &__size {
+        display: block;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $text2;
+
+        @media screen and (min-width: 1360px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    &__links {
+        display: none;
+
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+    
+            position: absolute;
+            height: 100%;
+            right: 20px;
+            top: 0;
+            opacity: 0;
+            transition: .3s;
+    
+            .icon {
+                width: 20px;
+                height: 20px;
+                fill: $primary;
+                transition: .3s;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: $background;
+        .doc-link__links {
+            opacity: 1;
+        }
+        .icon {
+            &:hover {
+                fill: $hover;
+            }
         }
     }
 }

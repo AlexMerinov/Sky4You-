@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-   window.app = {};
+   window.app = {}
 
    // Plugins
    @@include('./plugins/swiper.js');
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
    @@include('./plugins/cookie.min.js');
    @@include('./plugins/fancybox.umd.js');
 
-   //Blocks
+   // Blocks
 
    @@include('./blocks/burger.js');
    @@include('./blocks/sliders.js');
@@ -19,5 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
    @@include('./blocks/choice.js');
    @@include('./blocks/range-slider.js');
    @@include('./blocks/cookie.js');
-   
-}); 
+
+})
