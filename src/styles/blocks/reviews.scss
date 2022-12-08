@@ -1,0 +1,314 @@
+.reviews {
+    &__rating-box {
+        gap: 50px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__rating {
+        margin-bottom: 30px;
+    }
+
+    &__prompt {
+        padding: 10px;
+        background-color: $background;
+        margin-bottom: 25px;
+
+        @media screen and (min-width: 1360px) {
+            padding: 21px 20px;
+            margin-bottom: 21px;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 30px;
+        padding: 11px 16px;
+        background-color: $secondary;
+
+        font-size: 14px;
+        line-height: 19px;
+        &:active {
+            background-color: $primary;
+        }
+        @media screen and (min-width: 1360px) {
+            margin-bottom: 50px;
+            padding: 20px 45px;
+            font-size: 16px;
+            line-height: 22px;
+            &:hover {
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+.like-box {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+        &:last-child {
+            margin-right: 30px;
+        }
+    }
+
+    &__input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    &__icon {
+        width: 17px;
+        height: 17px;
+        fill: $decor;
+        margin-right: 5px;
+        cursor: pointer;
+        transition: .3s;
+        &--dis {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &__count {
+        color: $decor;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        color: $text2;
+    }
+
+    .like-box__input:checked ~ .like-box__icon {
+        fill: $secondary;
+    }
+
+    .like-box__input:checked ~ .like-box__icon--dis {
+        fill: #E32700;
+    }
+}
+
+.reviews-item {
+    border-top: 1px solid $decor;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    &__header {
+        margin-bottom: 15px;
+    }
+
+    &__block {
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+        color: $primary;
+    }
+
+    &__date {
+        font-size: 12px;
+        line-height: 27px;
+        font-weight: 400;
+        color: $text2;
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 700;
+        color: $primary;
+        margin-bottom: 5px;
+    }
+
+    &__answer {
+        padding-left: 10px;
+    }
+
+    &__footer {
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__answer-btn {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        color: $secondary;
+        text-decoration: underline;
+        opacity: 1;
+        transition: .3s;
+        &:active {
+            text-decoration: none;
+        } 
+    }
+
+    &__answer-btn.active {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    &__answer-close {
+        margin-left: auto;
+        width: 0px;
+        height: 0px;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $background;
+        padding: 7px;
+        transition: .3s;
+        .icon {
+            width: 16px;
+            height: 16px;
+            fill: $primary;
+            transition: .3s;
+        }
+
+        &:active {
+            background-color: $primary;
+            .icon {
+                fill: #FFF;
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                background-color: $primary;
+                .icon {
+                    fill: #FFF;
+                }
+            }
+        }
+
+        @media screen and (min-width: 1360px) {
+            width: 0px;
+            height: 0px;
+            padding: 10px;
+            .icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__answer-close.active {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+    }
+
+    @media screen and (min-width: 1360px) {
+        padding-bottom: 30px;
+        padding-top: 30px;
+        &__header {
+            margin-bottom: 30px;
+        }
+
+        &__name {
+            font-size: 20px;
+            line-height: 27px;
+        }
+
+        &__date {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 10px;
+        }
+
+        &__block {
+            margin-bottom: 20px;
+        }
+
+        &__answer-btn {
+            font-size: 16px;
+            line-height: 17px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &__answer {
+            padding-left: 50px;
+        }
+    }
+}   
+
+.answer-form {
+    &__field {
+        margin-bottom: 15px;
+        @media screen and (min-width: 1360px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__info {
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 400;
+        color: $hover;
+        margin-bottom: 15px;
+        @media screen and (min-width: 1360px) {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__consent {
+        margin-bottom: 15px;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        color: $text2;
+        a {
+            color: $secondary;
+            text-decoration: underline;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 20px;
+            a:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__btn {
+        padding: 11px 22px;
+        background-color: $secondary;
+        &:active {
+            background-color: $primary;
+        }
+        @media screen and (min-width: 1024px) {
+            &:hover {
+                background-color: $primary;
+            }
+        }
+        @media screen and (min-width: 1360px) {
+            padding: 14px 58px;
+        }
+    }
+}

@@ -249,27 +249,27 @@
             </div>
           </div>
         </div>
-        <div class="tabs-box">
-          <div class="tabs-box__pagination tabs-btn">
-            <label class="tabs-btn__item">
-              <input type="radio" name="tabs-btn">
+        <div class="tabs-box details-page__tabs-box">
+          <div class="tabs-box__pagination tabs-btn go-js-tabs-btns">
+            <label class="tabs-btn__item" data-tab="desc">
+              <input type="radio" checked name="tabs-btn">
               <span>ОПИСАНИЕ</span>
             </label>
-            <label class="tabs-btn__item">
+            <label class="tabs-btn__item" data-tab="char">
               <input type="radio" name="tabs-btn">
               <span>ХАРАКТЕРИСТИКИ</span>
             </label>
-            <label class="tabs-btn__item">
+            <label class="tabs-btn__item" data-tab="doc">
               <input type="radio" name="tabs-btn">
               <span>ДОКУМЕНТЫ</span>
             </label>
-            <label class="tabs-btn__item">
+            <label class="tabs-btn__item" data-tab="reviews">
               <input type="radio" name="tabs-btn">
               <span>ОТЗЫВЫ</span>
             </label>
           </div>
-          <div class="tabs-box__list tabs-list">
-            <div class="tabs-list__item text">
+          <div class="tabs-box__list tabs-list go-js-tabs-list">
+            <div class="tabs-list__item text" data-tab="desc">
               <p>
                 Для современного мира выбранный нами инновационный путь обеспечивает актуальность распределения внутренних резервов и ресурсов. Но курс на социально-ориентированный национальный проект позволяет выполнить важные задания по разработке первоочередных требований. В частности, выбранный нами инновационный путь способствует повышению качества новых принципов формирования материально-технической и кадровой базы.
               </p>
@@ -280,7 +280,7 @@
                 Вот вам яркий пример современных тенденций — сложившаяся структура организации предопределяет высокую востребованность анализа существующих паттернов поведения. В целом, конечно, высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки кластеризации усилий.
               </p>
             </div>
-            <div class="tabs-list__item">
+            <div class="tabs-list__item" data-tab="char">
               <ul class="char-list">
                 <li class="char-list__item">
                   <span class="char-list__name">Толщина банки</span>
@@ -308,7 +308,7 @@
                 </li>
               </ul>
             </div>
-            <div class="tabs-list__item">
+            <div class="tabs-list__item" data-tab="doc">
               <ul class="doc-list">
                 <li class="doc-list__item">
                   <div class="doc-link">
@@ -322,7 +322,7 @@
                     <div class="doc-link__links">
                       <a href="images/content/promo.png" download="product.png">
                         <svg class="icon">
-                          <use xlink:href="svg-sprite/svg-sprite.svg#Eye"></use>
+                          <use xlink:href="svg-sprite/svg-sprite.svg#Download"></use>
                         </svg>
                       </a>
                       <a href="">
@@ -345,7 +345,7 @@
                     <div class="doc-link__links">
                       <a href="images/content/promo.png" download="product.png">
                         <svg class="icon">
-                          <use xlink:href="svg-sprite/svg-sprite.svg#Eye"></use>
+                          <use xlink:href="svg-sprite/svg-sprite.svg#Download"></use>
                         </svg>
                       </a>
                       <a href="">
@@ -368,7 +368,7 @@
                     <div class="doc-link__links">
                       <a href="images/content/promo.png" download="product.png">
                         <svg class="icon">
-                          <use xlink:href="svg-sprite/svg-sprite.svg#Eye"></use>
+                          <use xlink:href="svg-sprite/svg-sprite.svg#Download"></use>
                         </svg>
                       </a>
                       <a href="">
@@ -391,7 +391,7 @@
                     <div class="doc-link__links">
                       <a href="images/content/promo.png" download="product.png">
                         <svg class="icon">
-                          <use xlink:href="svg-sprite/svg-sprite.svg#Eye"></use>
+                          <use xlink:href="svg-sprite/svg-sprite.svg#Download"></use>
                         </svg>
                       </a>
                       <a href="">
@@ -414,7 +414,7 @@
                     <div class="doc-link__links">
                       <a href="images/content/promo.png" download="product.png">
                         <svg class="icon">
-                          <use xlink:href="svg-sprite/svg-sprite.svg#Eye"></use>
+                          <use xlink:href="svg-sprite/svg-sprite.svg#Download"></use>
                         </svg>
                       </a>
                       <a href="">
@@ -427,7 +427,7 @@
                 </li>
               </ul>
             </div>
-            <div class="tabs-list__item">
+            <div class="tabs-list__item" data-tab="reviews">
               <div class="reviews">
                 <div class="reviews__rating rating">
                   <!-- <div class="rating-stars">
@@ -475,10 +475,10 @@
                     <span class="rating-sum__quantity"></span>
                   </div>
                 </div>
-                <div class="reviews__prompt">
+                <div class="reviews__prompt text">
                   Уважаемый клиент, Вы еще не заказывали у нас данный товар. Закажите и поделитесь своим мнением
                 </div>
-                <button type="button" class="btn">ОСТАВИТЬ ОТЗЫВ</button>
+                <button type="button" class="btn reviews__btn">ОСТАВИТЬ ОТЗЫВ</button>
                 <div class="reviews__rating-box">
                   <div class="rating-grade">
                     <div class="rating-grade__stars">
@@ -506,6 +506,149 @@
                       </div>
                     </div>
                     <span class="rating-grade__quantity">4</span>
+                  </div>
+                </div>
+                <div class="reviews__box reviews-box">
+                  <div class="reviews-box__item reviews-item">
+                    <div class="reviews-item__header">
+                      <div class="reviews-item__title">
+                        <span class="reviews-item__name">Иван Иванов</span>
+                        <div class="reviews-item__date">15 октября 2022</div>
+                      </div>
+                      <div class="rating-grade reviews-item__rating">
+                        <div class="rating-grade__stars">
+                          <img class="rating-off" src="images/icons/Rating-off.svg" alt="rating">
+                          <div class="rating-on rating-on--100">
+                            <img class="rating-on__image" src="images/icons/Rating-on.svg" alt="rating">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reviews-item__block">
+                      <span class="reviews-item__subtitle">Плюсы</span>
+                      <div class="reviews-item__text text">
+                        <p>
+                          Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="reviews-item__block">
+                      <span class="reviews-item__subtitle">Минусы</span>
+                      <div class="reviews-item__text text">
+                        <p>
+                          Идейные соображения высшего порядка.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="reviews-item__block">
+                      <span class="reviews-item__subtitle">Отзыв</span>
+                      <div class="reviews-item__text text">
+                        <p>
+                          Для современного мира выбранный нами инновационный путь обеспечивает актуальность распределения внутренних резервов и ресурсов. Но курс на социально-ориентированный национальный проект позволяет выполнить важные задания по разработке первоочередных требований. В частности, выбранный нами инновационный путь способствует повышению качества новых принципов формирования материально-технической и кадровой базы.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="reviews-item__footer">
+                      <div class="like-box go-js-like-box">
+                        <label class="like-box__item go-js-like-item">
+                          <input type="radio" name="like" class="like-box__input">
+                          <svg class="like-box__icon">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#Like"></use>
+                          </svg>
+                          <span class="like-box__count">15</span>
+                        </label>
+                        <label class="like-box__item go-js-like-item">
+                          <input type="radio" name="like" class="like-box__input">
+                          <svg class="like-box__icon like-box__icon--dis">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#Like"></use>
+                          </svg>
+                          <span class="like-box__count">7</span>
+                        </label>
+                      </div>
+                      <button type="button" class="reviews-item__answer-btn">Ответить</button>
+                      <button type="button" class="reviews-item__answer-close">
+                        <svg class="icon">
+                          <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="reviews-item__answer">
+                      <span class="reviews-item__name">Елена Соколова</span>
+                      <div class="reviews-item__text text">
+                        <p>
+                          Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="reviews-box__item reviews-item">
+                    <div class="reviews-item__header">
+                      <div class="reviews-item__title">
+                        <span class="reviews-item__name">Иван Иванов</span>
+                        <div class="reviews-item__date">15 октября 2022</div>
+                      </div>
+                      <div class="rating-grade reviews-item__rating">
+                        <div class="rating-grade__stars">
+                          <img class="rating-off" src="images/icons/Rating-off.svg" alt="rating">
+                          <div class="rating-on rating-on--100">
+                            <img class="rating-on__image" src="images/icons/Rating-on.svg" alt="rating">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reviews-item__block">
+                      <span class="reviews-item__subtitle">Отзыв</span>
+                      <div class="reviews-item__text text">
+                        <p>
+                          Для современного мира выбранный нами инновационный путь обеспечивает актуальность распределения внутренних резервов и ресурсов. Но курс на социально-ориентированный национальный проект позволяет выполнить важные задания по разработке первоочередных требований. В частности, выбранный нами инновационный путь способствует повышению качества новых принципов формирования материально-технической и кадровой базы.
+                        </p>
+                      </div>
+                      <div class="reviews-item__footer">
+                        <div class="like-box go-js-like-box">
+                          <label class="like-box__item go-js-like-item">
+                            <input type="radio" name="like" class="like-box__input">
+                            <svg class="like-box__icon">
+                              <use xlink:href="svg-sprite/svg-sprite.svg#Like"></use>
+                            </svg>
+                            <span class="like-box__count">15</span>
+                          </label>
+                          <label class="like-box__item go-js-like-item">
+                            <input type="radio" name="like" class="like-box__input">
+                            <svg class="like-box__icon like-box__icon--dis">
+                              <use xlink:href="svg-sprite/svg-sprite.svg#Like"></use>
+                            </svg>
+                            <span class="like-box__count">7</span>
+                          </label>
+                        </div>
+                        <button type="button" class="reviews-item__answer-btn">Ответить</button>
+                        <button type="button" class="reviews-item__answer-close">
+                          <svg class="icon">
+                            <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <form action="" class="reviews-item__form answer-form">
+                      <span class="answer-form__info">Вы в ответ Иван Иванов, 15 октября 2022</span>
+                      <div class="answer-form__wrapper">
+                        <div class="field answer-form__field">
+                          <input type="text" id="male" class="field__input" placeholder="" />
+                          <label for="male" class="field__label">ВАШЕ ИМЯ *</label>
+                        </div>
+                        <div class="field answer-form__field">
+                          <input type="text" id="male" class="field__input" placeholder="" />
+                          <label for="male" class="field__label">E-MAIL *</label>
+                        </div>
+                        <div class="field answer-form__field">
+                          <input type="text" id="male" class="field__input" placeholder="" />
+                          <label for="male" class="field__label">КОММЕНТАРИЙ *</label>
+                        </div>
+                      </div>
+                      <div class="answer-form__consent">
+                        Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных данных</a>
+                      </div>
+                      <button class="btn answer-form__btn" type="button">ОТПРАВИТЬ</button>
+                    </form>
                   </div>
                 </div>
               </div>

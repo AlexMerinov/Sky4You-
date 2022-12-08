@@ -19,5 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
    @@include('./blocks/choice.js');
    @@include('./blocks/range-slider.js');
    @@include('./blocks/cookie.js');
+   @@include('./blocks/like.js');
+   @@include('./blocks/tabs.js');
 
 })
