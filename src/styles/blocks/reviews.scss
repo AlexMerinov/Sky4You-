@@ -296,6 +296,13 @@
         }
     }
 
+    &__wrapper {
+        margin-left: -15px;
+        margin-right: -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     &__btn {
         padding: 11px 22px;
         background-color: $secondary;
