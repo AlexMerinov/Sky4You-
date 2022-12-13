@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
    // Plugins
    @@include('./plugins/swiper.js');
    @@include('./plugins/nouislider.min.js');
-   @@include('./plugins/cookie.min.js');
+   // @@include('./plugins/cookie.min.js');
    @@include('./plugins/fancybox.umd.js');
 
    // Blocks

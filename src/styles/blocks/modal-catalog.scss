@@ -1,0 +1,35 @@
+.popup__catalog {
+   margin-top: 139px;
+   .catalog  {
+      background-color: #fff;
+      width: 309px;
+   }
+   .cat-header {
+      border-bottom: 1px solid #9aaec0;
+   }
+
+   .catalog-item {
+      border: none;
+      &:hover {
+         .cat-header {
+            background-color: $background-active;  
+         }
+      }
+   }
+
+   .cat-header {
+      background-color: $background;
+      padding: 13px 45px 13px 12px;
+      &__name {
+         text-transform: none;
+      }
+
+      &__btn {
+         width: 35px;
+      }
+
+      &__icon-btn {
+         transform: rotate(-90deg);
+      }
+   }
+}

@@ -1,10 +1,8 @@
 @keyframes showContent {
     0% {
-      transform: scaleY(0);
       opacity: 0;
     }
     100% {
-      transform: scaleY(1);
       opacity: 1;
     }
 }
@@ -22,13 +20,14 @@
         transition: .2s;
         .tabs-list__item {
             display: none;
-            transform: scaleY(0);
             opacity: 0;
             transform-origin: center top;
             animation: showContent 0.6s forwards;
+            transition: .5s;
         }
         .tabs-list__item.active-content {
             display: block;
+            transition: .5s;
         }
     }
 }

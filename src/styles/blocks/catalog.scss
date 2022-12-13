@@ -42,9 +42,17 @@
 .catalog {
    &-item {
       border-bottom: 1px solid $decor;
+      position: relative;
       &--sub-none {
          .cat-header__btn {
             display: none;
+         }
+      }
+
+      &:nth-child(n+8) {
+         .sub-catalog--hover {
+            bottom: 0;
+            top: auto;
          }
       }
    }
@@ -56,14 +64,15 @@
    align-items: center;
    padding: 13px 55px 13px 22px;
    position: relative;
-   border-bottom: 1px solid transparent;
+   z-index: 2;
    transition: .3s;
 
    &__icon {
       width: 17px;
       flex: 0 0 17px;
       height: 17px;
-      fill: $primary;
+      fill: none;
+      stroke: $primary;
       margin-right: 21px;
       transition: .3s;
    }
@@ -112,13 +121,12 @@
       }
 
       .cat-header__icon {
-         fill: $hover;
+         stroke: $hover;
       }
    }
 
    &--active {
       background-color: $background;
-      border-color: $decor;
    }
 }
 
@@ -126,6 +134,32 @@
    max-height: 0;
    overflow: hidden;
    transition: .2s;
+   &--hover {
+      max-height: max-content;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+
+      .sub-catalog__item {
+         margin: 0;
+         &:first-child {
+            margin-top: 0;
+         }
+      }
+
+      .sub-catalog__link {
+         display: block;
+         padding: 13px 20px;
+         &--all {
+            text-transform: uppercase;
+         }
+         &:hover {
+            background-color: $background;
+         }
+      }
+   }
    &__item {
       margin-bottom: 15px;
       &:first-child {
@@ -144,5 +178,38 @@
       &:active {
          color: $hover;
       }
+   }
+}
+
+.sub-catalog--hover.active {
+   left: 100%;
+}
+
+.catalog-box-hidden {
+   max-height: 370px;
+   overflow: hidden;
+   position: relative;
+   &__btn {
+      width: 100%;
+      padding: 14px;
+
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      color: $primary;
+      background-color: $background-active;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+   }
+}
+
+.sidebar-main {
+   &__catalog {
+      margin-bottom: 30px;
    }
 }

@@ -1,3 +1,11 @@
+@keyframes showPopup {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+}
 .body {
    &__popup {
       display: none;
@@ -9,9 +17,10 @@
       height: 100%;
       background-color: rgb(000, 000, 000, 0.33);
       z-index: 100;
-      transition: all 0.2s linear;
+
+      opacity: 0;
+      animation: showPopup .5s forwards;
       &--active {
-         transition: all 0.2s linear;
          display: block;
       }
    }
@@ -23,14 +32,40 @@
       justify-content: center;
       width: 100%;
       min-height: 100%;
+      @media screen and (min-width: 1024px) {
+         align-items: stretch;
+         justify-content: flex-end;
+      }
    }
 
    &__window {
+      overflow: hidden;
       width: 100%;
       max-width: 100%;
-      height: 100%;
       background-color: $primary;
       position: relative;
+      background-color: #FFF;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 60px;
+      padding-bottom: 200px;
+
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: 768px) {
+         padding-bottom: 200px;
+         padding-top: 76px;
+         padding-left: 22px;
+         padding-right: 22px;
+      }
+      @media screen and (min-width: 1024px) {
+         max-width: 50%;
+         display: flex;
+         flex-direction: column;
+         height: auto;
+         padding-left: 40px;
+         padding-right: 40px;
+      }
    }
 
 
@@ -73,18 +108,16 @@
    }
 }
 
-.popup {
-   &__window {
-      background-color: #FFF;
-   }
-}
-
 .popup-window-h {
    padding: 15px 12px;
    display: flex;
    align-items: center;
    justify-content: space-between;
    border-bottom: 1px solid $background;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
 
    &__title {
       font-size: 20px;
@@ -101,4 +134,35 @@
          line-height: 40px;
       }
    }
+}
+
+.popup-reviews {
+   &__form {
+      .form-box__buttons {
+         margin: 0;
+         width: 100%;
+      }
+   }
+}
+
+.reviews-rating {
+   &__name {
+      display: block;
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: 700;
+      color: $primary;
+      margin-bottom: 15px;
+   }
+
+   &__stars {
+      margin-bottom: 20px;
+      @media screen and (min-width: 768px) {
+         margin-bottom: 30px;
+      }
+   }
+}
+
+.body__popup--active#popup-reviews {
+   z-index: 999999;
 }
