@@ -2,8 +2,6 @@
    align-self: flex-end;
    &__desc {
       padding: 6px 12px;
-      margin-left: -12px;
-      margin-right: -12px;
       margin-bottom: 18px;
       background-color: $background;
       
@@ -16,19 +14,18 @@
          padding: 11px 22px;
          font-size: 16px;
          line-height: 22px;
-         margin-left: -22px;
-         margin-right: -22px;
       }
       @media screen and (min-width: 1024px) {
          margin-left: -40px;
          margin-right: -40px;
+         padding: 10px 40px;
       }
    }
 
    &__form {
+      padding-left: 12px;
+      padding-right: 12px;
       @media screen and (min-width: 768px) {
-         margin-left: -10px;
-         margin-right: -10px;
          display: flex;
          flex-wrap: wrap;
          flex-basis: content;
@@ -40,6 +37,10 @@
             &__label {
                left: 10px;
             }
+
+            &--100 {
+               width: 100%;
+            }
          }
 
          .form-box__link-pas {
@@ -48,6 +49,8 @@
       }
 
       @media screen and (min-width: 1024px) {
+         margin-left: -20px;
+         margin-right: -20px;
          .form-box__link-pas {
             margin-left: 10px;
          }

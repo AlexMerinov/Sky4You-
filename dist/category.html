@@ -142,9 +142,6 @@
                      <ul class="catalog filters__catalog">
                         <li class="catalog-item filters__catalog-item">
                            <div href="#" class="catalog-item__header cat-header">
-                              <svg class="icon cat-header__icon">
-                                 <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
-                              </svg>
                               <span class="cat-header__name">НАЗВАНИЕ КАТЕГОРИИ</span>
                               <button type="button" class="cat-header__btn go-js-drop-catalog">
                                  <svg class="icon cat-header__icon-btn">
@@ -233,7 +230,7 @@
                                  </svg>
                               </button>
                            </div>
-                           <ul class="sub-catalog catalog-item__sub">
+                           <ul class="sub-catalog box-overflow catalog-item__sub">
                               <li class="sub-catalog__item chapter">
                                  <form action="" class="search-form">
                                     <input type="text" class="search-form__input" placeholder="Поиск значений" />
@@ -244,7 +241,7 @@
                                     </button>
                                  </form>
                               </li>
-                              <li class="sub-catalog__item chapter">
+                              <li class="sub-catalog__item box-overflow__hidden chapter">
                                  <label class="label-choice chapter__label">
                                     <input type="checkbox" class="label-choice__input">
                                     <span class="label-choice__custom">
@@ -256,7 +253,7 @@
                                  </label>
                                  <span class="chapter__count">123</span>
                               </li>
-                              <li class="sub-catalog__item chapter">
+                              <li class="sub-catalog__item box-overflow__hidden chapter">
                                  <label class="label-choice chapter__label">
                                     <input type="checkbox" class="label-choice__input">
                                     <span class="label-choice__custom">
@@ -268,7 +265,7 @@
                                  </label>
                                  <span class="chapter__count">34</span>
                               </li>
-                              <li class="sub-catalog__item chapter">
+                              <li class="sub-catalog__item box-overflow__hidden chapter">
                                  <label class="label-choice chapter__label">
                                     <input type="checkbox" class="label-choice__input">
                                     <span class="label-choice__custom">
@@ -280,7 +277,7 @@
                                  </label>
                                  <span class="chapter__count">123</span>
                               </li>
-                              <li class="sub-catalog__item chapter">
+                              <li class="sub-catalog__item box-overflow__hidden chapter">
                                  <label class="label-choice chapter__label">
                                     <input type="checkbox" class="label-choice__input">
                                     <span class="label-choice__custom">
@@ -292,7 +289,7 @@
                                  </label>
                                  <span class="chapter__count">34</span>
                               </li>
-                              <li class="sub-catalog__item chapter">
+                              <li class="sub-catalog__item box-overflow__hidden chapter">
                                  <label class="label-choice chapter__label">
                                     <input type="checkbox" class="label-choice__input">
                                     <span class="label-choice__custom">
@@ -304,7 +301,19 @@
                                  </label>
                                  <span class="chapter__count">123</span>
                               </li>
-                              <li class="sub-catalog__item chapter">
+                              <li class="sub-catalog__item box-overflow__hidden chapter">
+                                 <label class="label-choice chapter__label">
+                                    <input type="checkbox" class="label-choice__input">
+                                    <span class="label-choice__custom">
+                                       <svg class="icon">
+                                          <use xlink:href="svg-sprite/svg-sprite.svg#checkbox"></use>
+                                       </svg>
+                                    </span>
+                                    <span class="label-choice__text">Tempest</span>
+                                 </label>
+                                 <span class="chapter__count">123</span>
+                              </li>
+                              <li class="sub-catalog__item box-overflow__hidden chapter">
                                  <label class="label-choice chapter__label">
                                     <input type="checkbox" class="label-choice__input">
                                     <span class="label-choice__custom">
@@ -316,8 +325,8 @@
                                  </label>
                                  <span class="chapter__count">34</span>
                               </li>
-                              <li class="sub-catalog__item chapter">
-                                 <button type="button" class="more-items">Показать еще</button>
+                              <li class="sub-catalog__item">
+                                 <button type="button" class="more-items go-js-more">Показать еще</button>
                               </li>
                            </ul>
                         </li>
@@ -427,7 +436,7 @@
                   <div class="sections__section section">
                      <div class="category-box">
                         <div class="category-box__header">
-                           <button type="button" class="category-box__filter">
+                           <button type="button" class="category-box__filter go-js-filter-open">
                               <svg class="icon">
                                  <use xlink:href="svg-sprite/svg-sprite.svg#filter"></use>
                               </svg>

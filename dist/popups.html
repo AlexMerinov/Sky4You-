@@ -132,6 +132,14 @@
 
                <li class="list-pages__item"><button type="button" class="list-pages__btn go-js-open-popup"
                      data-popup-name="popup_cat">каталог</button></li>
+               <li class="list-pages__item"><button type="button" class="list-pages__btn go-js-open-popup"
+                     data-popup-name="popup_reset">сброс пароля</button></li>
+               <li class="list-pages__item"><button type="button" class="list-pages__btn go-js-open-popup"
+                     data-popup-name="popup_request">оставить заявку</button></li>
+               <li class="list-pages__item"><button type="button" class="list-pages__btn go-js-open-popup"
+                     data-popup-name="popup_preview">быстрый просмотр</button></li>
+               <li class="list-pages__item"><button type="button" class="list-pages__btn go-js-open-popup"
+                     data-popup-name="popup_clear">очистить избранное</button></li>
             </ul>
          </div>
       </main>
@@ -560,6 +568,72 @@
    </div>
 </div> -->
 
+<div class="body__popup popup go-js-popup" id="popup-cart" data-popup-name="popup_preview">
+   <div class="popup__box">
+      <div class="popup__window popup-cart">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Наименование товара</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="popup-cart__body popup-window-b popup-window-b--on">
+            <div class="popup-cart__box popup-cart__box--p">
+               <div class="preview-card">
+                  <span class="preview-card__name">Фильтр масла TEMPEST. Номер производителя AA48112</span>
+                  <span class="preview-card__desc text">Для современного мира выбранный нами инновационный путь
+                     обеспечивает
+                     актуальность распределения внутренних резервов и ресурсов. Но курс на социально-ориентированный
+                     национальный проект позволяет выполнить важные задания по разработке первоочередных требований. В
+                     частности, выбранный нами инновационный путь способствует повышению качества новых принципов
+                     формирования материально-технической и кадровой базы.</span>
+                  <picture class="preview-card__images">
+                     <img src="images/content/product.png" alt="product-photo">
+                  </picture>
+               </div>
+            </div>
+            <div class="popup-cart__footer">
+               <div class="value-sum">
+                  <div class="value-sum__count">16 350 ₽</div>
+               </div>
+               <button type="button" class="design-btn">
+                  <svg class="icon">
+                     <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+                  </svg>
+                  в корзину
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" id="popup-user" data-popup-name="popup_clear">
+   <div class="popup__box">
+      <div class="popup__window popup__window--top popup-user">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Oчистить избранное?</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="popup-user__desc">
+            все товары будут удалены
+         </div>
+         <div action="" class="popup-user__form form-box">
+            <div class="form-box__buttons">
+               <button type="button" class="form-box__link">нет</button>
+               <button type="button" class="form-box__btn">да</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
 <div class="body__popup popup go-js-popup" id="popup-user" data-popup-name="popup_user">
    <div class="popup__box">
       <div class="popup__window popup-user">
@@ -587,6 +661,75 @@
             <div class="form-box__buttons">
                <a href="#" class="form-box__link">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
                <button class="form-box__btn">ВОЙТИ</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" id="popup-reset" data-popup-name="popup_request">
+   <div class="popup__box">
+      <div class="popup__window popup-user">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Оставить заявку</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="popup-user__desc">
+            Пожалуйста, заполните все обязательные поля для входа
+         </div>
+         <form action="" class="popup-user__form form-box">
+            <div class="field field--100 form-box__field">
+               <input type="text" id="name" class="field__input" placeholder="" />
+               <label for="name" class="field__label req">Ваше имя</label>
+            </div>
+            <div class="field field--100 form-box__field">
+               <input type="text" id="male" class="field__input" placeholder="" />
+               <label for="male" class="field__label req">E-MAIL</label>
+            </div>
+            <div class="field field--100 form-box__field">
+               <input type="text" id="phone" class="field__input" placeholder="" />
+               <label for="phone" class="field__label">телефон</label>
+            </div>
+            <div class="field field--100 form-box__field">
+               <input type="text" id="comment" class="field__input" placeholder="" />
+               <label for="comment" class="field__label">комментарий</label>
+            </div>
+            <div class="form-box__consent consent">
+               Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных данных</a>
+            </div>
+            <div class="form-box__buttons">
+               <button class="form-box__btn form-box__btn--100">отправить</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" id="popup-reset" data-popup-name="popup_reset">
+   <div class="popup__box">
+      <div class="popup__window popup__window--bottom popup-user">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Сброс пароля</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="popup-user__desc">
+            На указанный адрес будет отправлено сообщение с ссылкой для сброса пароля
+         </div>
+         <form action="" class="popup-user__form form-box">
+            <div class="field field--100 form-box__field">
+               <input type="text" id="male" class="field__input" placeholder="" />
+               <label for="male" class="field__label req">E-MAIL</label>
+            </div>
+            <div class="form-box__buttons">
+               <button class="form-box__btn form-box__btn--100">отправить</button>
             </div>
          </form>
       </div>
@@ -629,13 +772,13 @@
             <div class="form-box__section">
                <h3 class="form-box__subtitle">Укажите тип покупателя</h3>
                <div class="form-box__body row">
-                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                  <div class="field field--error form-box__field col cols-1 cols-sm-6 cols-md-4">
                      <input type="text" id="fam" class="field__input" placeholder="" />
-                     <label for="fam" class="field__label">ФАМИЛИЯ *</label>
+                     <label for="fam" class="field__label req">ФАМИЛИЯ</label>
                   </div>
                   <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
                      <input type="text" id="name" class="field__input" placeholder="" />
-                     <label for="name" class="field__label">ИМЯ *</label>
+                     <label for="name" class="field__label req">ИМЯ</label>
                   </div>
                   <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
                      <input type="text" id="secname" class="field__input" placeholder="" />
@@ -643,31 +786,31 @@
                   </div>
                   <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
                      <input type="text" id="male" class="field__input" placeholder="" />
-                     <label for="male" class="field__label">E-MAIL *</label>
+                     <label for="male" class="field__label req">E-MAIL</label>
                   </div>
                   <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
                      <input type="text" id="phone" class="field__input" placeholder="" />
-                     <label for="phone" class="field__label">ТЕЛЕФОН *</label>
+                     <label for="phone" class="field__label req">ТЕЛЕФОН</label>
                   </div>
                   <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
                      <input type="text" id="org" class="field__input" placeholder="" />
-                     <label for="org" class="field__label">НАЗВАНИЕ ОРГАНИЗАЦИИ *</label>
+                     <label for="org" class="field__label req">НАЗВАНИЕ ОРГАНИЗАЦИИ</label>
                   </div>
                   <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
                      <input type="text" id="inn" class="field__input" placeholder="" />
-                     <label for="inn" class="field__label">ИНН *</label>
+                     <label for="inn" class="field__label req">ИНН</label>
                   </div>
                   <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
                      <input type="text" id="kpp" class="field__input" placeholder="" />
-                     <label for="kpp" class="field__label">КПП *</label>
+                     <label for="kpp" class="field__label req">КПП</label>
                   </div>
                   <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
                      <input type="text" id="bank" class="field__input" placeholder="" />
-                     <label for="bank" class="field__label">НАЗВАНИЕ БАНКА *</label>
+                     <label for="bank" class="field__label req">НАЗВАНИЕ БАНКА</label>
                   </div>
                   <div class="field form-box__field col cols-1">
                      <input type="text" id="address-ur" class="field__input" placeholder="" />
-                     <label for="address-ur" class="field__label">ЮРИДИЧЕСКИЙ АДРЕС *</label>
+                     <label for="address-ur" class="field__label req">ЮРИДИЧЕСКИЙ АДРЕС</label>
                   </div>
                </div>
             </div>
@@ -683,6 +826,24 @@
                      <label for="pas2" class="field__label">ПОВТОРИТЕ ПАРОЛЬ</label>
                   </div>
                </div>
+            </div>
+            <div class="chapter form-box__chapter">
+               <label class="label-choice chapter__label">
+                  <input type="checkbox" class="label-choice__input">
+                  <span class="label-choice__custom">
+                     <svg class="icon">
+                        <use xlink:href="svg-sprite/svg-sprite.svg#checkbox"></use>
+                     </svg>
+                  </span>
+                  <span class="label-choice__text">Запомнить пароль</span>
+               </label>
+            </div>
+            <div class="form-box__consent consent">
+               Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных данных</a>
+            </div>
+            <div class="form-box__buttons">
+               <button type="button" class="form-box__link">отменить</button>
+               <button class="form-box__btn">сохранить</button>
             </div>
          </form>
       </div>
@@ -1010,7 +1171,7 @@
                   </button>
                </div>
             </div>
-            <div class="save-draft">
+            <div class="save-draft popup-cart__save">
                <svg class="icon save-draft__icon">
                   <use xlink:href="svg-sprite/svg-sprite.svg#draft"></use>
                </svg>

@@ -21,5 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
    @@include('./blocks/cookie.js');
    @@include('./blocks/like.js');
    @@include('./blocks/tabs.js');
+   @@include('./blocks/more-items.js');
+   @@include('./blocks/open-filter.js');
 
 })

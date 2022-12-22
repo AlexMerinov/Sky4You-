@@ -5,6 +5,36 @@
       margin-bottom: 19px;
    }
 
+   &__consent {
+      padding-left: 12px;
+      @media screen and (min-width: 1024px) {
+         padding-left: 0;
+         margin-left: -6px;
+      }
+      @media screen and (min-width: 1360px) {
+         margin-left: 0;
+      }
+   }
+
+   &__chapter {
+      padding-left: 12px;
+      margin-bottom: 20px;
+      .label-choice {
+         &__custom {
+            border: 1px solid #99afc3;
+         }
+      }
+      @media screen and (min-width: 768px) {
+         margin-left: -6px;
+      }
+      @media screen and (min-width: 1024px) {
+         padding-left: 0;
+      }
+      @media screen and (min-width: 1360px) {
+         margin-left: 0;
+      }
+   }
+
    &__subtitle {
       background-color: $background;
       padding: 12px;
@@ -31,6 +61,19 @@
       }
    }
 
+   &__section {
+      padding-left: 12px;
+      padding-right: 12px;
+      // @media screen and (min-width: 768px) {
+      //    padding-left: 24px;
+      //    padding-right: 24px; 
+      // }
+      @media screen and (min-width: 1024px) {
+         padding-left: 0;
+         padding-right: 0;
+      }
+   }
+
    &__buttons {
       display: flex;
       flex-direction: column;
@@ -49,6 +92,10 @@
          bottom: 80px;
          .form-box__btn {
             width: 50%;
+         }
+
+         .form-box__btn--100 {
+            width: 100%;
          }
       }
 
@@ -94,12 +141,17 @@
       transition: all 0.3s linear;
 
       &:active {
-         background-color: $primary;
+         background-color: $hover;
       }
 
       @media screen and (min-width: 768px) {
          width: 50%;
          padding: 39px 0;
+      }
+      @media screen and (min-width: 1024px) {
+         &:hover {
+            background-color: $hover;
+         }
       }
    }
 
@@ -139,6 +191,12 @@
          }
       }
    }
+
+   .col {
+      .chapter__label {
+         margin-bottom: 15px;
+      }
+   }
 }
 
 .field {
@@ -173,6 +231,17 @@
       }
    }
 
+   &__label.req {
+      &:after {
+         content: '*';
+         color: $primary;
+
+         position: absolute;
+         top: 0;
+         right: -12px;
+      }
+   }
+
    textarea.field__input {
       resize: vertical;
       max-height: 100px;
@@ -185,7 +254,20 @@
       color: $text2;
    }
 
+   .field__input:focus ~ .field__label::after,
+   .field__input:not(:placeholder-shown) ~ 
+   .field__label::after { 
+      color: $text2;
+   }
+
    .field__input:focus {
       border-bottom: 1px solid $hover;
+   }
+
+   &--error {
+      .field__input {
+         color: #e32700;
+         border-color: #e32700;
+      }
    }
 }

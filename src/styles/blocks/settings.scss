@@ -14,6 +14,59 @@ body {
       flex-direction: column;
    }
 
+   &__head-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      .page__title {
+         margin-bottom: 0;
+      }
+   }
+
+   &__btn-pagination {
+      display: flex;
+      align-items: center;
+
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+      color: $primary;
+      text-transform: uppercase;
+      transition: .3s;
+      .icon {
+         width: 18px;
+         height: 20px;
+         fill: $primary;
+         transition: .3s;
+      }
+      span {
+         display: none;
+      }
+      &:active {
+         color: $hover;
+         .icon {
+            fill: $hover;
+         }
+      }
+      @media screen and (min-width: 1024px) {
+         span {
+            display: block;
+            margin-left: 10px;
+         }
+         &:hover {
+            color: $hover;
+            .icon {
+               fill: $hover;
+            }
+         }
+      }
+   }
+
+   &__main {
+      flex: 1 1 auto;
+   }
+
    &__title {
       margin-bottom: 10px;
       @media screen and (min-width: 1360px) {
@@ -396,6 +449,134 @@ button {
          width: 100%;
          height: 100%;
          object-fit: cover;
+      }
+   }
+}
+
+.box-off {
+   padding: 13px 11px 11px 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   &--bg {
+      background-color: $background;
+   }
+
+   &__title {
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 700;
+      color: $primary;
+      margin-bottom: 7px;
+   }
+
+   &__desc {
+      margin-bottom: 16px;
+   }
+
+   &__pagination {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+   }
+
+   &__back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $primary;
+      padding: 10px;
+      width: 132px;
+
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $primary;
+      transition: .3s;
+
+      .icon {
+         width: 13px;
+         height: 10px;
+         margin-right: 5px;
+         fill: none;
+         stroke: $primary;
+         transform: rotate(180deg);
+         transition: .3s;
+      }
+
+      &:active {
+         background-color: $primary;
+         color: #FFF;
+         .icon {
+            stroke: #FFF;
+         }
+      }
+   }
+
+   &__page {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $secondary;
+      padding: 10px;
+      width: 132px;
+      
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #FFF;
+      transition: .3s;
+
+      &:active {
+         background-color: $primary;
+      }
+   }
+
+   @media screen and (min-width: 1024px) {
+      padding: 44px 50px 50px 50px;
+
+      &__title {
+         font-size: 30px;
+         line-height: 41px;
+         margin-bottom: 15px;
+      }
+
+      &__desc {
+         font-size: 16px;
+         line-height: 22px;
+         margin-bottom: 30px;
+      }
+
+      &__pagination {
+         gap: 30px;
+      }
+
+      &__back {
+         padding: 19px;
+         width: 190px;
+         font-size: 16px;
+         line-height: 22px;
+         &:hover {
+            background-color: $primary;
+            color: #FFF;
+            .icon {
+               stroke: #FFF;
+            }
+         }
+      }
+
+      &__page {
+         padding: 19px;
+         width: 190px;
+         font-size: 16px;
+         line-height: 22px;
+
+         &:hover {
+            background-color: $primary;
+         }
       }
    }
 }

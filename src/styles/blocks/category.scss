@@ -1,108 +1,113 @@
+.category-page {
+   .row-box__col-l {
+      padding-top: 52px;
+   }
+}
+
 .category-box {
-    &__header {
-        display: flex;
-        margin-bottom: 30px;
-    }
-    &__choice-box {
-        margin-left: 50px;
-        &:nth-child(2) {
-            margin-left: auto;
-        }
-        &:nth-child(3) {
-            display: none;
-            @media screen and (min-width: 768px) {
-                display: block;
-            }
-        }
-    }
+   &__header {
+      display: flex;
+      margin-bottom: 30px;
+   }
+   &__choice-box {
+      &:nth-child(2) {
+         margin-left: auto;
+      }
+      &:nth-child(3) {
+         display: none;
+         @media screen and (min-width: 768px) {
+               display: block;
+         }
+      }
+   }
 
-    &__row {
-        margin-bottom: 20px;
-        @media screen and (min-width: 1360px) {
-            margin-bottom: 60px;
-        } 
-    }
+   &__row {
+      margin-bottom: 20px;
+      @media screen and (min-width: 1360px) {
+         margin-bottom: 60px;
+      } 
+   }
 
-    &__filter {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-right: auto;
+   &__filter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: auto;
 
-        font-size: 14px;
-        line-height: 19px;
-        font-weight: 500;
-        color: $primary;
-        transition: .3s;
-        .icon {
-            width: 20px;
-            height: 18px;
-            fill: $primary;
-            transition: .3s;
-        }
-        &:active {
-            color: $hover;
-            .icon {
-                fill: $hover;
-            }
-        }
-        @media screen and (min-width: 1360px) {
-            display: none;
-        }
-    }
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 500;
+      color: $primary;
+      transition: .3s;
+      .icon {
+         width: 20px;
+         height: 18px;
+         fill: $primary;
+         transition: .3s;
+      }
+      &:active {
+         color: $hover;
+         .icon {
+               fill: $hover;
+         }
+      }
+      @media screen and (min-width: 1024px) {
+         display: none;
+      }
+   }
 
-    &__footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+   &__footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
 
-    &__more {
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
+   &__more {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
 
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 17px;
-        text-transform: uppercase;
-        color: $primary;
-        transition: .3s;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: $primary;
+      transition: .3s;
 
-        .icon {
-            width: 15px;
-            height: 18px;
-            fill: none;
-            stroke: $primary;
-            transition: stroke .3s;
-        }
+      .icon {
+         width: 15px;
+         height: 18px;
+         fill: none;
+         stroke: $primary;
+         transition: stroke .3s;
+      }
 
-        &:active {
-            color: $hover;
-            .icon {
-                stroke: $hover;
-            }
-        }
+      &:active {
+         color: $hover;
+         .icon {
+               stroke: $hover;
+         }
+      }
 
-        @media screen and (min-width: 1024px) {
-            &:hover {
-                color: $hover;
-                .icon {
-                    stroke: $hover;
-                }
-            }
-        }
+      @media screen and (min-width: 1024px) {
+         &:hover {
+               color: $hover;
+               .icon {
+                  stroke: $hover;
+               }
+         }
+      }
 
-        @media screen and (min-width: 1360px) {
-            font-size: 16px;
+      @media screen and (min-width: 1360px) {
+         font-size: 16px;
 
-            .icon {
-                width: 18px;
-                height: 22px;
-            }
-        }
-    }
+         .icon {
+               width: 18px;
+               height: 22px;
+         }
+      }
+   }
 }
 
 .pagination-box {

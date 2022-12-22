@@ -38,7 +38,18 @@
    padding-left: 5px;
    padding-right: 5px;
 
-   @media screen and (min-width: 1360px) {
+   &--padding {
+      padding-bottom: 10px;
+      @media screen and (min-width: 768px) {
+         padding-bottom: 20px;
+      }
+
+      @media screen and (min-width: 1024px) {
+         padding-bottom: 30px;
+      }
+   }
+
+   @media screen and (min-width: 768px) {
       padding-left: 10px;
       padding-right: 10px;
    }
@@ -130,6 +141,12 @@
 
 .cols-11 {
    width: 91.6666666667%;
+}
+
+@media screen and (min-width: 576px) {
+   .row-cols-vsm-2 > * {
+      width: 50%;
+  }
 }
 
 @media screen and (min-width: 768px) {

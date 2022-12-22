@@ -1,4 +1,23 @@
-@@include('includes/header.html', { 'title' : 'New Project' })
+<!DOCTYPE html>
+<html lang="ru">
+<!-- Head -->
+
+<head>
+   <!-- Meta -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>New Project</title>
+   <!-- / Meta -->
+
+   <!-- Styles -->
+   <link rel="stylesheet" href="styles/style.min.css" />
+   <!-- / Styles -->
+</head>
+<!-- / Head -->
+
+<!-- Body -->
+
+<body class="body">
 
 <!-- Page -->
 <div class="page" id="top">
@@ -97,18 +116,50 @@
       <!-- / Header -->
       <!-- Main -->
       <main class="page__main main">
-         <div class="container">
-            <ul class="list-pages">
-               <li class="list-pages__item"><a href="main.html" target="_blank"># Главная</a></li>
-               <li class="list-pages__item"><a href="catalog.html" target="_blank"># Каталог</a></li>
-               <li class="list-pages__item"><a href="category.html" target="_blank"># Категории</a></li>
-               <li class="list-pages__item"><a href="card-detail.html" target="_blank"># Карточка товара</a></li>
-               <li class="list-pages__item"><a href="popups.html" target="_blank"># Модалки</a></li>
-               <li class="list-pages__item"><a href="favorites.html" target="_blank"># Избранное</a></li>
-               <li class="list-pages__item"><a href="404.html" target="_blank"># 404</a></li>
-               <li class="list-pages__item"><a href=""></a></li>
-            </ul>
+         <div class="sections">
+            <section class="sections__section section">
+               <div class="container">
+                  <div class="section__box box-off">
+                     <picture class="box-off__preview">
+                        <img src="images/404.png" alt="404">
+                     </picture>
+                     <h2 class="box-off__title">Страница не найдена. Ошибка 404.</h2>
+                     <span class="box-off__desc text">Возможно, она была удалена или не существует. Чтобы найти
+                        необходимую информацию, рекомендуем перейти на главную страницу.</span>
+                     <div class="box-off__pagination">
+                        <a href="#" class="box-off__back">
+                           <svg class="icon">
+                              <use xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"></use>
+                           </svg>
+                           <span>назад</span>
+                        </a>
+                        <a href="#" class="box-off__page">
+                           на главную
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </section>
          </div>
+
+         <!-- Questions -->
+         <section class="sections__section questions">
+            <div class="container">
+               <div class="questions__wrapper" style="background-image: url('images/content/question.png')">
+                  <div class="questions__box">
+                     <h2 class="questions__title">Остались вопросы? Пишите!</h2>
+                     <span class="questions__desc">
+                        Оставьте свою заявку и наши специалисты свяжутся с Вами в
+                        ближайшее время
+                     </span>
+                  </div>
+                  <button type="button" class="btn questions__btn">
+                     ОСТАВИТЬ ЗАЯВКУ
+                  </button>
+               </div>
+            </div>
+         </section>
+         <!-- / Questions -->
       </main>
       <!-- / Main -->
 
@@ -291,7 +342,51 @@
    </div>
 </div>
 <!-- / Page -->
+
 <!--Popup-->
+
+<div class="body__popup popup go-js-popup" id="popup-cart" data-popup-name="popup_preview">
+   <div class="popup__box">
+      <div class="popup__window popup-cart">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Наименование товара</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="popup-cart__body popup-window-b popup-window-b--on">
+            <div class="popup-cart__box popup-cart__box--p">
+               <div class="preview-card">
+                  <span class="preview-card__name">Фильтр масла TEMPEST. Номер производителя AA48112</span>
+                  <span class="preview-card__desc text">Для современного мира выбранный нами инновационный путь
+                     обеспечивает
+                     актуальность распределения внутренних резервов и ресурсов. Но курс на социально-ориентированный
+                     национальный проект позволяет выполнить важные задания по разработке первоочередных требований. В
+                     частности, выбранный нами инновационный путь способствует повышению качества новых принципов
+                     формирования материально-технической и кадровой базы.</span>
+                  <picture class="preview-card__images">
+                     <img src="images/content/product.png" alt="product-photo">
+                  </picture>
+               </div>
+            </div>
+            <div class="popup-cart__footer">
+               <div class="value-sum">
+                  <div class="value-sum__count">16 350 ₽</div>
+               </div>
+               <button type="button" class="design-btn">
+                  <svg class="icon">
+                     <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+                  </svg>
+                  в корзину
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
 <div class="body__popup popup go-js-popup" id="popup-user" data-popup-name="popup_user">
    <div class="popup__box">
       <div class="popup__window popup-user">
@@ -325,8 +420,191 @@
    </div>
 </div>
 
-<div class="body__popup popup go-js-popup" id="popup-cat" data-popup-name="popup_cat">
+<div class="body__popup popup go-js-popup" id="popup-reset" data-popup-name="popup_request">
    <div class="popup__box">
+      <div class="popup__window popup-user">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Оставить заявку</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="popup-user__desc">
+            Пожалуйста, заполните все обязательные поля для входа
+         </div>
+         <form action="" class="popup-user__form form-box">
+            <div class="field field--100 form-box__field">
+               <input type="text" id="name" class="field__input" placeholder="" />
+               <label for="name" class="field__label req">Ваше имя</label>
+            </div>
+            <div class="field field--100 form-box__field">
+               <input type="text" id="male" class="field__input" placeholder="" />
+               <label for="male" class="field__label req">E-MAIL</label>
+            </div>
+            <div class="field field--100 form-box__field">
+               <input type="text" id="phone" class="field__input" placeholder="" />
+               <label for="phone" class="field__label">телефон</label>
+            </div>
+            <div class="field field--100 form-box__field">
+               <input type="text" id="comment" class="field__input" placeholder="" />
+               <label for="comment" class="field__label">комментарий</label>
+            </div>
+            <div class="form-box__consent consent">
+               Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных данных</a>
+            </div>
+            <div class="form-box__buttons">
+               <button class="form-box__btn form-box__btn--100">отправить</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" id="popup-reset" data-popup-name="popup_reset">
+   <div class="popup__box">
+      <div class="popup__window popup__window--bottom popup-user">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Сброс пароля</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="popup-user__desc">
+            На указанный адрес будет отправлено сообщение с ссылкой для сброса пароля
+         </div>
+         <form action="" class="popup-user__form form-box">
+            <div class="field field--100 form-box__field">
+               <input type="text" id="male" class="field__input" placeholder="" />
+               <label for="male" class="field__label req">E-MAIL</label>
+            </div>
+            <div class="form-box__buttons">
+               <button class="form-box__btn form-box__btn--100">отправить</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" id="popup-reg" data-popup-name="popup_reg">
+   <div class="popup__box">
+      <div class="popup__window popup-reg">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Регистрация</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <form action="" class="popup-reg__form form-box">
+            <div class="form-box__section">
+               <h3 class="form-box__subtitle">Укажите тип покупателя</h3>
+               <div class="chapter form-box__body row row-cols-1 row-cols-sm-2">
+                  <div class="col">
+                     <label class="label-choice label-choice--round chapter__label">
+                        <input type="radio" name="package" class="label-choice__input">
+                        <span class="label-choice__custom">
+                        </span>
+                        <span class="label-choice__text">Физическое лицо</span>
+                     </label>
+                  </div>
+                  <div class="col">
+                     <label class="label-choice label-choice--round chapter__label">
+                        <input type="radio" name="package" class="label-choice__input">
+                        <span class="label-choice__custom">
+                        </span>
+                        <span class="label-choice__text">Юридическое лицо</span>
+                     </label>
+                  </div>
+               </div>
+            </div>
+            <div class="form-box__section">
+               <h3 class="form-box__subtitle">Укажите тип покупателя</h3>
+               <div class="form-box__body row">
+                  <div class="field field--error form-box__field col cols-1 cols-sm-6 cols-md-4">
+                     <input type="text" id="fam" class="field__input" placeholder="" />
+                     <label for="fam" class="field__label req">ФАМИЛИЯ</label>
+                  </div>
+                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                     <input type="text" id="name" class="field__input" placeholder="" />
+                     <label for="name" class="field__label req">ИМЯ</label>
+                  </div>
+                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                     <input type="text" id="secname" class="field__input" placeholder="" />
+                     <label for="secname" class="field__label">ОТЧЕСТВО</label>
+                  </div>
+                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                     <input type="text" id="male" class="field__input" placeholder="" />
+                     <label for="male" class="field__label req">E-MAIL</label>
+                  </div>
+                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                     <input type="text" id="phone" class="field__input" placeholder="" />
+                     <label for="phone" class="field__label req">ТЕЛЕФОН</label>
+                  </div>
+                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                     <input type="text" id="org" class="field__input" placeholder="" />
+                     <label for="org" class="field__label req">НАЗВАНИЕ ОРГАНИЗАЦИИ</label>
+                  </div>
+                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                     <input type="text" id="inn" class="field__input" placeholder="" />
+                     <label for="inn" class="field__label req">ИНН</label>
+                  </div>
+                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                     <input type="text" id="kpp" class="field__input" placeholder="" />
+                     <label for="kpp" class="field__label req">КПП</label>
+                  </div>
+                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                     <input type="text" id="bank" class="field__input" placeholder="" />
+                     <label for="bank" class="field__label req">НАЗВАНИЕ БАНКА</label>
+                  </div>
+                  <div class="field form-box__field col cols-1">
+                     <input type="text" id="address-ur" class="field__input" placeholder="" />
+                     <label for="address-ur" class="field__label req">ЮРИДИЧЕСКИЙ АДРЕС</label>
+                  </div>
+               </div>
+            </div>
+            <div class="form-box__section">
+               <h3 class="form-box__subtitle">Пароль</h3>
+               <div class="form-box__body row row-cols-1 row-cols-sm-2">
+                  <div class="field form-box__field col">
+                     <input type="text" id="pas" class="field__input" placeholder="" />
+                     <label for="pas" class="field__label">ВВЕДИТЕ ПАРОЛЬ</label>
+                  </div>
+                  <div class="field form-box__field col">
+                     <input type="text" id="pas2" class="field__input" placeholder="" />
+                     <label for="pas2" class="field__label">ПОВТОРИТЕ ПАРОЛЬ</label>
+                  </div>
+               </div>
+            </div>
+            <div class="chapter form-box__chapter">
+               <label class="label-choice chapter__label">
+                  <input type="checkbox" class="label-choice__input">
+                  <span class="label-choice__custom">
+                     <svg class="icon">
+                        <use xlink:href="svg-sprite/svg-sprite.svg#checkbox"></use>
+                     </svg>
+                  </span>
+                  <span class="label-choice__text">Запомнить пароль</span>
+               </label>
+            </div>
+            <div class="form-box__consent consent">
+               Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных данных</a>
+            </div>
+            <div class="form-box__buttons">
+               <button type="button" class="form-box__link">отменить</button>
+               <button class="form-box__btn">сохранить</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" id="popup-cat" data-popup-name="popup_cat">
+   <div class="popup__box popup__box--catalog">
       <div class="popup__window popup-catalog">
          <div class="popup-window-h">
             <span class="popup-window-h__title">Каталог</span>
@@ -344,7 +622,7 @@
                </svg>
             </a>
             <ul class="catalog">
-               <li class="catalog-item">
+               <li class="catalog-item go-js-hover-catalog">
                   <a href="#" class="catalog-item__header cat-header">
                      <svg class="icon cat-header__icon">
                         <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
@@ -368,7 +646,7 @@
                      </li>
                   </ul>
                </li>
-               <li class="catalog-item catalog-item--sub-none">
+               <li class="catalog-item catalog-item--sub-none go-js-hover-catalog">
                   <a href="#" class="catalog-item__header cat-header">
                      <svg class="icon cat-header__icon">
                         <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
@@ -392,7 +670,7 @@
                      </li>
                   </ul>
                </li>
-               <li class="catalog-item">
+               <li class="catalog-item go-js-hover-catalog">
                   <a href="#" class="catalog-item__header cat-header">
                      <svg class="icon cat-header__icon">
                         <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
@@ -416,7 +694,7 @@
                      </li>
                   </ul>
                </li>
-               <li class="catalog-item catalog-item--sub-none">
+               <li class="catalog-item catalog-item--sub-none go-js-hover-catalog">
                   <a href="#" class="catalog-item__header cat-header">
                      <svg class="icon cat-header__icon">
                         <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
@@ -430,7 +708,7 @@
                   </a>
                   <ul class="sub-catalog catalog-item__sub"></ul>
                </li>
-               <li class="catalog-item">
+               <li class="catalog-item go-js-hover-catalog">
                   <a href="#" class="catalog-item__header cat-header">
                      <svg class="icon cat-header__icon">
                         <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
@@ -454,7 +732,7 @@
                      </li>
                   </ul>
                </li>
-               <li class="catalog-item">
+               <li class="catalog-item go-js-hover-catalog">
                   <a href="#" class="catalog-item__header cat-header">
                      <svg class="icon cat-header__icon">
                         <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
@@ -478,7 +756,7 @@
                      </li>
                   </ul>
                </li>
-               <li class="catalog-item">
+               <li class="catalog-item go-js-hover-catalog">
                   <a href="#" class="catalog-item__header cat-header">
                      <svg class="icon cat-header__icon">
                         <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
@@ -502,7 +780,7 @@
                      </li>
                   </ul>
                </li>
-               <li class="catalog-item">
+               <li class="catalog-item go-js-hover-catalog">
                   <a href="#" class="catalog-item__header cat-header">
                      <svg class="icon cat-header__icon">
                         <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
@@ -526,7 +804,7 @@
                      </li>
                   </ul>
                </li>
-               <li class="catalog-item">
+               <li class="catalog-item go-js-hover-catalog">
                   <a href="#" class="catalog-item__header cat-header">
                      <svg class="icon cat-header__icon">
                         <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
@@ -550,7 +828,7 @@
                      </li>
                   </ul>
                </li>
-               <li class="catalog-item">
+               <li class="catalog-item go-js-hover-catalog">
                   <a href="#" class="catalog-item__header cat-header">
                      <svg class="icon cat-header__icon">
                         <use xlink:href="svg-sprite/svg-sprite.svg#airplane"></use>
@@ -580,7 +858,7 @@
    </div>
 </div>
 
-<div class="body__popup popup go-js-popup" id="popup-user" data-popup-name="popup_cart">
+<div class="body__popup popup go-js-popup" id="popup-cart" data-popup-name="popup_cart">
    <div class="popup__box">
       <div class="popup__window popup-cart">
          <div class="popup-window-h">
@@ -591,76 +869,141 @@
                </svg>
             </button>
          </div>
-         <div class="popup-cart__box">
-            <div class="cart-card">
-               <a href="#" class="cart-card__preview">
-                  <img src="images/content/product.png" alt="product">
-               </a>
-               <div class="cart-card__content">
-                  <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112</a>
-                  <div class="cart-card__price value-price">
-                     <div class="count value-price__count">
-                        <button type="button" class="count__btn count__btn--down">
-                           <span></span>
-                        </button>
-                        <input type="text" class="count__input" min="1" max="100" value="1">
-                        <button type="button" class="count__btn count__btn--up">
-                           <span></span>
-                        </button>
+         <div class="popup-cart__body popup-window-b popup-window-b--on">
+            <div class="popup-cart__box">
+               <div class="cart-card">
+                  <a href="#" class="cart-card__preview">
+                     <img src="images/content/product.png" alt="product">
+                  </a>
+                  <div class="cart-card__content">
+                     <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112 длинное
+                        название
+                        товара, занимающее несколько строк в корзине</a>
+                     <div class="cart-card__price value-price">
+                        <div class="count value-price__count">
+                           <button type="button" class="count__btn count__btn--down">
+                              <span></span>
+                           </button>
+                           <input type="text" class="count__input" min="1" max="100" value="1">
+                           <button type="button" class="count__btn count__btn--up">
+                              <span></span>
+                           </button>
+                        </div>
+                        <div class="value-price__result">6 900 ₽</div>
                      </div>
-                     <div class="value-price__result">6 900 ₽</div>
                   </div>
+                  <button type="button" class="cart-card__delete">
+                     <svg class="icon">
+                        <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                     </svg>
+                  </button>
                </div>
-               <button type="button" class="cart-card__delete">
-                  <svg class="icon">
-                     <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
-                  </svg>
-               </button>
-            </div>
-            <div class="cart-card">
-               <a href="#" class="cart-card__preview">
-                  <img src="images/content/product.png" alt="product">
-               </a>
-               <div class="cart-card__content">
-                  <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112</a>
-                  <div class="cart-card__price value-price">
-                     <div class="count value-price__count">
-                        <button type="button" class="count__btn count__btn--down">
-                           <span></span>
-                        </button>
-                        <input type="text" class="count__input" min="1" max="100" value="1">
-                        <button type="button" class="count__btn count__btn--up">
-                           <span></span>
-                        </button>
+               <div class="cart-card">
+                  <a href="#" class="cart-card__preview">
+                     <img src="images/content/product.png" alt="product">
+                  </a>
+                  <div class="cart-card__content">
+                     <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112</a>
+                     <div class="cart-card__price value-price">
+                        <div class="count value-price__count">
+                           <button type="button" class="count__btn count__btn--down">
+                              <span></span>
+                           </button>
+                           <input type="text" class="count__input" min="1" max="100" value="1">
+                           <button type="button" class="count__btn count__btn--up">
+                              <span></span>
+                           </button>
+                        </div>
+                        <div class="value-price__result">6 900 ₽</div>
                      </div>
-                     <div class="value-price__result">6 900 ₽</div>
                   </div>
+                  <button type="button" class="cart-card__delete">
+                     <svg class="icon">
+                        <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                     </svg>
+                  </button>
                </div>
-               <button type="button" class="cart-card__delete">
-                  <svg class="icon">
-                     <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
-                  </svg>
-               </button>
             </div>
-         </div>
-         <div class="save-draft">
-            <svg class="icon save-draft__icon">
-               <use xlink:href="svg-sprite/svg-sprite.svg#draft"></use>
-            </svg>
-            <span class="save-draft__text">СОХРАНИТЬ В ЧЕРНОВИКИ</span>
-         </div>
-         <div class="popup-cart__footer">
-            <div class="value-sum">
-               <span>Итого:</span>
-               <div class="value-sum__count">16 350 ₽</div>
-            </div>
-            <button type="button" class="design-btn">
-               <svg class="icon">
-                  <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+            <div class="save-draft popup-cart__save">
+               <svg class="icon save-draft__icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#draft"></use>
                </svg>
-               оформить ЗАКАЗ
+               <span class="save-draft__text">отложить заказ</span>
+            </div>
+            <div class="popup-cart__footer">
+               <div class="value-sum">
+                  <span>Итого:</span>
+                  <div class="value-sum__count">16 350 ₽</div>
+               </div>
+               <button type="button" class="design-btn">
+                  <svg class="icon">
+                     <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+                  </svg>
+                  оформить ЗАКАЗ
+               </button>
+            </div>
+         </div>
+         <div class="popup-cart__body popup-window-b popup-window-b--off">
+            <h2 class="popup-window-b__title">Корзина пуста</h2>
+            <span class="popup-window-b__desc">Перейдите в каталог, чтобы добавить товары в корзину и оформить
+               покупку</span>
+            <a href="catalog.html" class="popup-window-b__link">каталог</a>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" id="popup-reviews" data-popup-name="popup_reviews">
+   <div class="popup__box">
+      <div class="popup__window popup-reviews">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Оставить отзыв</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
             </button>
          </div>
+         <div class="popup-reviews__rating reviews-rating">
+            <span class="reviews-rating__name">Ваша оценка</span>
+            <div class="rating-stars reviews-rating__stars">
+               <div class="rating-stars__wrapper">
+                  <input class="rating-stars__item" type="radio" name="rating" value="1" />
+                  <input class="rating-stars__item" type="radio" name="rating" value="2" />
+                  <input class="rating-stars__item" type="radio" name="rating" value="3" />
+                  <input class="rating-stars__item" type="radio" name="rating" value="4" />
+                  <input class="rating-stars__item" type="radio" name="rating" value="5" />
+               </div>
+            </div>
+         </div>
+         <form action="" class="popup-reviews__form form-box row">
+            <div class="field form-box__field">
+               <input type="text" id="pas" class="field__input" placeholder="" />
+               <label for="pas" class="field__label">Ваше ИМЯ *</label>
+            </div>
+            <div class="field form-box__field col">
+               <input type="text" id="male" class="field__input" placeholder="" />
+               <label for="male" class="field__label">E-MAIL *</label>
+            </div>
+            <div class="field form-box__field col">
+               <textarea name="" id="plus" rows="10" class="field__input"></textarea>
+               <label for="plus" class="field__label">Плюсы</label>
+            </div>
+            <div class="field form-box__field col">
+               <textarea name="" id="minus" rows="10" class="field__input"></textarea>
+               <label for="minus" class="field__label">Минусы</label>
+            </div>
+            <div class="field form-box__field col">
+               <textarea name="" id="comment" rows="10" class="field__input"></textarea>
+               <label for="comment" class="field__label">комментарий *</label>
+            </div>
+            <div class="form-box__person">
+               Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных данных</a>
+            </div>
+            <div class="form-box__buttons">
+               <button class="form-box__btn">ОТПРАВИТЬ</button>
+            </div>
+         </form>
       </div>
    </div>
 </div>
@@ -752,7 +1095,15 @@
 </div>
 <!-- / Cookie -->
 
-@@include('includes/footer.html')
+
+        <!-- Scripts -->
+        <script src="scripts/script.min.js"></script>
+        <!-- / Scripts -->
+
+    </body>
+    <!-- / Body -->
+
+</html>
 
 <!-- <svg class="icon">
 	<use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
