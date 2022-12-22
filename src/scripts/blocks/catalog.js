@@ -3,7 +3,7 @@ window.app.Catalog = () => {
    if (!catalogItems) return;
 
    catalogItems.forEach((catalogItem) => {
-      if (catalogItem.classList.contains('go-js-hover-catalog')) {
+      if (catalogItem.classList.contains('go-js-hover-catalog') && document.documentElement.clientWidth > 1024) {
          catalogItem.addEventListener('mouseenter', e => {
             let subList = catalogItem.querySelector('.sub-catalog');
             subList.classList.add('active');

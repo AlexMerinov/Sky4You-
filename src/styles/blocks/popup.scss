@@ -16,12 +16,16 @@
       width: 100%;
       height: 100%;
       background-color: rgb(000, 000, 000, 0.33);
-      z-index: 100;
+      z-index: 200;
 
       opacity: 0;
       animation: showPopup .5s forwards;
       &--active {
          display: block;
+      }
+
+      &--cat {
+         z-index: 100;
       }
    }
 }
@@ -35,6 +39,20 @@
       @media screen and (min-width: 1024px) {
          align-items: stretch;
          justify-content: flex-end;
+         &--catalog {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 127px 20px 0 20px;
+            justify-content: flex-start;
+            padding-top: 127px;
+         }
+      }
+
+      @media screen and (min-width: 1360px) {
+         &--catalog {
+            max-width: 1370px;
+            padding: 138px 22px 0 22px;
+         }
       }
    }
 
@@ -45,8 +63,6 @@
       background-color: $primary;
       position: relative;
       background-color: #FFF;
-      padding-left: 12px;
-      padding-right: 12px;
       padding-top: 60px;
       padding-bottom: 200px;
 
@@ -55,16 +71,85 @@
       @media screen and (min-width: 768px) {
          padding-bottom: 200px;
          padding-top: 76px;
-         padding-left: 22px;
-         padding-right: 22px;
       }
       @media screen and (min-width: 1024px) {
-         max-width: 50%;
+         max-width: 75%;
          display: flex;
          flex-direction: column;
          height: auto;
          padding-left: 40px;
          padding-right: 40px;
+      }
+
+      @media screen and (min-width: 1360px) {
+         max-width: 50%;
+      }
+
+      .popup-window-b--off {
+         display: none;
+      }
+
+      &--off {
+         .popup-window-b--off {
+            display: flex;
+         }
+      }
+   }
+
+   &__window.popup-catalog {
+      @media screen and (min-width: 1024px) {
+         padding: 0;
+         overflow: visible;
+         max-width: 272px;
+         height: max-content;
+         .popup-window-h, .popup-catalog__all {
+            display: none;
+         }
+         .cat-header__icon-btn {
+            transform: rotate(-90deg);
+         }
+
+         .cat-header {
+            background-color: #f1f6fb;
+         }
+
+         .catalog-item:hover {
+            .cat-header {
+               background-color: #e0edfb;
+            }
+         }
+
+         .catalog-item {
+            &:nth-child(n+8) {
+               .sub-catalog {
+                  bottom: 0;
+                  top: auto;
+               }
+            }
+         }
+
+         .sub-catalog {
+            max-height: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #FFF;
+            &__item:hover {
+               background-color: $background;
+            }
+            &__link {
+               padding: 13px 20px;
+            }
+         }
+
+         .sub-catalog.active {
+            left: 100%;
+         }
+      }
+
+      @media screen and (min-width: 1360px) {
+         max-width: 309px;
       }
    }
 
@@ -159,6 +244,78 @@
       margin-bottom: 20px;
       @media screen and (min-width: 768px) {
          margin-bottom: 30px;
+      }
+   }
+}
+
+.popup-window-b {
+   display: flex;
+   flex-direction: column;
+   flex: 1 1 auto;
+   &--off {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   }
+
+   &__title {
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: 700;
+      color: $primary;
+      margin-bottom: 10px;
+      @media screen and (min-width: 1024px) {
+         font-size: 30px;
+         line-height: 41px;
+         margin-bottom: 15px;
+      }
+   }
+
+   &__desc {
+      display: block;
+      font-size: 15px;
+      line-height: 21px;
+      font-weight: 400;
+      color: $primary;
+      @media screen and (min-width: 1024px) {
+         font-size: 16px;
+         line-height: 21px;
+      }
+   }
+
+   &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $secondary;
+      transition: .3s;
+
+      position: absolute;
+      bottom: 60px;
+      left: 0;
+      width: 100%;
+      height: 60px;
+
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+      color: #FFF;
+      text-transform: uppercase;
+
+      &:active {
+         background-color: $primary;
+      }
+
+      @media screen and (min-width: 768px) {
+         bottom: 80px;
+      }
+
+      @media screen and (min-width: 1024px) {
+         bottom: 0;
+         height: 100px;
+         &:hover {
+            background-color: $primary;
+         }
       }
    }
 }

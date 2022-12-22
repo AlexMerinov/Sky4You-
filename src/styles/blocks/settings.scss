@@ -83,10 +83,17 @@ button {
    &__col-l {
       display: none;
 
-      @media screen and (min-width: 1360px) {
-         width: 309px;
+      @media screen and (min-width: 1024px) {
+         flex: 0 0 auto;
+         max-width: 270px;
          display: flex;
          flex-direction: column;
+         margin-right: 20px;
+      }
+
+      @media screen and (min-width: 1360px) {
+         width: 309px;
+         max-width: 309px;
          margin-right: 30px;
       }
 
@@ -113,7 +120,12 @@ button {
    }
 
    &__col-r {
-      max-width: 100%;
+      flex: 1 1 auto;
+      width: 100%;
+
+      @media screen and (min-width: 1024px) {
+         width: 70%;
+      }
 
       @media screen and (min-width: 1360px) {
          max-width: 987px;
@@ -211,6 +223,15 @@ button {
          height: 20px;
       }
    }
+
+   @media screen and (min-width: 1024px) {
+      &:hover {
+         background-color: $primary;
+         .icon {
+            fill: #FFF;
+         }
+      }
+   }
 }
 
 .promo {
@@ -230,7 +251,7 @@ button {
       }
    }
 
-   @media screen and (min-width: 1360px) {
+   @media screen and (min-width: 1024px) {
       display: none;
    }
 }

@@ -15,7 +15,7 @@ window.app.Sliders = () => {
             pagination: {
                el: '.banner-slider__pagination',
                clickable: true,
-             },
+            },
          },
       }
    });
@@ -57,9 +57,9 @@ window.app.Sliders = () => {
       if (!sliders) return;
 
       sliders.forEach((slider) => {
-         
-         const sliderBest   = slider.querySelector('.slider-best');
-         const sliderView   = slider.querySelector('.slider-view');
+
+         const sliderBest = slider.querySelector('.slider-best');
+         const sliderView = slider.querySelector('.slider-view');
          const navArrows = {
             navigation: {
                nextEl: slider.closest('.section').querySelector('.go-js-slider__btn--next'),
@@ -78,6 +78,12 @@ window.app.Sliders = () => {
                         slidesPerView: 2.6,
                         spaceBetween: 20,
                      },
+
+                     1024: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                     },
+
                      1360: {
                         slidesPerView: 3,
                         spaceBetween: 30,
@@ -87,13 +93,13 @@ window.app.Sliders = () => {
                         },
                      },
                   }
-               }); 
+               });
                break;
             case slider.dataset.sliderName == 'view':
                new Swiper(sliderView, {
                   slidesPerView: 1.2,
                   spaceBetween: 10,
-                  allowTouchMove: true, 
+                  allowTouchMove: true,
                   watchSlidesProgress: true,
                   loop: true,
                   breakpoints: {
@@ -130,7 +136,7 @@ window.app.Sliders = () => {
                         },
                      },
                   }
-               }); 
+               });
                break;
          }
       });
