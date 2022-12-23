@@ -1,25 +1,41 @@
 .details-page {
-    &__row {
-        margin-bottom: 30px;
-        @media screen and (min-width: 1360px) {
-            margin-bottom: 50px;
-        }
-    }
+   &__row {
+      margin-bottom: 30px;
+      @media screen and (min-width: 1360px) {
+         margin-bottom: 50px;
+      }
+   }
+
+   &__tabs-box {
+   margin-bottom: 30px;
+   @media screen and (min-width: 1360px) {
+      margin-bottom: 50px;
+   }
+   }
 }
 
-.details-row {
+.details-row { 
     display: grid;
     grid-template-columns: minmax(1fr, 576px);
     width: 100%;
 
-    &__slide {
-        max-width: 100%;
-        min-width: 0;
-    }
+   &__slide {
+      max-width: 100%;
+      min-width: 0;
+   }
 
-    &__desc {
-        margin-right: 40px;
-    }
+   &__desc {
+      @media screen and (min-width: 1360px) {
+         margin-right: 40px;
+      }
+   }
+
+   &__cart {
+      display: none;
+      @media screen and (min-width: 768px) {
+         display: block;
+      }
+   }
 
     @media screen and (min-width: 768px) {
         grid-template-columns: repeat(2, 50%);
@@ -179,6 +195,23 @@
         }
     }
 
+    &__char {
+      .char-list {
+         &__item {
+            &:nth-child(n+6) {
+               display: none;
+            }
+         }
+      }
+      .char-list.show {
+         .char-list__item {
+            &:nth-child(n+6) {
+               display: flex;
+            }
+         }
+      }
+    }
+
     &__show-btn {
         @media screen and (min-width: 768px) {
             margin-bottom: 15px;
@@ -278,7 +311,7 @@
             object-fit: contain;
         }
 
-        @media screen and (min-width: 1360px) {
+        @media screen and (min-width: 1024px) {
             width: 58px;
             height: 61px;
             margin-right: 12px;
@@ -290,19 +323,23 @@
         flex-direction: column;
     }
 
-    &__name {
-        display: block;
-        font-size: 16px;
-        line-height: 22px;
-        font-weight: 400;
-        color: $primary;
-        margin-bottom: 5px;
+   &__name {
+      display: block;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      color: $primary;
+      margin-bottom: 5px;
 
-        @media screen and (min-width: 1360px) {
-            font-size: 20px;
-            line-height: 27px;
-        }
-    }
+      @media screen and (min-width: 768px) {
+         max-width: 270px;
+      }
+
+      @media screen and (min-width: 1024px) {
+         font-size: 20px;
+         line-height: 27px;
+      }
+   }
 
     &__size {
         display: block;

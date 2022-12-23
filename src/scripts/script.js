@@ -23,5 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
    @@include('./blocks/tabs.js');
    @@include('./blocks/more-items.js');
    @@include('./blocks/open-filter.js');
+   @@include('./blocks/other.js');
 
 })

@@ -25,7 +25,14 @@
       margin-bottom: 20px;
       @media screen and (min-width: 1360px) {
          margin-bottom: 60px;
-      } 
+      }
+      
+      .col {
+         padding-bottom: 10px;
+         @media screen and (min-width: 1360px) {
+            padding-bottom: 30px;
+         }
+      }
    }
 
    &__filter {

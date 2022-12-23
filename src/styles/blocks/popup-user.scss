@@ -1,5 +1,10 @@
 .popup-user {
    align-self: flex-end;
+   &--reviews {
+      @media screen and (min-width: 1360px) {
+         width: 50%;
+      }
+   }
    &__desc {
       padding: 6px 12px;
       margin-bottom: 18px;

@@ -9,7 +9,6 @@
       padding-left: 12px;
       @media screen and (min-width: 1024px) {
          padding-left: 0;
-         margin-left: -6px;
       }
       @media screen and (min-width: 1360px) {
          margin-left: 0;
@@ -226,6 +225,9 @@
       left: 5px;
       transform: translateY(-50%);
       transition: all 0.3s linear;
+      @media screen and (min-width: 768px) {
+         left: 10px;
+      }
       @media screen and (min-width: 1360px) {
          left: 15px;
       }
