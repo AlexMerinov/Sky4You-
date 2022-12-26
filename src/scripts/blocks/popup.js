@@ -13,11 +13,13 @@ window.app.PopupModal = () => {
 
    const popupHoverButtons = document.querySelectorAll('.go-js-open-popup-hover');
    if (!popupHoverButtons) return;
-   popupHoverButtons.forEach((popupHoverButton) => {
-      popupHoverButton.addEventListener("mouseenter", (event) => {
-         openPopup(popupHoverButton.dataset.popupName);
+   if (document.documentElement.clientWidth > 1024) {
+      popupHoverButtons.forEach((popupHoverButton) => {
+         popupHoverButton.addEventListener("mouseenter", (event) => {
+            openPopup(popupHoverButton.dataset.popupName);
+         });
       });
-   });
+   }
 
    const openPopup = (popupName) => {
       const popups = document.querySelectorAll('.go-js-popup');
@@ -45,23 +47,14 @@ window.app.PopupModal = () => {
             }
          }
 
-         // let modalOverlays = popup.querySelectorAll('.popup__box');
-         // modalOverlays.forEach((modalOverlay) => {
-         //    modalOverlay.addEventListener("click", (event) => {
-         //       if (event.target !== popup.querySelector('.popup__window') || event.target !== popup.querySelector('.popup-window-h')) {
-         //          closeModalPopup();
-         //          console.log(event.target);
-         //       }
-         //    });
-         // });
-
-         let oherOffCatalogs = popup.querySelectorAll('.catalog');
-         oherOffCatalogs.forEach((oherOffCatalog) => {
-            oherOffCatalog.addEventListener("mouseleave", (event) => {
-               closeModalPopup();
+         if (document.documentElement.clientWidth > 1024) {
+            let oherOffCatalogs = popup.querySelectorAll('.catalog');
+            oherOffCatalogs.forEach((oherOffCatalog) => {
+               oherOffCatalog.addEventListener("mouseleave", (event) => {
+                  closeModalPopup();
+               });
             });
-         });
-
+         }
 
          let closePopups = document.querySelectorAll('.go-js-close-modal');
          closePopups.forEach((closePopup) => {

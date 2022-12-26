@@ -63,28 +63,33 @@
       background-color: $primary;
       position: relative;
       background-color: #FFF;
-      padding-top: 60px;
+      padding-top: 12px;
       padding-bottom: 200px;
 
       display: flex;
       flex-direction: column;
-      @media screen and (min-width: 768px) {
-         padding-bottom: 200px;
-         padding-top: 76px;
+      &--review {
+         @media screen and (min-width: 1024px) {
+            width: 50%;
+         }
       }
       @media screen and (min-width: 1024px) {
-         padding-top: 95px;
+         padding-top: 20px;
          max-width: 75%;
          display: flex;
          flex-direction: column;
          height: auto;
-         padding-left: 40px;
-         padding-right: 40px;
          box-shadow: 0px 0px 12px #0036681A;
+         &--mini {
+            max-width: 30%;
+         }
       }
 
       @media screen and (min-width: 1360px) {
          max-width: 60%;
+         &--mini {
+            max-width: 30%;
+         }
       }
 
       .popup-window-b--off {
@@ -205,19 +210,27 @@
    .reviews-rating {
       padding-left: 12px;
       padding-right: 12px;
+      @media screen and (min-width: 768px) {
+         padding-left: 22px;
+         padding-right: 22px;
+      }
       @media screen and (min-width: 1024px) {
-         padding: 0;
+         padding-left: 40px;
+         padding-right: 40px;
       }
    }
 }
 
 .popup-window-h {
-   padding: 15px 12px;
+   // padding: 15px 12px;
+   padding-bottom: 12px;
+   padding-left: 12px;
+   padding-right: 12px;
    display: flex;
    align-items: center;
    justify-content: space-between;
    border-bottom: 1px solid $background;
-   position: absolute;
+   // position: absolute;
    top: 0;
    left: 0;
    width: 100%;
@@ -230,7 +243,9 @@
    }
 
    @media screen and (min-width: 768px) {
-      padding: 15px 22px 20px 22px;
+      // padding: 15px 22px 20px 22px;
+      padding-left: 20px;
+      padding-right: 20px;
 
       &__title {
          font-size: 30px;
@@ -239,7 +254,10 @@
    }
 
    @media screen and (min-width: 1024px) {
-      padding: 27px 40px;
+      // padding: 27px 40px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 20px;
    }
 }
 
@@ -340,10 +358,6 @@
          }
       }
    }
-}
-
-.body__popup--active#popup-reviews {
-   z-index: 999999;
 }
 
 .preview-card {

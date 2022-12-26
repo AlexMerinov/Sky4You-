@@ -100,22 +100,21 @@
          }
       }
 
-      input:checked ~ span {
-         color: $primary;
-      }
-
-      input:checked ~ span::after {
-         width: 100%;
-         opacity: 1;
-      }
-
       @media screen and (min-width: 1360px) {
          font-size: 16px;
          line-height: 22px;
          margin-right: 40px;
          &:hover {
-               color: $hover;
+            color: $hover;
          }
+      }
+   }
+
+   &__item.activ-btn {
+      color: $primary;
+      span::after {
+         width: 100%;
+         opacity: 1;
       }
    }
 

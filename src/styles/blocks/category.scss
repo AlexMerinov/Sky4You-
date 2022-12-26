@@ -4,6 +4,48 @@
    }
 }
 
+.row-box__col-l.filter-column.filters--open {
+   background-color: #FFF;
+   padding-top: 0;
+   display: block;
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 99999;
+   .catalog {
+      padding-left: 12px;
+      padding-right: 12px;
+   }
+   .filters {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding-bottom: 60px;
+      overflow: scroll;
+      padding-bottom: 180px;
+      .filters-btn {
+         background-color: #FFF;
+         position: fixed;
+         bottom: 60px;
+         width: 100%;
+         z-index: 9999;
+         &__on {
+            margin-bottom: 0;
+         }
+      }
+      @media screen and (min-width: 768px) {
+         padding-bottom: 200px;
+         .filters-btn {
+            bottom: 80px;
+         }
+      }
+   }
+}
+
 .category-box {
    &__header {
       display: flex;

@@ -69,6 +69,53 @@
          margin-bottom: 0;
       }
    }
+
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 12px;
+      margin-bottom: 25px;
+
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 700;
+      border-bottom: 1px solid $background-active;
+      @media screen and (min-width: 1024px) {
+         display: none;
+      }
+   }
+
+   .filter-close {
+      width: 30px;
+      height: 30px;
+      background-color: $background-active;
+      padding: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .3s;
+      .icon {
+         width: 16px;
+         height: 16px;
+         fill: $primary;
+         transition: .3ss;
+      }
+
+      &:active {
+         background-color: $primary;
+         .icon {
+            fill: #fff;
+         }
+      }
+   }
+
+   &__buttons {
+      margin-top: auto;
+      @media screen and (min-width: 1024px) {
+         margin-top: 0;
+      }
+   }
 }
 
 .chapter {

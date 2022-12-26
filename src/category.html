@@ -118,8 +118,16 @@
                <li class="list-links__item"><a href="#">Моторное масло</a></li>
             </ul>
             <div class="row-box__row">
-               <div class="row-box__col-l">
+               <div class="row-box__col-l filter-column">
                   <div class="filters">
+                     <div class="filters__header">
+                        <div class="filters-title">Фильтры</div>
+                        <button type="button" class="filter-close filter-close-js">
+                           <svg class="icon">
+                              <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+                           </svg>
+                        </button>
+                     </div>
                      <ul class="catalog filters__catalog">
                         <li class="catalog-item filters__catalog-item">
                            <div href="#" class="catalog-item__header cat-header">
@@ -405,7 +413,7 @@
                         </li>
                      </ul>
                      <div class="filters__buttons filters-btn">
-                        <button type="button" class="btn filters-btn__on">ПРИМЕНИТЬ</button>
+                        <button type="button" class="btn filters-btn__on filter-close-js">ПРИМЕНИТЬ</button>
                         <button type="button" class="btn filters-btn__off">СБРОСИТЬ</button>
                      </div>
                   </div>

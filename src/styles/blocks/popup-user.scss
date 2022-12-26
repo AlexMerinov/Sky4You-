@@ -21,8 +21,6 @@
          line-height: 22px;
       }
       @media screen and (min-width: 1024px) {
-         margin-left: -40px;
-         margin-right: -40px;
          padding: 10px 40px;
       }
    }
@@ -34,31 +32,14 @@
          display: flex;
          flex-wrap: wrap;
          flex-basis: content;
-         .field {
-            width: 50%;
-            flex: 0 0 auto;
-            padding-left: 10px;
-            padding-right: 10px;
-            &__label {
-               left: 10px;
-            }
+         padding-left: 22px;
+         padding-right: 22px;
 
-            &--100 {
-               width: 100%;
-            }
-         }
-
-         .form-box__link-pas {
-            margin-left: calc(50% + 10px);
-         }
       }
 
       @media screen and (min-width: 1024px) {
-         margin-left: -20px;
-         margin-right: -20px;
-         .form-box__link-pas {
-            margin-left: 10px;
-         }
+         padding-left: 40px;
+         padding-right: 40px;
 
          .form-box__buttons {
             flex-wrap: wrap;
@@ -76,9 +57,7 @@
 
    @media screen and (min-width: 1024px) {
       align-self: auto;
-      width: 420px;
       .field {
-         width: 100%;
          flex: 0 0 auto;
          padding-left: 10px;
          padding-right: 10px;
