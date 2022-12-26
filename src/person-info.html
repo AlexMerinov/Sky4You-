@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<!-- Head -->
-
-<head>
-   <!-- Meta -->
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>New Project</title>
-   <!-- / Meta -->
-
-   <!-- Styles -->
-   <link rel="stylesheet" href="styles/style.min.css" />
-   <!-- / Styles -->
-</head>
-<!-- / Head -->
-
-<!-- Body -->
-
-<body class="body">
+@@include('includes/header.html', { 'title' : 'New Project' })
 
 <!-- Page -->
 <div class="page" id="top">
@@ -115,23 +96,117 @@
       </header>
       <!-- / Header -->
       <!-- Main -->
-      <main class="page__main main">
+      <main class="page__category row-box category-page">
          <div class="container">
-            <ul class="list-pages">
-               <li class="list-pages__item"><a href="main.html" target="_blank"># Главная</a></li>
-               <li class="list-pages__item"><a href="catalog.html" target="_blank"># Каталог</a></li>
-               <li class="list-pages__item"><a href="category.html" target="_blank"># Категории</a></li>
-               <li class="list-pages__item"><a href="card-detail.html" target="_blank"># Карточка товара</a></li>
-               <li class="list-pages__item"><a href="popups.html" target="_blank"># Модалки</a></li>
-               <li class="list-pages__item"><a href="favorites.html" target="_blank"># Избранное</a></li>
-               <li class="list-pages__item"><a href="404.html" target="_blank"># 404</a></li>
-               <li class="list-pages__item"><a href="person-account.html" target="_blank"># Мои профили</a></li>
-               <li class="list-pages__item"><a href="person-favorit.html" target="_blank"># Мои избранные</a></li>
-               <li class="list-pages__item"><a href="person-info.html" target="_blank"># Личный кабинет</a></li>
-               <li class="list-pages__item"><a href="person-order.html" target="_blank"># Текущие заказы</a></li>
-               <li class="list-pages__item"><a href=""></a></li>
+            <ul class="breadcrumbs">
+               <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link">Главная</a>
+               </li>
+               <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link">Личный кабинет</a>
+               </li>
+               <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Личные данные</a>
+               </li>
             </ul>
+            <div class="page__head-title">
+               <h1 class="title page__title">Личные данные</h1>
+            </div>
+            <div class="row-box__row">
+               <div class="row-box__col-l">
+                  <div class="person-box">
+                     <div class="person-box__header column-header">
+                        <div class="column-header__title">Фильтры</div>
+                        <button type="button" class="column-header__close filter-close-js">
+                           <svg class="icon">
+                              <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+                           </svg>
+                        </button>
+                     </div>
+                     <ul class="person-box__list">
+                        <li class="person-box__item"><a href="" class="person-box__link">
+                              <svg class="icon person-box__icon">
+                                 <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+                              </svg>
+                              <span>личные данные</span>
+                           </a></li>
+                        <li class="person-box__item"><a href="" class="person-box__link">
+                              <svg class="icon person-box__icon person-box__icon--stroke">
+                                 <use xlink:href="svg-sprite/svg-sprite.svg#clock"></use>
+                              </svg>
+                              <span>текущие заказы</span>
+                           </a></li>
+                        <li class="person-box__item"><a href="" class="person-box__link">
+                              <svg class="icon person-box__icon person-box__icon--stroke">
+                                 <use xlink:href="svg-sprite/svg-sprite.svg#order done"></use>
+                              </svg>
+                              <span>выполненные заказы</span>
+                           </a></li>
+                        <li class="person-box__item"><a href="" class="person-box__link">
+                              <svg class="icon person-box__icon">
+                                 <use xlink:href="svg-sprite/svg-sprite.svg#like"></use>
+                              </svg>
+                              <span>избранное</span>
+                           </a></li>
+                        <li class="person-box__item"><a href="" class="person-box__link">
+                              <svg class="icon person-box__icon person-box__icon--stroke">
+                                 <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+                              </svg>
+                              <span>корзина</span>
+                           </a></li>
+                        <li class="person-box__item"><a href="" class="person-box__link">
+                              <svg class="icon person-box__icon">
+                                 <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+                              </svg>
+                              <span>мои профили</span>
+                           </a></li>
+                        <li class="person-box__item"><a href="" class="person-box__link">
+                              <svg class="icon person-box__icon person-box__icon--stroke">
+                                 <use xlink:href="svg-sprite/svg-sprite.svg#log-out"></use>
+                              </svg>
+                              <span>Выйти</span>
+                           </a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="row-box__col-r sections">
+                  <!--Sections-->
+
+                  <!--Section -->
+                  <div class="sections__section section">
+                     <div class="user-info row">
+                        <div class="col">
+                           <div class="user-info__box">
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- / Section banner-->
+
+                  <!--/ Sections-->
+               </div>
+            </div>
          </div>
+
+         <!-- Questions -->
+         <section class="sections__section questions">
+            <div class="container">
+               <div class="questions__wrapper" style="background-image: url('images/content/question.png')">
+                  <div class="questions__box">
+                     <h2 class="questions__title">Остались вопросы? Пишите!</h2>
+                     <span class="questions__desc">
+                        Оставьте свою заявку и наши специалисты свяжутся с Вами в
+                        ближайшее время
+                     </span>
+                  </div>
+                  <button type="button" class="btn questions__btn">
+                     ОСТАВИТЬ ЗАЯВКУ
+                  </button>
+               </div>
+            </div>
+         </section>
+         <!-- / Questions -->
       </main>
       <!-- / Main -->
 
@@ -775,15 +850,7 @@
 </div>
 <!-- / Cookie -->
 
-
-        <!-- Scripts -->
-        <script src="scripts/script.min.js"></script>
-        <!-- / Scripts -->
-
-    </body>
-    <!-- / Body -->
-
-</html>
+@@include('includes/footer.html')
 
 <!-- <svg class="icon">
 	<use xlink:href="svg-sprite/svg-sprite.svg#user"></use>

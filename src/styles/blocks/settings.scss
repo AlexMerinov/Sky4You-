@@ -247,6 +247,42 @@ button {
    font-weight: 500;
    color: #FFF;
    transition: all 0.3s linear;
+   @media screen and (min-width: 1024px) {
+      font-size: 16px;
+      line-height: 22px;
+   }
+
+   &--light {
+      border: 2px solid $primary;
+      color: $primary;
+      &:active {
+         background-color: $primary;
+         color: #FFF;
+      }
+      @media screen and (min-width: 1024px) {
+         &:hover {
+            background-color: $primary;
+            color: #FFF;
+         }
+      }
+   }
+
+   &--green {
+      background-color: $secondary;
+      border: 2px solid $secondary;
+      &:active {
+         background-color: $primary;
+         border: 2px solid $primary;
+         color: #FFF;
+      }
+      @media screen and (min-width: 1024px) {
+         &:hover {
+            background-color: $primary;
+            border: 2px solid $primary;
+            color: #FFF;
+         }
+      }
+   }
 }
 
 .close-btn {
@@ -320,6 +356,7 @@ button {
    display: flex;
    align-items: center;
    margin-bottom: 10px;
+   display: none;
    &__item {
       position: relative;
       margin-right: 20px;
@@ -357,6 +394,10 @@ button {
       &--active {
          color: $primary;
       }
+   }
+
+   @media screen and (min-width: 1024px) {
+      display: flex;
    }
 
    @media screen and (min-width: 1360px) {
@@ -632,5 +673,39 @@ button {
 
       font-size: 16px;
       line-height: 22px;  
+   }
+}
+
+.box-buttons {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-left: 12px;
+   padding-right: 12px;
+   gap: 10px;
+   &__item {
+      width: 100%;
+      min-width: 270px;
+      padding: 19px 25px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      text-transform: uppercase;
+   }
+
+   @media screen and (min-width: 768px) {
+      flex-direction: row;
+      padding-left: 22px;
+      padding-right: 22px;
+      &__item {
+         width: auto;
+         min-width: 270px;
+         gap: 30px;
+      }
+   }
+
+   @media screen and (min-width: 1024px) {
+      padding: 0;
    }
 }

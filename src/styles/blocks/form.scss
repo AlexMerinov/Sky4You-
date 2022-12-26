@@ -5,6 +5,12 @@
       margin-bottom: 19px;
    }
 
+   &__section {
+      @media screen and (min-width: 1024px) {
+         margin-bottom: 10px;
+      }
+   }
+
    &__consent {
       padding-left: 12px;
       @media screen and (min-width: 1024px) {
@@ -39,8 +45,9 @@
       font-weight: 700;
       color: $primary;
       @media screen and (min-width: 768px) {
-         padding-left: 20px;
-         padding-right: 20px;
+         padding-left: 22px;
+         padding-right: 22px;
+         margin-bottom: 10px;
       }
       @media screen and (min-width: 1024px) {
          padding: 14px 40px;
@@ -180,6 +187,25 @@
       }
    }
 
+   &__type {
+      padding: 15px 12px;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      color: $primary;
+      @media screen and (min-width: 768px) {
+         padding-left: 22px;
+         padding-right: 22px;
+      }
+      @media screen and (min-width: 1024px) {
+         padding-left: 0;
+         padding-right: 0;
+         font-size: 20px;
+         line-height: 27px;
+      }
+      
+   }
+
    .col {
       .chapter__label {
          margin-bottom: 15px;
@@ -211,15 +237,9 @@
 
       position: absolute;
       top: 50%;
-      left: 5px;
+      left: 0;
       transform: translateY(-50%);
       transition: all 0.3s linear;
-      @media screen and (min-width: 768px) {
-         left: 10px;
-      }
-      @media screen and (min-width: 1360px) {
-         left: 15px;
-      }
    }
 
    &__label.req {

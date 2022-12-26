@@ -1,0 +1,237 @@
+.person-box {
+   &__link {
+      padding: 14px 11px;
+      display: flex;
+      align-items: center;
+      background-color: #FFF;
+
+      font-size: 15px;
+      line-height: 21px;
+      text-transform: uppercase;
+      color: $primary;
+      font-weight: 400;
+      transition: .3s;
+      border-bottom: 1px solid $background-active;
+
+      &:active {
+         background-color: $background-active;
+      }
+   }
+
+   &__icon {
+      width: 20px;
+      height: 20px;
+      fill: $primary;
+      margin-right: 34px;
+      transition: .3s;
+      &--stroke {
+         fill: none;
+         stroke: $primary;
+      }
+   }
+
+   @media screen and (min-width: 1024px) {
+      &__link {
+         &:hover {
+            background-color: $background;
+         }
+      }
+   }
+}
+
+.section {
+   &__person-page {
+      margin-left: -12px;
+      margin-right: -12px;
+      @media screen and (min-width: 768px) {
+         margin-left: -22px;
+         margin-right: -22px;
+      }
+
+      @media screen and (min-width: 1024px) {
+         margin: 0;
+         .form-box__subtitle {
+            padding-left: 22px;
+            padding-right: 22px;
+         }
+      }
+   }
+}
+
+.person-page {
+   &__name {
+      display: block;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      color: #FFF;
+      background-color: $primary;
+      padding: 14px 12px;
+      span {
+         color: $text2;
+      }
+      @media screen and (min-width: 768px) {
+         padding-left: 22px;
+         padding-right: 22px;
+      }
+      @media screen and (min-width: 1024px) {
+         padding-top: 19px;
+         padding-bottom: 19px;
+      }
+   }
+}
+
+.form-box {
+   .row {
+      padding-left: 12px;
+      @media screen and (min-width: 768px) {
+         padding-left: 22px;
+      }
+      @media screen and (min-width: 1024px) {
+         padding: 0;
+      }
+   }
+}
+
+.order-item {
+   display: flex;
+   flex-direction: column;
+   padding: 14px 11px;
+   background-color: $background;
+
+   &__name {
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: 700;
+      margin-bottom: 3px;
+      color: $primary;
+   }
+
+   &__date {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      color: $primary;
+
+      margin-bottom: 13px;
+      span {
+         color: $text2;
+      }
+   }
+
+   &__status {
+      width: max-content;
+      display: inline-block;
+      padding: 3px 6px;
+      background-color: $hover;
+      margin-bottom: 18px;
+
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #FFF;
+   }
+
+   &__price {
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: 700;
+      color: $primary;
+
+      margin-bottom: 15px;
+   }
+
+   &__pagination {
+      display: flex;
+      gap: 10px;
+   }
+
+   &__link {
+      flex: 1 1 auto;
+      width: auto;
+      padding: 11px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFF;
+
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $primary;
+      transition: .3s;
+      &:active {
+         background-color: $primary;
+         color: #FFF;
+      }
+      @media screen and (min-width: 1024px) {
+         &:hover {
+            background-color: $primary;
+            color: #FFF;
+         }
+      }
+   }
+
+   &__btn {
+      padding: 10px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      .icon {
+         width: 20px;
+         height: 20px;
+         fill: $primary;
+         &--repeat {
+            fill: none;
+            stroke: $primary;
+         }
+      }
+   }
+
+   &__label {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: calc(100% + 8px);
+
+      font-size: 12px;
+      line-height: 17px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #FFF;
+      white-space: nowrap;
+
+      background-color: $primary;
+      height: 0;
+      opacity: 0;
+      transition: .3s;
+
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: -8px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 0;
+         height: 0;
+         border-top: 8px solid $primary;
+         border-left: 6px solid transparent;
+         border-right: 6px solid transparent;
+         transition: .3s;
+      }
+   }
+
+   &__btn:hover {
+      .order-item__label {
+         height: auto;
+         opacity: 1;
+         padding: 8px;
+      }
+   }
+}

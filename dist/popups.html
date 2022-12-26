@@ -141,6 +141,8 @@
                      data-popup-name="popup_review">отзыв</button></li>
                <li class="list-pages__item"><button type="button" class="list-pages__btn go-js-open-popup"
                      data-popup-name="popup_exit">выход</button></li>
+               <li class="list-pages__item"><button type="button" class="list-pages__btn go-js-open-popup"
+                     data-popup-name="popup_delet">удалить профиль</button></li>
             </ul>
          </div>
       </main>
@@ -623,7 +625,31 @@
             </button>
          </div>
          <div class="popup-user__desc">
-            все товары будут удалены
+            Все товары будут удалены
+         </div>
+         <div action="" class="popup-user__form form-box">
+            <div class="form-box__buttons">
+               <button type="button" class="form-box__link">нет</button>
+               <button type="button" class="form-box__btn">да</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" id="popup-delet" data-popup-name="popup_delet">
+   <div class="popup__box">
+      <div class="popup__window popup__window--mini popup-user">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Удалить профиль?</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="popup-user__desc">
+            Вы уверены, что хотите удалить профиль «ООО Аэрофлот» безвозвратно?
          </div>
          <div action="" class="popup-user__form form-box">
             <div class="form-box__buttons">
@@ -637,7 +663,7 @@
 
 <div class="body__popup popup go-js-popup" id="popup-user" data-popup-name="popup_user">
    <div class="popup__box">
-      <div class="popup__window popup-user">
+      <div class="popup__window popup__window--mini popup-user">
          <div class="popup-window-h">
             <span class="popup-window-h__title">Авторизация</span>
             <button type="button" class="close-btn go-js-close-modal">
@@ -650,7 +676,7 @@
             Пожалуйста, заполните все обязательные поля для входа
          </div>
          <form action="" class="popup-user__form form-box">
-            <div class="row row-cols-1 row-cols-sm-2">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-l-1">
                <div class="field form-box__field col">
                   <label>
                      <input type="text" class="field__input" placeholder="" />
