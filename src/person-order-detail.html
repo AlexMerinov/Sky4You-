@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<!-- Head -->
-
-<head>
-   <!-- Meta -->
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>New Project</title>
-   <!-- / Meta -->
-
-   <!-- Styles -->
-   <link rel="stylesheet" href="styles/style.min.css" />
-   <!-- / Styles -->
-</head>
-<!-- / Head -->
-
-<!-- Body -->
-
-<body class="body">
+@@include('includes/header.html', { 'title' : 'New Project' })
 
 <!-- Page -->
 <div class="page" id="top">
@@ -128,7 +109,7 @@
                   <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Личные данные</a>
                </li>
             </ul>
-            <h1 class="title page__title">Личные данные</h1>
+            <h1 class="title page__title">Заказ №2342342</h1>
             <div class="row-box__row">
                <div class="row-box__col-l">
                   <div class="person-box">
@@ -141,13 +122,13 @@
                         </button>
                      </div>
                      <ul class="person-box__list">
-                        <li class="person-box__item"><a href="" class="person-box__link person-box__link--active">
+                        <li class="person-box__item"><a href="" class="person-box__link">
                               <svg class="icon person-box__icon">
                                  <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
                               </svg>
                               <span>личные данные</span>
                            </a></li>
-                        <li class="person-box__item"><a href="" class="person-box__link">
+                        <li class="person-box__item"><a href="" class="person-box__link person-box__link--active">
                               <svg class="icon person-box__icon person-box__icon--stroke">
                                  <use xlink:href="svg-sprite/svg-sprite.svg#clock"></use>
                               </svg>
@@ -192,132 +173,105 @@
                   <!--Section -->
                   <div class="sections__section section">
                      <div class="person-page section__person-page">
-                        <span class="person-page__name"><span>Профиль:</span> ООО Аэрофлот</span>
-                        <form class="person-page__form form-box">
-                           <div class="form-box__section">
-                              <h3 class="form-box__subtitle">Тип покупателя</h3>
-                              <div class="form-box__type">Юридическое лицо</div>
+                        <div class="person-page__name">
+                           <span class="person-page__text">Дата:</span> 23 окт. 2022
+                           <span class="person-page__status person-page__status--loading">в обработке</span>
+                        </div>
+                        <div class="person-page__subheader">Контактная информация</div>
+                        <div class="person-page__row row row-cols-1 row-cols-vsm-2 row-cols-sm-3">
+                           <div class="contact-field person-page__field col">
+                              <span class="contact-field__desc">ФАМИЛИЯ</span>
+                              <span class="contact-field__name">Орленко</span>
                            </div>
-                           <div class="form-box__section">
-                              <h3 class="form-box__subtitle">Контактные данные</h3>
-                              <div class="row">
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">фамилия</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">имя</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">отчество</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" name="mail" class="field__input" placeholder="" />
-                                          <span class="field__label">e-mail</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" name="phone" class="field__input" placeholder="" />
-                                          <span class="field__label req">телефон</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">название организации</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">инн</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">кпп</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-1 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">название банка</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">юридический адрес</span>
-                                       </label>
-                                    </div>
+                           <div class="contact-field person-page__field col">
+                              <span class="contact-field__desc">имя</span>
+                              <span class="contact-field__name">Александр</span>
+                           </div>
+                           <div class="contact-field person-page__field col">
+                              <span class="contact-field__desc">отчество</span>
+                              <span class="contact-field__name">Сергеевич</span>
+                           </div>
+                           <div class="contact-field person-page__field col">
+                              <span class="contact-field__desc">E-MAIL</span>
+                              <span class="contact-field__name">orlenkoalexander@gmail.com</span>
+                           </div>
+                           <div class="contact-field person-page__field col">
+                              <span class="contact-field__desc">ТЕЛЕФОН</span>
+                              <span class="contact-field__name">+7 (950) 645 43 92</span>
+                           </div>
+                           <div class="contact-field person-page__field col">
+                              <span class="contact-field__desc">АДРЕС</span>
+                              <span class="contact-field__name">Владимирская область, г. Одинцово, пр. Славы, 24</span>
+                           </div>
+                        </div>
+                        <div class="person-page__subheader">Товары в заказе</div>
+                        <div class="order-box person-page__orders">
+                           <div class="order-box__item product-order">
+                              <picture class="product-order__image">
+                                 <img src="images/content/product.png" alt="product">
+                              </picture>
+                              <div class="product-order__desc">
+                                 <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
+                                 <div class="product-order__info">
+                                    <span class="product-order__count">2 шт</span>
+                                    <span class="product-order__price">6 900 ₽</span>
                                  </div>
                               </div>
+                              <div class="product-order__sum">13 800 ₽</div>
                            </div>
-                           <div class="form-box__section">
-                              <h3 class="form-box__subtitle">Адрес доставки</h3>
-                              <div class="row">
-                                 <div class="col cols-1 cols-sm-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">город</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">улица</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" name="mail" class="field__input" placeholder="" />
-                                          <span class="field__label">дом</span>
-                                       </label>
-                                    </div>
+                           <div class="order-box__item product-order">
+                              <picture class="product-order__image">
+                                 <img src="images/content/product.png" alt="product">
+                              </picture>
+                              <div class="product-order__desc">
+                                 <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
+                                 <div class="product-order__info">
+                                    <span class="product-order__count">2 шт</span>
+                                    <span class="product-order__price">6 900 ₽</span>
                                  </div>
                               </div>
+                              <div class="product-order__sum">13 800 ₽</div>
                            </div>
-                           <div class="box-buttons">
-                              <button class="btn btn--green box-buttons__item" type="button">сохранить
-                                 изменения</button>
-                              <a href="" class="btn btn--light box-buttons__item">все профили</a>
+                           <div class="order-box__item product-order">
+                              <picture class="product-order__image">
+                                 <img src="images/content/product.png" alt="product">
+                              </picture>
+                              <div class="product-order__desc">
+                                 <span class="product-order__name">Фильтр масла TEMPEST. Номер производителя AA48112
+                                    Длинное название товара занимаеющее несколько строк Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Ut nulla velit voluptates sint vero ab corporis,
+                                    adipisci quam minima quas!</span>
+                                 <div class="product-order__info">
+                                    <span class="product-order__count">2 шт</span>
+                                    <span class="product-order__price">6 900 ₽</span>
+                                 </div>
+                              </div>
+                              <div class="product-order__sum">13 800 ₽</div>
                            </div>
-                        </form>
+                        </div>
+                        <div class="person-page__pagination pagination-fixed">
+                           <div class="pagination-fixed__title">Итого: 21 700 ₽</div>
+                           <div class="pagination-fixed__btns">
+                              <button type="button" class="pagination-fixed__btn btn btn--light">
+                                 <svg class="icon btn__icon btn__icon--stroke">
+                                    <use xlink:href="svg-sprite/svg-sprite.svg#repeat"></use>
+                                 </svg>
+                                 повторить
+                              </button>
+                              <button type="button" class="pagination-fixed__btn btn btn--light">
+                                 <svg class="icon btn__icon">
+                                    <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                                 </svg>
+                                 отменить
+                              </button>
+                           </div>
+                           <div class="pagination-fixed__link btn btn--green">все заказы</div>
+                        </div>
+                        <div class="person-page__client-text client-text text">Уважаемый клиент, мы очень ценим Ваше
+                           мнение,
+                           пожалуйста
+                           поделитесь им , это сделает нашу работу еще лучше!</div>
+                        <button type="button" class="btn btn--green person-page__btn-review">ОСТАВИТЬ ОТЗЫВ</button>
                      </div>
                   </div>
                   <!-- / Section banner-->
@@ -988,15 +942,7 @@
 </div>
 <!-- / Cookie -->
 
-
-        <!-- Scripts -->
-        <script src="scripts/script.min.js"></script>
-        <!-- / Scripts -->
-
-    </body>
-    <!-- / Body -->
-
-</html>
+@@include('includes/footer.html')
 
 <!-- <svg class="icon">
 	<use xlink:href="svg-sprite/svg-sprite.svg#user"></use>

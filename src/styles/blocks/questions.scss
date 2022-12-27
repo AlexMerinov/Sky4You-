@@ -32,6 +32,7 @@
       color: #FFF;
       background-color: $primary;
       line-height: 16px;
+      width: max-content;
       &:active {
          background-color: $hover;
       }

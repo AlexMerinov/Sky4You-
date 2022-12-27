@@ -13,8 +13,11 @@
 
    &__consent {
       padding-left: 12px;
+      @media screen and (min-width: 768px) {
+         padding-left: 20px;
+      }
       @media screen and (min-width: 1024px) {
-         padding-left: 0px;
+         padding-left: 40px;
       }
    }
 
@@ -211,6 +214,13 @@
          margin-bottom: 15px;
       }
    }
+
+   &__warning {
+      padding-left: 6px;
+      @media screen and (min-width: 768px) {
+         padding-left: 12px;
+      }
+   }
 }
 
 .field {
@@ -237,9 +247,12 @@
 
       position: absolute;
       top: 50%;
-      left: 0;
+      left: 5px;
       transform: translateY(-50%);
       transition: all 0.3s linear;
+      @media screen and (min-width: 768px) {
+         left: 10px;
+      }
    }
 
    &__label.req {

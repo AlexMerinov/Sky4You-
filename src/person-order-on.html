@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<!-- Head -->
-
-<head>
-   <!-- Meta -->
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <title>New Project</title>
-   <!-- / Meta -->
-
-   <!-- Styles -->
-   <link rel="stylesheet" href="styles/style.min.css" />
-   <!-- / Styles -->
-</head>
-<!-- / Head -->
-
-<!-- Body -->
-
-<body class="body">
+@@include('includes/header.html', { 'title' : 'New Project' })
 
 <!-- Page -->
 <div class="page" id="top">
@@ -125,10 +106,12 @@
                   <a href="#" class="breadcrumbs__link">Личный кабинет</a>
                </li>
                <li class="breadcrumbs__item">
-                  <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Личные данные</a>
+                  <a href="#" class="breadcrumbs__link breadcrumbs__link--active">Текущие заказы</a>
                </li>
             </ul>
-            <h1 class="title page__title">Личные данные</h1>
+            <div class="page__head-title">
+               <h1 class="title page__title">Текущие заказы</h1>
+            </div>
             <div class="row-box__row">
                <div class="row-box__col-l">
                   <div class="person-box">
@@ -141,7 +124,7 @@
                         </button>
                      </div>
                      <ul class="person-box__list">
-                        <li class="person-box__item"><a href="" class="person-box__link person-box__link--active">
+                        <li class="person-box__item"><a href="" class="person-box__link">
                               <svg class="icon person-box__icon">
                                  <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
                               </svg>
@@ -153,7 +136,7 @@
                               </svg>
                               <span>текущие заказы</span>
                            </a></li>
-                        <li class="person-box__item"><a href="" class="person-box__link">
+                        <li class="person-box__item"><a href="" class="person-box__link person-box__link--active">
                               <svg class="icon person-box__icon person-box__icon--stroke">
                                  <use xlink:href="svg-sprite/svg-sprite.svg#order done"></use>
                               </svg>
@@ -191,133 +174,123 @@
 
                   <!--Section -->
                   <div class="sections__section section">
-                     <div class="person-page section__person-page">
-                        <span class="person-page__name"><span>Профиль:</span> ООО Аэрофлот</span>
-                        <form class="person-page__form form-box">
-                           <div class="form-box__section">
-                              <h3 class="form-box__subtitle">Тип покупателя</h3>
-                              <div class="form-box__type">Юридическое лицо</div>
-                           </div>
-                           <div class="form-box__section">
-                              <h3 class="form-box__subtitle">Контактные данные</h3>
-                              <div class="row">
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">фамилия</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">имя</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">отчество</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" name="mail" class="field__input" placeholder="" />
-                                          <span class="field__label">e-mail</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" name="phone" class="field__input" placeholder="" />
-                                          <span class="field__label req">телефон</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">название организации</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">инн</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-6 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">кпп</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-1 cols-md-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">название банка</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">юридический адрес</span>
-                                       </label>
-                                    </div>
-                                 </div>
+                     <div class="order-box row row-cols-1 row-cols-vsm-2 row-cols-l-2 row-cols-md-3">
+                        <div class="col col--padding">
+                           <div class="order-box__item order-item">
+                              <div class="order-item__name">Заказ № 35468</div>
+                              <div class="order-item__date"><span>Дата:</span> 23 окт. 2021</div>
+                              <span class="order-item__status order-item__status--on">выполнен</span>
+                              <div class="order-item__price"><span>9 999</span> ₽</div>
+                              <div class="order-item__pagination">
+                                 <a href="#" class="order-item__link">подробнее</a>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon icon--repeat">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#repeat"></use>
+                                    </svg>
+                                    <span class="order-item__label">повторить заказ</span>
+                                 </button>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                                    </svg>
+                                    <span class="order-item__label">отменить заказ</span>
+                                 </button>
                               </div>
                            </div>
-                           <div class="form-box__section">
-                              <h3 class="form-box__subtitle">Адрес доставки</h3>
-                              <div class="row">
-                                 <div class="col cols-1 cols-sm-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">город</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" class="field__input" placeholder="" />
-                                          <span class="field__label req">улица</span>
-                                       </label>
-                                    </div>
-                                 </div>
-                                 <div class="col cols-1 cols-sm-4">
-                                    <div class="field form-box__field">
-                                       <label>
-                                          <input type="text" name="mail" class="field__input" placeholder="" />
-                                          <span class="field__label">дом</span>
-                                       </label>
-                                    </div>
-                                 </div>
+                        </div>
+                        <div class="col col--padding">
+                           <div class="order-box__item order-item">
+                              <div class="order-item__name">Заказ № 35468</div>
+                              <div class="order-item__date"><span>Дата:</span> 23 окт. 2021</div>
+                              <span class="order-item__status order-item__status--on">выполнен</span>
+                              <div class="order-item__price"><span>9 999</span> ₽</div>
+                              <div class="order-item__pagination">
+                                 <a href="#" class="order-item__link">подробнее</a>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon icon--repeat">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#repeat"></use>
+                                    </svg>
+                                    <span class="order-item__label">повторить заказ</span>
+                                 </button>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                                    </svg>
+                                    <span class="order-item__label">отменить заказ</span>
+                                 </button>
                               </div>
                            </div>
-                           <div class="box-buttons">
-                              <button class="btn btn--green box-buttons__item" type="button">сохранить
-                                 изменения</button>
-                              <a href="" class="btn btn--light box-buttons__item">все профили</a>
+                        </div>
+                        <div class="col col--padding">
+                           <div class="order-box__item order-item">
+                              <div class="order-item__name">Заказ № 35468</div>
+                              <div class="order-item__date"><span>Дата:</span> 23 окт. 2021</div>
+                              <span class="order-item__status order-item__status--on">выполнен</span>
+                              <div class="order-item__price"><span>9 999</span> ₽</div>
+                              <div class="order-item__pagination">
+                                 <a href="#" class="order-item__link">подробнее</a>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon icon--repeat">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#repeat"></use>
+                                    </svg>
+                                    <span class="order-item__label">повторить заказ</span>
+                                 </button>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                                    </svg>
+                                    <span class="order-item__label">отменить заказ</span>
+                                 </button>
+                              </div>
                            </div>
-                        </form>
+                        </div>
+                        <div class="col col--padding">
+                           <div class="order-box__item order-item">
+                              <div class="order-item__name">Заказ № 35468</div>
+                              <div class="order-item__date"><span>Дата:</span> 23 окт. 2021</div>
+                              <span class="order-item__status order-item__status--off">отменен</span>
+                              <div class="order-item__price"><span>9 999</span> ₽</div>
+                              <div class="order-item__pagination">
+                                 <a href="#" class="order-item__link">подробнее</a>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon icon--repeat">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#repeat"></use>
+                                    </svg>
+                                    <span class="order-item__label">повторить заказ</span>
+                                 </button>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                                    </svg>
+                                    <span class="order-item__label">отменить заказ</span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col col--padding">
+                           <div class="order-box__item order-item">
+                              <div class="order-item__name">Заказ № 35468</div>
+                              <div class="order-item__date"><span>Дата:</span> 23 окт. 2021</div>
+                              <span class="order-item__status order-item__status--off">отменен</span>
+                              <div class="order-item__price"><span>9 999</span> ₽</div>
+                              <div class="order-item__pagination">
+                                 <a href="#" class="order-item__link">подробнее</a>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon icon--repeat">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#repeat"></use>
+                                    </svg>
+                                    <span class="order-item__label">повторить заказ</span>
+                                 </button>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                                    </svg>
+                                    <span class="order-item__label">отменить заказ</span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+
                      </div>
                   </div>
                   <!-- / Section banner-->
@@ -988,15 +961,7 @@
 </div>
 <!-- / Cookie -->
 
-
-        <!-- Scripts -->
-        <script src="scripts/script.min.js"></script>
-        <!-- / Scripts -->
-
-    </body>
-    <!-- / Body -->
-
-</html>
+@@include('includes/footer.html')
 
 <!-- <svg class="icon">
 	<use xlink:href="svg-sprite/svg-sprite.svg#user"></use>

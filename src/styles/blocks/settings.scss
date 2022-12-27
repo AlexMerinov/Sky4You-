@@ -191,6 +191,53 @@ button {
          max-width: 987px;
       }
    }
+
+   &__row--order {
+      flex-direction: column;
+      .row-box__col-l {
+         display: block;
+         order: 2;
+         margin-right: 0;
+         margin-bottom: 30px;
+      }
+
+      .person-page {
+         &__subheader {
+            margin-left: -12px;
+            margin-right: -12px;
+         }
+      }
+      @media screen and (min-width: 768px) {
+         .person-page {
+            &__subheader {
+               margin-left: -22px;
+               margin-right: -22px;
+            }
+         }
+      }
+      @media screen and (min-width: 1024px) {
+         flex-direction: row;
+         .row-box__col-l {
+            width: 270px;
+            margin-left: 30px;
+         }
+
+         .person-page {
+            &__subheader {
+               margin-left: 0;
+               margin-right: 0;
+               padding: 14px 20px;
+
+            }
+         }
+      }
+
+      @media screen and (min-width: 1360px) {
+         .row-box__col-l {
+            width: 309px;
+         }
+      }
+   }
 }
 
 .section {
@@ -214,6 +261,34 @@ button {
 
    &__navigation {
       display: none;
+   }
+
+   &__order {
+      .person-page__orders {
+         padding: 0;
+      }
+      .form-box {
+         &__subtitle {
+            margin-left: -12px;
+            margin-right: -12px;
+            @media screen and (min-width: 768px) {
+               margin-left: -22px;
+               margin-right: -22px;
+            }
+            @media screen and (min-width: 1024px) {
+               margin-left: 0;
+               margin-right: 0;
+               padding: 14px 20px;
+            }
+         }
+
+         &__consent {
+            padding-left: 0;
+         }
+         .row {
+            padding: 15px 0;
+         }
+      }
    }
 
    @media screen and (min-width: 768px) {
@@ -247,6 +322,21 @@ button {
    font-weight: 500;
    color: #FFF;
    transition: all 0.3s linear;
+   &__icon {
+      display: none;
+      @media screen and (min-width: 1024px) {
+         display: block;
+         width: 20px;
+         height: 20px;
+         fill: $primary;
+         margin-right: 10px;
+         transition: .3s;
+         &--stroke {
+            fill: none;
+            stroke: $primary;
+         }
+      }
+   }
    @media screen and (min-width: 1024px) {
       font-size: 16px;
       line-height: 22px;
@@ -258,11 +348,25 @@ button {
       &:active {
          background-color: $primary;
          color: #FFF;
+         .btn__icon {
+            fill: #FFF;
+            &--stroke {
+               fill: none;
+               stroke: #FFF;
+            }
+         }
       }
       @media screen and (min-width: 1024px) {
          &:hover {
             background-color: $primary;
             color: #FFF;
+            .btn__icon {
+               fill: #FFF;
+               &--stroke {
+                  fill: none;
+                  stroke: #FFF;
+               }
+            }
          }
       }
    }
@@ -708,4 +812,201 @@ button {
    @media screen and (min-width: 1024px) {
       padding: 0;
    }
+}
+
+.pagination-fixed {
+   padding: 10px 12px;
+   position: fixed;
+   background-color: #fff;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   z-index: 999999;
+   -webkit-box-shadow: 0px -5px 10px -4px rgba(34, 60, 80, 0.17);
+   -moz-box-shadow: 0px -5px 10px -4px rgba(34, 60, 80, 0.17);
+   box-shadow: 0px -5px 10px -4px rgba(34, 60, 80, 0.17);
+   &__title {
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: 700;
+      color: $primary;
+      margin-bottom: 10px;
+      white-space: nowrap;
+   }
+
+   &__btns {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+   }
+
+   &__btn {
+      padding: 11px;
+      flex: 1 1 auto;
+      width: 100%;
+   }
+
+   &__link {
+      padding: 11px;
+      white-space: nowrap;
+      cursor: pointer;
+   }
+
+   @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 22px;
+
+      position: static;
+      box-shadow: none;
+      width: auto;
+      z-index: 1;
+      &__title {
+         margin-bottom: 0;
+      }
+
+      &__btns {
+         margin-bottom: 0;
+         flex: 1 1 auto;
+         gap: 20px;
+         margin-left: 20px;
+         margin-right: 20px;
+      }
+
+      &__btn {
+         padding: 15px;
+         min-width: 150px;
+      }
+
+      &__link {
+         padding: 15px;
+         min-width: 170px;
+      }
+   }
+
+   @media screen and (min-width: 1024px) {
+      flex-wrap: wrap;
+      padding: 0;
+      &__title {
+         font-size: 32px;
+         line-height: 40px;
+         width: 100%;
+         margin-bottom: 15px;
+      }
+
+      &__link {
+         padding: 15px;
+         min-width: 190px;
+      }
+
+      &__btns {
+         margin-left: 0;
+         gap: 30px;
+         margin-right: 30px;
+      }
+   }
+
+   @media screen and (min-width: 1360px) {
+      flex-wrap: nowrap;
+      &__title {
+         font-size: 40px;
+         line-height: 54px;
+         margin-bottom: 0;
+      }
+      &__btns {
+         gap: 30px;
+      }
+      &__btn {
+         padding: 20px;
+         min-width: 190px;
+      }
+
+      &__link {
+         padding: 20px;
+         min-width: 190px;
+      }
+   }
+}
+
+.client-text {
+   padding: 10px 12px;
+   background-color: $background;
+   @media screen and (min-width: 768px) {
+      padding: 22px 22px;
+   }
+}
+
+.artboard {
+   max-width: 350px;
+   padding: 22px 70px 26px 30px;
+   background-color: #fff;
+   box-shadow: 0px 0px 12px #0036681A;
+   position: relative;
+   display: none;
+   &__title {
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: 700;
+      color: $primary;
+      margin-bottom: 5px;
+   }
+
+   &__desc {
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 400;
+      color: $primary;
+   }
+
+   &__close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      padding: 7.5px;
+      transition: .3s;
+      background-color: $background;
+
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      .icon {
+         width: 15px;
+         height: 15px;
+         fill: $primary;
+         transition: .3s;
+      }
+
+      &:active {
+         background-color: $primary;
+         .icon {
+            fill: #FFF;
+         }
+      }
+
+      @media screen and (min-width: 1024px) {
+         &:hover {
+            background-color: $primary;
+            .icon {
+               fill: #FFF;
+            }
+         }
+      }
+   }
+
+   &--active {
+      display: inline-block;
+   }
+}
+
+
+//псевдокласс для демонстрации окон активности
+.art-box {
+   display: flex;
+   gap: 30px;
+   align-items: flex-start;
+   flex-direction: column;
 }

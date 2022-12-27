@@ -111,6 +111,18 @@ window.app.otherFunction = () => {
       let totalRatingPercent = totalRating.toFixed(1) / 5 * 100;
       ratingImage.style.width = totalRatingPercent + "%";
    })
+
+   //закрытие окна активности
+   const artboards = document.querySelectorAll('.artboard');
+   if (!artboards) return;
+
+   artboards.forEach((artboard) => {
+      let artClose = artboard.querySelector('.js-art-close');
+
+      artClose.addEventListener('click', () => {
+         artboard.classList.remove('artboard--active');
+      });
+   })
 };
 
 window.app.otherFunction();
