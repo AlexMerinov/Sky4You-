@@ -442,6 +442,10 @@
    align-items: center;
    padding-bottom: 20px;
    border-bottom: 1px solid $background-active;
+   &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+   }
    &__image {
       display: none;
       @media screen and (min-width: 768px) {

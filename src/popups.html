@@ -131,6 +131,10 @@
 
                <li class="list-pages__item"><button type="button" class="list-pages__btn go-js-open-popup"
                      data-popup-name="popup_delet">удалить профиль</button></li>
+               <li class="list-pages__item"><button type="button" class="list-pages__btn go-js-open-popup"
+                     data-popup-name="popup_person-reduct">Редактирование данных</button></li>
+               <li class="list-pages__item"><button type="button" class="list-pages__btn go-js-open-popup"
+                     data-popup-name="popup_cart-cancel">Отменить заказ</button></li>
             </ul>
          </div>
       </main>
@@ -369,8 +373,10 @@
                </svg>
             </button>
          </div>
-         <div class="popup-user__desc">
-            Все товары будут удалены
+         <div class="popup-user__wrapper">
+            <div class="popup-user__desc popup-user__desc--bgnone">
+               Все товары будут удалены
+            </div>
          </div>
          <div action="" class="popup-user__form form-box">
             <div class="form-box__buttons">
@@ -393,8 +399,10 @@
                </svg>
             </button>
          </div>
-         <div class="popup-user__desc popup-user__desc--bgnone">
-            Вы уверены, что хотите удалить профиль «ООО Аэрофлот» безвозвратно?
+         <div class="popup-user__wrapper">
+            <div class="popup-user__desc popup-user__desc--bgnone">
+               Вы уверены, что хотите удалить профиль «ООО Аэрофлот» безвозвратно?
+            </div>
          </div>
          <div action="" class="popup-user__form form-box">
             <div class="form-box__buttons">
@@ -421,21 +429,23 @@
             Пожалуйста, заполните все обязательные поля для входа
          </div>
          <form action="" class="popup-user__form form-box">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-l-1">
-               <div class="field form-box__field col">
-                  <label>
-                     <input type="text" class="field__input" placeholder="" />
-                     <span class="field__label req">e-mail</span>
-                  </label>
+            <div class="form-box__wrapper">
+               <div class="row row-cols-1 row-cols-sm-2 row-cols-l-1">
+                  <div class="field form-box__field col">
+                     <label>
+                        <input type="text" class="field__input" placeholder="" />
+                        <span class="field__label req">e-mail</span>
+                     </label>
+                  </div>
+                  <div class="field form-box__field col">
+                     <label>
+                        <input type="text" class="field__input" placeholder="" />
+                        <span class="field__label req">пароль</span>
+                     </label>
+                  </div>
                </div>
-               <div class="field form-box__field col">
-                  <label>
-                     <input type="text" class="field__input" placeholder="" />
-                     <span class="field__label req">пароль</span>
-                  </label>
-               </div>
+               <a href="#" class="form-box__link-pas">Забыли пароль?</a>
             </div>
-            <a href="#" class="form-box__link-pas">Забыли пароль?</a>
             <div class="form-box__buttons">
                <a href="#" class="form-box__link">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
                <button class="form-box__btn">ВОЙТИ</button>
@@ -460,34 +470,36 @@
             Пожалуйста, заполните все обязательные поля для входа
          </div>
          <form action="" class="popup-user__form form-box">
-            <div class="row">
-               <div class="field form-box__field col cols-1 cols-sm-4 cols-l-1">
-                  <label>
-                     <input type="text" class="field__input" placeholder="" />
-                     <span class="field__label req">ваше имя</span>
-                  </label>
+            <div class="form-box__wrapper">
+               <div class="row">
+                  <div class="field form-box__field col cols-1 cols-sm-4 cols-l-1">
+                     <label>
+                        <input type="text" class="field__input" placeholder="" />
+                        <span class="field__label req">ваше имя</span>
+                     </label>
+                  </div>
+                  <div class="field form-box__field col cols-1 cols-sm-4 cols-l-1">
+                     <label>
+                        <input type="text" name="male" class="field__input" placeholder="" />
+                        <span class="field__label req">e-mail</span>
+                     </label>
+                  </div>
+                  <div class="field form-box__field col cols-1 cols-sm-4 cols-l-1">
+                     <label>
+                        <input type="text" name="phone" class="field__input" placeholder="" />
+                        <span class="field__label req">телефон</span>
+                     </label>
+                  </div>
+                  <div class="field form-box__field col cols-1">
+                     <label>
+                        <input type="text" class="field__input" placeholder="" />
+                        <span class="field__label">комментарий</span>
+                     </label>
+                  </div>
                </div>
-               <div class="field form-box__field col cols-1 cols-sm-4 cols-l-1">
-                  <label>
-                     <input type="text" name="male" class="field__input" placeholder="" />
-                     <span class="field__label req">e-mail</span>
-                  </label>
+               <div class="form-box__consent consent">
+                  Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных данных</a>
                </div>
-               <div class="field form-box__field col cols-1 cols-sm-4 cols-l-1">
-                  <label>
-                     <input type="text" name="phone" class="field__input" placeholder="" />
-                     <span class="field__label req">телефон</span>
-                  </label>
-               </div>
-               <div class="field form-box__field col cols-1">
-                  <label>
-                     <input type="text" class="field__input" placeholder="" />
-                     <span class="field__label">комментарий</span>
-                  </label>
-               </div>
-            </div>
-            <div class="form-box__consent consent">
-               Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных данных</a>
             </div>
             <div class="form-box__buttons">
                <button class="form-box__btn form-box__btn--100">отправить</button>
@@ -540,126 +552,128 @@
             </button>
          </div>
          <form action="" class="popup-reg__form form-box">
-            <div class="form-box__section">
-               <h3 class="form-box__subtitle">Укажите тип покупателя</h3>
-               <div class="chapter form-box__body row row-cols-1 row-cols-sm-2">
-                  <div class="col">
-                     <label class="label-choice label-choice--round chapter__label">
-                        <input type="radio" name="package" class="label-choice__input">
+            <div class="form-box__wrapper">
+               <div class="form-box__section">
+                  <h3 class="form-box__subtitle">Укажите тип покупателя</h3>
+                  <div class="chapter form-box__body row row-cols-1 row-cols-sm-2">
+                     <div class="col">
+                        <label class="label-choice label-choice--round chapter__label">
+                           <input type="radio" name="package" class="label-choice__input">
+                           <span class="label-choice__custom">
+                           </span>
+                           <span class="label-choice__text">Физическое лицо</span>
+                        </label>
+                     </div>
+                     <div class="col">
+                        <label class="label-choice label-choice--round chapter__label">
+                           <input type="radio" name="package" class="label-choice__input">
+                           <span class="label-choice__custom">
+                           </span>
+                           <span class="label-choice__text">Юридическое лицо</span>
+                        </label>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-box__section">
+                  <h3 class="form-box__subtitle">Укажите тип покупателя</h3>
+                  <div class="form-box__body row">
+                     <div class="field field--error form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label req">фамилия</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label req">имя</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">отчество</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" name="male" class="field__input" placeholder="" />
+                           <span class="field__label req">e-mail</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" name="phone" class="field__input" placeholder="" />
+                           <span class="field__label req">телефон</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label req">название организации</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">инн</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">кпп</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">название банка</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">юридический адрес</span>
+                        </label>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-box__section">
+                  <h3 class="form-box__subtitle">Пароль</h3>
+                  <div class="form-box__body row row-cols-1 row-cols-sm-2">
+                     <div class="field form-box__field col">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">введите пароль</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">повторите пароль</span>
+                        </label>
+                     </div>
+                  </div>
+                  <div class="chapter form-box__chapter">
+                     <label class="label-choice chapter__label">
+                        <input type="checkbox" class="label-choice__input">
                         <span class="label-choice__custom">
+                           <svg class="icon">
+                              <use xlink:href="svg-sprite/svg-sprite.svg#checkbox"></use>
+                           </svg>
                         </span>
-                        <span class="label-choice__text">Физическое лицо</span>
+                        <span class="label-choice__text">Запомнить пароль</span>
                      </label>
                   </div>
-                  <div class="col">
-                     <label class="label-choice label-choice--round chapter__label">
-                        <input type="radio" name="package" class="label-choice__input">
-                        <span class="label-choice__custom">
-                        </span>
-                        <span class="label-choice__text">Юридическое лицо</span>
-                     </label>
+                  <div class="form-box__consent consent">
+                     Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных данных</a>
                   </div>
                </div>
-            </div>
-            <div class="form-box__section">
-               <h3 class="form-box__subtitle">Укажите тип покупателя</h3>
-               <div class="form-box__body row">
-                  <div class="field field--error form-box__field col cols-1 cols-sm-6 cols-md-4">
-                     <label>
-                        <input type="text" class="field__input" placeholder="" />
-                        <span class="field__label req">фамилия</span>
-                     </label>
-                  </div>
-                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
-                     <label>
-                        <input type="text" class="field__input" placeholder="" />
-                        <span class="field__label req">имя</span>
-                     </label>
-                  </div>
-                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
-                     <label>
-                        <input type="text" class="field__input" placeholder="" />
-                        <span class="field__label">отчество</span>
-                     </label>
-                  </div>
-                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
-                     <label>
-                        <input type="text" name="male" class="field__input" placeholder="" />
-                        <span class="field__label req">e-mail</span>
-                     </label>
-                  </div>
-                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
-                     <label>
-                        <input type="text" name="phone" class="field__input" placeholder="" />
-                        <span class="field__label req">телефон</span>
-                     </label>
-                  </div>
-                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
-                     <label>
-                        <input type="text" class="field__input" placeholder="" />
-                        <span class="field__label req">название организации</span>
-                     </label>
-                  </div>
-                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
-                     <label>
-                        <input type="text" class="field__input" placeholder="" />
-                        <span class="field__label">инн</span>
-                     </label>
-                  </div>
-                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
-                     <label>
-                        <input type="text" class="field__input" placeholder="" />
-                        <span class="field__label">кпп</span>
-                     </label>
-                  </div>
-                  <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
-                     <label>
-                        <input type="text" class="field__input" placeholder="" />
-                        <span class="field__label">название банка</span>
-                     </label>
-                  </div>
-                  <div class="field form-box__field col cols-1">
-                     <label>
-                        <input type="text" class="field__input" placeholder="" />
-                        <span class="field__label">юридический адрес</span>
-                     </label>
-                  </div>
+               <div class="form-box__buttons">
+                  <button type="button" class="form-box__link">отменить</button>
+                  <button class="form-box__btn">сохранить</button>
                </div>
-            </div>
-            <div class="form-box__section">
-               <h3 class="form-box__subtitle">Пароль</h3>
-               <div class="form-box__body row row-cols-1 row-cols-sm-2">
-                  <div class="field form-box__field col">
-                     <label>
-                        <input type="text" class="field__input" placeholder="" />
-                        <span class="field__label">введите пароль</span>
-                     </label>
-                  </div>
-                  <div class="field form-box__field col">
-                     <label>
-                        <input type="text" class="field__input" placeholder="" />
-                        <span class="field__label">повторите пароль</span>
-                     </label>
-                  </div>
-               </div>
-            </div>
-            <div class="chapter form-box__chapter">
-               <label class="label-choice chapter__label">
-                  <input type="checkbox" class="label-choice__input">
-                  <span class="label-choice__custom">
-                     <svg class="icon">
-                        <use xlink:href="svg-sprite/svg-sprite.svg#checkbox"></use>
-                     </svg>
-                  </span>
-                  <span class="label-choice__text">Запомнить пароль</span>
-               </label>
-            </div>
-            <div class="form-box__consent consent">
-               Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных данных</a>
-            </div>
-            <div class="form-box__buttons">
-               <button type="button" class="form-box__link">отменить</button>
-               <button class="form-box__btn">сохранить</button>
             </div>
          </form>
       </div>
@@ -987,12 +1001,6 @@
                   </button>
                </div>
             </div>
-            <div class="save-draft popup-cart__save">
-               <svg class="icon save-draft__icon">
-                  <use xlink:href="svg-sprite/svg-sprite.svg#draft"></use>
-               </svg>
-               <span class="save-draft__text">отложить заказ</span>
-            </div>
             <div class="popup-cart__footer">
                <div class="value-sum">
                   <span>Итого:</span>
@@ -1092,13 +1100,191 @@
                </svg>
             </button>
          </div>
-         <div class="popup-user__desc popup-user__desc--bgnone">
-            После выхода вам будет недоступно отслеживание статуса своих заказов.
+         <div class="popup-user__wrapper">
+            <div class="popup-user__desc popup-user__desc--bgnone">
+               После выхода вам будет недоступно отслеживание статуса своих заказов.
+            </div>
          </div>
-         <div action="" class="popup-user__form form-box">
+         <div class="popup-user__form form-box">
             <div class="form-box__buttons">
                <button type="button" class="form-box__link">да</button>
                <button type="button" class="form-box__btn">нет</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" id="person-reduct" data-popup-name="popup_person-reduct">
+   <div class="popup__box">
+      <div class="popup__window popup-reg">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">Редактирование данных</span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <form action="" class="popup-reg__form form-box">
+            <div class="form-box__wrapper">
+               <div class="form-box__section">
+                  <h3 class="form-box__subtitle">Контактная информация</h3>
+                  <div class="form-box__body row">
+                     <div class="field field--error form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label req">фамилия</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label req">имя</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">отчество</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label req">дата рождения</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" name="male" class="field__input" placeholder="" />
+                           <span class="field__label req">e-mail</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col cols-1 cols-sm-6 cols-md-4">
+                        <label>
+                           <input type="text" name="phone" class="field__input" placeholder="" />
+                           <span class="field__label req">телефон</span>
+                        </label>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-box__section">
+                  <h3 class="form-box__subtitle">Пароль</h3>
+                  <div class="form-box__body row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                     <div class="field form-box__field col">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">старый пароль</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">новый пароль</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col">
+                        <label>
+                           <input type="text" class="field__input" placeholder="" />
+                           <span class="field__label">повторите пароль</span>
+                        </label>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="form-box__buttons">
+               <button type="button" class="form-box__link">отменить</button>
+               <button class="form-box__btn">сохранить</button>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" id="popup-cart-cancel" data-popup-name="popup_cart-cancel">
+   <div class="popup__box">
+      <div class="popup__window popup-cart">
+         <div class="popup-window-h">
+            <span class="popup-window-h__title">
+               Отменить заказ ?
+               <span class="popup-window-h__number">№ 345345345</span>
+            </span>
+            <button type="button" class="close-btn go-js-close-modal">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+               </svg>
+            </button>
+         </div>
+         <div class="popup-cart__body popup-window-b popup-window-b--on">
+            <div class="popup-cart__wrapper">
+               <div class="product-order popup-cart__product-order">
+                  <picture class="product-order__image">
+                     <img src="images/content/product.png" alt="product">
+                  </picture>
+                  <div class="product-order__desc">
+                     <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
+                     <div class="product-order__info">
+                        <span class="product-order__count">2 шт</span>
+                        <span class="product-order__price">6 900 ₽</span>
+                     </div>
+                  </div>
+                  <div class="product-order__sum">13 800 ₽</div>
+               </div>
+               <div class="product-order popup-cart__product-order">
+                  <picture class="product-order__image">
+                     <img src="images/content/product.png" alt="product">
+                  </picture>
+                  <div class="product-order__desc">
+                     <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
+                     <div class="product-order__info">
+                        <span class="product-order__count">2 шт</span>
+                        <span class="product-order__price">6 900 ₽</span>
+                     </div>
+                  </div>
+                  <div class="product-order__sum">13 800 ₽</div>
+               </div>
+               <div class="product-order popup-cart__product-order">
+                  <picture class="product-order__image">
+                     <img src="images/content/product.png" alt="product">
+                  </picture>
+                  <div class="product-order__desc">
+                     <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
+                     <div class="product-order__info">
+                        <span class="product-order__count">2 шт</span>
+                        <span class="product-order__price">6 900 ₽</span>
+                     </div>
+                  </div>
+                  <div class="product-order__sum">13 800 ₽</div>
+               </div>
+               <div class="product-order popup-cart__product-order">
+                  <picture class="product-order__image">
+                     <img src="images/content/product.png" alt="product">
+                  </picture>
+                  <div class="product-order__desc">
+                     <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
+                     <div class="product-order__info">
+                        <span class="product-order__count">2 шт</span>
+                        <span class="product-order__price">6 900 ₽</span>
+                     </div>
+                  </div>
+                  <div class="product-order__sum">13 800 ₽</div>
+               </div>
+            </div>
+            <div class="popup-cart__footer popup-cart__footer--cancel">
+               <div class="value-sum">
+                  <span>Итого:</span>
+                  <div class="value-sum__count">16 350 ₽</div>
+               </div>
+               <div class="popup-cart__btns">
+                  <button type="button" class="btn btn--link">
+
+                     отменить
+                  </button>
+                  <button type="button" class="design-btn btn">
+                     нет
+                  </button>
+               </div>
             </div>
          </div>
       </div>

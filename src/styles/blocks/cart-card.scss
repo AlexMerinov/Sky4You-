@@ -1,16 +1,8 @@
 .popup {
    &__window.popup-cart {
       height: auto;
-      padding-bottom: 200px;
       display: flex;
       flex-direction: column;
-      @media screen and (min-width: 768px) {
-         padding-bottom: 200px;
-      }
-
-      @media screen and (min-width: 1024px) {
-         padding-bottom: 120px;
-      }
    }
 }
 
@@ -23,6 +15,8 @@
       &--p {
          padding-left: 12px;
          padding-right: 12px;
+         padding-bottom: 190px;
+         max-height: 100%;
          @media screen and (min-width: 768px) {
             padding-left: 20px;
             padding-right: 20px;
@@ -31,6 +25,34 @@
             padding-left: 40px;
             padding-right: 40px;
          }
+      }
+   }
+
+   &__wrapper {
+      padding-bottom: 212px;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @media screen and (min-width: 768px) {
+         padding-bottom: 280px;
+      }
+
+      @media screen and (min-width: 1024px) {
+         padding-bottom: 200px;
+      }
+   }
+
+   &__btns {
+      display: flex;
+      .btn {
+         width: 50%;
+      }
+   }
+
+   &__product-order {
+      padding: 20px 12px;
+      @media screen and (min-width: 1024px) {
+         padding: 20px 40px;
       }
    }
 
@@ -48,6 +70,7 @@
          margin-left: 40px;
       }
    }
+
    &__footer {
       margin-top: auto;
       display: flex;
@@ -62,6 +85,9 @@
          bottom: 80px;
          left: 0;
          width: 100%;
+         &--cancel {
+            flex-direction: column;
+         }
       }
 
       @media screen and (min-width: 1024px) {
@@ -72,7 +98,7 @@
 
 .value-sum {
    display: flex;
-   align-items: center;
+   flex-direction: column;
    width: 100%;
    padding: 19px 12px;
    font-size: 16px;

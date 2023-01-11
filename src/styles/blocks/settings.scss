@@ -140,6 +140,7 @@ button {
 
    &__col-l {
       display: none;
+      position: relative;
 
       @media screen and (min-width: 1024px) {
          flex: 0 0 auto;
@@ -255,6 +256,17 @@ button {
       .section__title {
          margin-bottom: 0;
       }
+
+      &--form {
+         background-color: $background;
+         padding: 14px 12px;
+         @media screen and (min-width: 1024px) {
+            padding: 0 0 0 20px;
+            .section__navigation {
+               display: flex;
+            }
+         }
+      }
    }
 
    &__navigation {
@@ -282,9 +294,6 @@ button {
 
          &__consent {
             padding-left: 0;
-         }
-         .row {
-            padding: 15px 0;
          }
       }
    }
@@ -335,9 +344,31 @@ button {
          }
       }
    }
-   @media screen and (min-width: 1024px) {
+
+   &--link {
+      background-color: #fff;
+      color: $primary;
+      text-decoration: underline;
+      &:active {
+         text-decoration: none;
+      }
+   }
+
+   @media screen and (min-width: 768px) {
       font-size: 16px;
       line-height: 22px;
+   }
+
+   @media screen and (min-width: 1024px) {
+
+      &--link {
+         font-size: 16px;
+         line-height: 22px;
+         font-weight: 500;
+         &:hover {
+            text-decoration: none;
+         }
+      }
    }
 
    &--light {
@@ -1067,6 +1098,194 @@ button {
       .language__icon {
          transform: rotate(180deg);
       }
+   }
+}
+
+.search-answer {
+   font-size: 14px;
+   line-height: 20px;
+   font-weight: 400;
+   color: $primary;
+
+   &__link {
+      color: $secondary;
+      text-decoration: underline;
+      &:active {
+         text-decoration: none;
+      }
+   }
+
+   @media screen and (min-width: 1024px) {
+      font-size: 16px;
+      line-height: 22px;
+      &__link {
+         &:hover {
+            text-decoration: none;
+         }
+      }
+   }
+}
+
+.delivery-card {
+   padding: 10px 15px;
+   background-color: $background;
+   display: flex;
+   flex-direction: column;
+   transition: .3s;
+   border: 2px solid transparent;
+
+   .label-choice {
+      &__custom {
+         margin-right: 0;
+      }
+   }
+
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5px;
+   }
+
+   &__name {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+      color: $primary;
+   }
+
+   &__desc {
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      color: $text2;
+      margin-bottom: 20px;
+      max-width: 252px;
+   }
+
+   &__card-list {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+   }
+
+   &__card-item {
+      margin-left: 10px;
+   }
+
+   &__days {
+      display: inline-block;
+      width: fit-content;
+      padding: 3px 6px;
+      background-color: $secondary;
+      margin-bottom: 15px;
+
+      font-size: 10px;
+      line-height: 14px;
+      font-weight: 500;
+      color: #FFF;
+      text-transform: uppercase;
+   }
+
+   &__price {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 700;
+      color: $primary;
+   }
+
+   &:active {
+      border-color: $hover;
+   }
+   @media screen and (min-width: 768px) {
+      padding: 15px 20px;
+
+      &__name {
+         font-size: 20px;
+         line-height: 27px;
+      }
+
+      &__desc {
+         font-size: 16px;
+         line-height: 22px;
+      }
+
+      &__header {
+         margin-bottom: 10px;
+      }
+
+      &__days {
+         margin-bottom: 12px;
+         font-size: 12px;
+         line-height: 17px;
+      }
+
+      &__price {
+         font-size: 20px;
+         line-height: 27px;
+      }
+   }
+
+   @media screen and (min-width: 1024px) {
+      &:hover {
+         border-color: $hover;
+      }
+   }
+}
+
+.finish-order{
+   &__btn {
+      padding: 19px;
+      width: 100%;
+      background-color: $secondary;
+      transition: .3s;
+
+      &:active {
+         background-color: $primary;
+      }
+
+      @media screen and (min-width: 1024px) {
+         &:hover {
+            background-color: $primary;
+         }
+      }
+   }
+
+   &__link {
+      background-color: $background;
+      padding: 19px;
+      @media screen and (min-width: 1024px) {
+         display: none;
+      }
+   }
+
+   &__fixed {
+      position: fixed;
+      bottom: 60px;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      @media screen and (min-width: 576px) {
+         display: flex;
+         * {
+            width: 50%;
+         }
+      }
+      @media screen and (min-width: 768px) {
+         bottom: 80px;
+      }
+      @media screen and (min-width: 1024px) {
+         position: static;
+         * {
+            width: 100%;
+         }
+      }
+   }
+
+   @media screen and (min-width: 1024px) {
+      position: sticky;
+      position:-webkit-sticky; 
+      top: 0px;
    }
 }
 

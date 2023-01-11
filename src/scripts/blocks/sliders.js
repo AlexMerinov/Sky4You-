@@ -60,6 +60,7 @@ window.app.Sliders = () => {
 
          const sliderBest = slider.querySelector('.slider-best');
          const sliderView = slider.querySelector('.slider-view');
+         const sliderDelivery = slider.querySelector('.slider-delivery');
          const navArrows = {
             navigation: {
                nextEl: slider.closest('.section').querySelector('.go-js-slider__btn--next'),
@@ -86,6 +87,60 @@ window.app.Sliders = () => {
 
                      1360: {
                         slidesPerView: 3,
+                        spaceBetween: 30,
+                        navigation: {
+                           nextEl: navArrows.navigation.nextEl,
+                           prevEl: navArrows.navigation.prevEl,
+                        },
+                     },
+                  }
+               });
+               break;
+            case slider.dataset.sliderName == 'coice_delivery':
+               new Swiper(sliderDelivery, {
+                  slidesPerView: 1.2,
+                  spaceBetween: 10,
+                  watchSlidesProgress: true,
+                  breakpoints: {
+                     576: {
+                        slidesPerView: 2.2,
+                        spaceBetween: 20,
+                     },
+
+                     768: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 20,
+                     },
+
+                     1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        navigation: {
+                           nextEl: navArrows.navigation.nextEl,
+                           prevEl: navArrows.navigation.prevEl,
+                        },
+                     },
+                  }
+               });
+               break;
+            case slider.dataset.sliderName == 'best_four':
+               new Swiper(sliderBest, {
+                  slidesPerView: 2.2,
+                  spaceBetween: 10,
+                  watchSlidesProgress: true,
+                  breakpoints: {
+                     768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                     },
+
+                     1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                     },
+
+                     1360: {
+                        slidesPerView: 4,
                         spaceBetween: 30,
                         navigation: {
                            nextEl: navArrows.navigation.nextEl,

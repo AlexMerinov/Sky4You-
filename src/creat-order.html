@@ -110,31 +110,38 @@
             <div class="row-box__row row-box__row--order">
 
                <div class="row-box__col-l">
-                  <div class="calc-sum">
-                     <ul class="calc-sum__list">
-                        <li class="calc-sum__item">
-                           <span class="calc-sum__name">Товаров на</span>
-                           <span class="calc-sum__price">31 800₽</span>
-                        </li>
-                        <li class="calc-sum__item">
-                           <span class="calc-sum__name">Скидка на </span>
-                           <span class="calc-sum__price">0 ₽</span>
-                        </li>
-                        <li class="calc-sum__item">
-                           <span class="calc-sum__name">Доставка </span>
-                           <span class="calc-sum__price">0 ₽</span>
-                        </li>
-                        <li class="calc-sum__item calc-sum__item--total">
-                           <span class="calc-sum__name">Всего </span>
-                           <span class="calc-sum__price">31 800 ₽</span>
-                        </li>
-                     </ul>
+                  <div class="finish-order">
+                     <div class="calc-sum">
+                        <ul class="calc-sum__list">
+                           <li class="calc-sum__item">
+                              <span class="calc-sum__name">Товаров на</span>
+                              <span class="calc-sum__price">31 800₽</span>
+                           </li>
+                           <li class="calc-sum__item">
+                              <span class="calc-sum__name">Скидка на </span>
+                              <span class="calc-sum__price">0 ₽</span>
+                           </li>
+                           <li class="calc-sum__item">
+                              <span class="calc-sum__name">Доставка </span>
+                              <span class="calc-sum__price">0 ₽</span>
+                           </li>
+                           <li class="calc-sum__item calc-sum__item--total">
+                              <span class="calc-sum__name">Всего </span>
+                              <span class="calc-sum__price">31 800 ₽</span>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="finish-order__fixed">
+                        <a href="#" class="btn--link btn finish-order__link">
+                           назад
+                        </a>
+                        <button type="button" class="finish-order__btn btn">подтвердить заказ</button>
+                     </div>
                   </div>
                </div>
 
                <div class="row-box__col-r sections">
                   <!--Sections-->
-
                   <!--Section -->
                   <div class="sections__section section">
                      <div class="person-page section__order">
@@ -186,7 +193,7 @@
                         <form action="" class="form-box">
                            <div class="form-box__section">
                               <h3 class="form-box__subtitle">Укажите тип покупателя</h3>
-                              <div class="chapter form-box__body row row-cols-1 row-cols-sm-2">
+                              <div class="chapter form-box__chapter  row row-cols-1 row-cols-sm-2">
                                  <div class="col">
                                     <label class="label-choice label-choice--round chapter__label">
                                        <input type="radio" name="package" class="label-choice__input">
@@ -251,7 +258,99 @@
                               </div>
                            </div>
                            <div class="form-box__section">
-                              <h3 class="form-box__subtitle">Выберете способ доставки</h3>
+                              <!--Section best-->
+                              <div class="form-box__slider section go-js-slider" data-slider-name="coice_delivery">
+                                 <!-- header section -->
+                                 <div class="section__header section__header--form">
+                                    <h2 class="section__title">Выберете способ доставки</h2>
+                                    <div class="section__navigation">
+                                       <!-- If we need navigation buttons -->
+                                       <div class="swiper-button-prev go-js-slider__btn go-js-slider__btn--prev">
+                                          <svg class="icon">
+                                             <use xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"></use>
+                                          </svg>
+                                       </div>
+                                       <div class="swiper-button-next go-js-slider__btn go-js-slider__btn--next">
+                                          <svg class="icon">
+                                             <use xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"></use>
+                                          </svg>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- / header section -->
+
+                                 <div class="swiper slider-best slider-delivery">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper slider-best__wrapper">
+                                       <!-- Slides -->
+                                       <div class="swiper-slide slider-best__slide">
+                                          <div class="delivery-card">
+                                             <div class="delivery-card__header">
+                                                <span class="delivery-card__name">Самовывоз</span>
+                                                <label class="label-choice label-choice--round chapter__label">
+                                                   <input type="radio" name="delivery" class="label-choice__input">
+                                                   <span class="label-choice__custom">
+                                                   </span>
+                                                </label>
+                                             </div>
+                                             <div class="delivery-card__days">1 день</div>
+                                             <div class="delivery-card__price">0 ₽</div>
+                                          </div>
+                                       </div>
+
+                                       <div class="swiper-slide slider-best__slide">
+                                          <div class="delivery-card">
+                                             <div class="delivery-card__header">
+                                                <span class="delivery-card__name">доставка 1</span>
+                                                <label class="label-choice label-choice--round chapter__label">
+                                                   <input type="radio" name="delivery" class="label-choice__input">
+                                                   <span class="label-choice__custom">
+                                                   </span>
+                                                </label>
+                                             </div>
+                                             <div class="delivery-card__days">12 день</div>
+                                             <div class="delivery-card__price">50 ₽</div>
+                                          </div>
+                                       </div>
+
+                                       <div class="swiper-slide slider-best__slide">
+                                          <div class="delivery-card">
+                                             <div class="delivery-card__header">
+                                                <span class="delivery-card__name">Доставка 2</span>
+                                                <label class="label-choice label-choice--round chapter__label">
+                                                   <input type="radio" name="delivery" class="label-choice__input">
+                                                   <span class="label-choice__custom">
+                                                   </span>
+                                                </label>
+                                             </div>
+                                             <div class="delivery-card__days">13 день</div>
+                                             <div class="delivery-card__price">110 ₽</div>
+                                          </div>
+                                       </div>
+
+                                       <div class="swiper-slide slider-best__slide">
+                                          <div class="delivery-card">
+                                             <div class="delivery-card__header">
+                                                <span class="delivery-card__name">Служба доставки 3</span>
+                                                <label class="label-choice label-choice--round chapter__label">
+                                                   <input type="radio" name="delivery" class="label-choice__input">
+                                                   <span class="label-choice__custom">
+                                                   </span>
+                                                </label>
+                                             </div>
+                                             <div class="delivery-card__days">91 день</div>
+                                             <div class="delivery-card__price">500 ₽</div>
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                    <!-- If we need navigation buttons -->
+                                    <div class="swiper-button-prev slider-best__btn slider-best__btn--prev"></div>
+                                    <div class="swiper-button-next slider-best__btn slider-best__btn--next"></div>
+                                 </div>
+                              </div>
+                              <!-- / Section best-->
+
                               <div class="form-box__body row">
                                  <div class="field form-box__field col cols-1 cols-sm-4">
                                     <label>
@@ -311,6 +410,43 @@
                            </div>
                            <div class="form-box__section">
                               <h3 class="form-box__subtitle">Выберете способ оплаты</h3>
+                              <div class="form-box__payment">
+                                 <div class="delivery-card form-box__dliv-card">
+                                    <div class="delivery-card__header">
+                                       <span class="delivery-card__name">Картой онлайн</span>
+                                       <label class="label-choice label-choice--round chapter__label">
+                                          <input type="radio" name="payment" class="label-choice__input">
+                                          <span class="label-choice__custom">
+                                          </span>
+                                       </label>
+                                    </div>
+                                    <span class="delivery-card__desc">Картами Visa, MasterCard, Мир</span>
+                                    <ul class="delivery-card__card-list">
+                                       <li class="delivery-card__card-item">
+                                          <img src="images/icons/visa.svg" alt="visa">
+                                       </li>
+                                       <li class="delivery-card__card-item">
+                                          <img src="images/icons/MasterCard.svg" alt="MasterCard">
+                                       </li>
+                                       <li class="delivery-card__card-item">
+                                          <img src="images/icons/mir.svg" alt="mir">
+                                       </li>
+                                    </ul>
+                                 </div>
+
+                                 <div class="delivery-card form-box__dliv-card">
+                                    <div class="delivery-card__header">
+                                       <span class="delivery-card__name">Картой онлайн</span>
+                                       <label class="label-choice label-choice--round chapter__label">
+                                          <input type="radio" name="payment" class="label-choice__input">
+                                          <span class="label-choice__custom">
+                                          </span>
+                                       </label>
+                                    </div>
+                                    <span class="delivery-card__desc">Счет на оплату будет отправлен на Вашу электронную
+                                       почту</span>
+                                 </div>
+                              </div>
                               <div class="form-box__consent consent">
                                  Нажимая на кнопку «Отправить», вы даете согласие на обработку <a href="#">персональных
                                     данных</a>
