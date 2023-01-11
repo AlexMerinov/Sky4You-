@@ -8,6 +8,7 @@ body {
    min-height: 100%;
    display: flex;
    flex-direction: column;
+   padding-top: 144px;
    &__box {
       flex: 1 1 auto;
       display: flex;
@@ -82,10 +83,8 @@ body {
    }
 
    &__categories {
-      margin-bottom: 30px;
-      @media screen and (min-width: 1360px) {
-         margin-bottom: 80px;
-      }
+      padding-bottom: 10px;
+      margin-bottom: 20px;
    }
 
    &__categories.list-links {
@@ -134,7 +133,6 @@ button {
 
 .row-box {
    flex: 1 1 auto;
-   padding-top: 20px;
 
    &__row {
       display: flex;
@@ -1002,6 +1000,76 @@ button {
    }
 }
 
+.swiper-button-disabled.swiper-button-lock {
+   background-color: $background;
+   pointer-events: none;
+   .icon {
+      stroke: $decor;
+   }
+}
+
+.language {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   &__label {
+      position: relative;
+   }
+   &__input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+   }
+   &__custom {
+      display: block;
+      padding: 5px 10px;
+      background-color: $background-active;
+
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: $primary;
+      cursor: pointer;
+      transition: .3s;
+   }
+
+   &__input:checked ~ &__custom {
+      background-color: transparent;
+      color: #FFF;
+   }
+
+   &__icon {
+      position: absolute;
+      top: 8px;
+      right: -17px;
+
+      width: 12px;
+      height: 6px;
+
+      fill: none;
+      stroke: #FFF;
+      transition: .3s;
+   }
+
+   &:hover {
+      .language__input:checked ~ .language__custom {
+         color: $hover;
+      }
+
+      .language__icon {
+         stroke: $hover;
+      }
+   }
+
+   &--open {
+      .language__icon {
+         transform: rotate(180deg);
+      }
+   }
+}
+
 
 //псевдокласс для демонстрации окон активности
 .art-box {
@@ -1009,4 +1077,10 @@ button {
    gap: 30px;
    align-items: flex-start;
    flex-direction: column;
+}
+
+.icon {
+   &--stroke {
+      fill: none;
+   }
 }

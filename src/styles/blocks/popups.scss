@@ -36,6 +36,10 @@
          width: 20px;
          height: 20px;
          fill: #FFF;
+         &--stroke {
+            fill: none;
+            stroke: #FFF;
+         }
       }
 
       &:hover {
@@ -52,7 +56,6 @@
          .icon {
             width: 30px;
             height: 30px;
-            fill: #FFF;
          }
       }
    }

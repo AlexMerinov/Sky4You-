@@ -13,6 +13,11 @@ window.app.otherFunction = () => {
          answerBtn.classList.add('hidden');
          closeAnswerBtn.classList.add('visible');
          rewAnswer.classList.add('reviews-answer--active');
+         if (rewAnswer.classList.contains('reviews-answer--active')) {
+            rewAnswer.style.maxHeight = rewAnswer.scrollHeight + "px";
+         } else {
+            rewAnswer.style.maxHeight = 0 + "px";
+         }
       }
 
       closeAnswerBtn.addEventListener('click', closeAnswer);
@@ -20,6 +25,7 @@ window.app.otherFunction = () => {
          answerBtn.classList.remove('hidden');
          closeAnswerBtn.classList.remove('visible');
          rewAnswer.classList.remove('reviews-answer--active');
+         rewAnswer.style.maxHeight = 0 + "px";
       }
    })
 
@@ -123,6 +129,30 @@ window.app.otherFunction = () => {
          artboard.classList.remove('artboard--active');
       });
    })
+
+
+   //Скрытие поиска при скроле
+   const headerScroll = document.querySelector('.header-bot');
+   let lastScroll = 0;
+   const defaultOffset = 200;
+
+   const scrollPosition = () => window.pageXOffset || document.documentElement.scrollTop;
+   const containHide = () => headerScroll.classList.contains('header-bot--hide');
+
+   window.addEventListener('scroll', () => {
+
+      if (document.documentElement.clientWidth <= 1024) {
+         if (scrollPosition() > lastScroll && !containHide() && scrollPosition() > defaultOffset) {
+            headerScroll.classList.add('header-bot--hide')
+         }
+         else if (scrollPosition() < lastScroll && containHide()) {
+            headerScroll.classList.remove('header-bot--hide')
+         }
+
+         lastScroll = scrollPosition();
+      }
+   });
+
 };
 
 window.app.otherFunction();

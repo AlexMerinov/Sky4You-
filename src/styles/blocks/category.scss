@@ -160,6 +160,35 @@
          }
       }
    }
+
+   .choice-box {
+      &__header {
+         @media screen and (min-width: 1024px) {
+            &:hover {
+               .choice-box__title {
+                  color: $hover;
+               }
+
+               .choice-box__btn {
+                  .icon {
+                     stroke: $hover;
+                  }
+               }
+            }
+         }
+      }
+
+      &__name {
+         &:active {
+            color: $hover;
+         }
+         @media screen and (min-width: 1024px) {
+            &:hover {
+               color: $hover;
+            }
+         }
+      }
+   }
 }
 
 .pagination-box {

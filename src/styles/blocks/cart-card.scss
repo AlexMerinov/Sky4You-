@@ -33,6 +33,11 @@
          }
       }
    }
+
+   &__body {
+      overflow: scroll;
+   }
+
    &__save {
       margin-top: auto;
       margin-left: 12px;

@@ -52,6 +52,12 @@
       }
    }
 
+   .cat-header {
+      &__name {
+         text-transform: none;
+      }
+   }
+
 }
 
 .cat-header {

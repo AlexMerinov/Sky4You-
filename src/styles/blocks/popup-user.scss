@@ -1,6 +1,7 @@
 .popup-user {
    align-self: flex-end;
    &--reviews {
+      align-self: auto;
       @media screen and (min-width: 1360px) {
          width: 50%;
       }
@@ -15,6 +16,10 @@
       line-height: 19px;
       color: $primary;
 
+      &--bgnone {
+         background-color: transparent;
+      }
+
       @media screen and (min-width: 768px) {
          padding: 11px 22px;
          font-size: 16px;
@@ -28,10 +33,11 @@
    &__form {
       padding-left: 12px;
       padding-right: 12px;
+      flex-basis: content;
+      overflow: auto;
       @media screen and (min-width: 768px) {
          display: flex;
          flex-wrap: wrap;
-         flex-basis: content;
          padding-left: 22px;
          padding-right: 22px;
 

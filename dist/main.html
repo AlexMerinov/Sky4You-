@@ -59,6 +59,19 @@
                   <div class="header-top__contacts contacts-h">
                      <span class="address contacts-h__address">г. Калининград, ул. Челнокова, д. 58</span>
                      <a href="tel:+7(4012)376432" class="contacts-h__phone phone">+7 (4012) 37-64-32</a>
+                     <!-- <div class="language">
+                        <label class="language__label">
+                           <input class="language__input" type="radio" name="lng" id="ru">
+                           <span class="language__custom">RU</span>
+                        </label>
+                        <label class="language__label">
+                           <input class="language__input" type="radio" name="lng" id="en">
+                           <span class="language__custom">EN</span>
+                        </label>
+                        <svg class="icon language__icon">
+                           <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                        </svg>
+                     </div> -->
                   </div>
                </div>
             </div>
@@ -89,7 +102,7 @@
                            <svg class="icon">
                               <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
                            </svg>
-                           <span class="activities__counter">0</span>
+                           <span class="activities__counter">12</span>
                         </button>
                      </li>
                      <li class="activities__item">
@@ -97,12 +110,12 @@
                            <svg class="icon">
                               <use xlink:href="svg-sprite/svg-sprite.svg#favorite"></use>
                            </svg>
-                           <span class="activities__counter">0</span>
+                           <span class="activities__counter">123</span>
                         </button>
                      </li>
                      <li class="activities__item">
                         <button type="button" class="activities__btn go-js-open-popup" data-popup-name="popup_cart">
-                           <svg class="icon">
+                           <svg class="icon icon--stroke">
                               <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
                            </svg>
                            <span class="activities__counter">0</span>
@@ -271,21 +284,21 @@
                         <!-- Additional required wrapper -->
                         <div class="swiper-wrapper banner-slider__wrapper">
                            <!-- Slides -->
-                           <div class="swiper-slide banner-slider__slide">
+                           <a href="#" class="swiper-slide banner-slider__slide">
                               <picture class="banner-slider__content">
                                  <img src="images/content/баннер.png" alt="banner" />
                               </picture>
-                           </div>
-                           <div class="swiper-slide banner-slider__slide">
+                           </a>
+                           <a href="#" class="swiper-slide banner-slider__slide">
                               <picture class="banner-slider__content">
                                  <img src="images/content/баннер.png" alt="banner" />
                               </picture>
-                           </div>
-                           <div class="swiper-slide banner-slider__slide">
+                           </a>
+                           <a href="#" class="swiper-slide banner-slider__slide">
                               <picture class="banner-slider__content">
                                  <img src="images/content/баннер.png" alt="banner" />
                               </picture>
-                           </div>
+                           </a>
                         </div>
                         <!-- If we need pagination -->
                         <div class="swiper-pagination banner-slider__pagination"></div>
@@ -627,7 +640,8 @@
          <!-- Questions -->
          <section class="sections__section questions">
             <div class="container">
-               <div class="questions__wrapper" style="background-image: url('images/content/question.png')">
+               <div class="questions__wrapper"
+                  style="background: url('images/content/question.png') no-repeat right / cover;">
                   <div class="questions__box">
                      <h2 class="questions__title">Остались вопросы? Пишите!</h2>
                      <span class="questions__desc">
@@ -1320,7 +1334,7 @@
                   <svg class="icon activities__icon">
                      <use xlink:href="svg-sprite/svg-sprite.svg#favorite"></use>
                   </svg>
-                  <span class="activities__counter">0</span>
+                  <span class="activities__counter">12</span>
                   <span>Избранное</span>
                </a>
             </li>
@@ -1329,7 +1343,7 @@
             <!--Popup btn item-->
             <li class="activities__item go-js-open-popup" data-popup-name="popup_cart">
                <button type="button" class="activities__btn">
-                  <svg class="icon activities__icon">
+                  <svg class="icon activities__icon icon--stroke">
                      <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
                   </svg>
                   <span class="activities__counter">0</span>
@@ -1346,7 +1360,7 @@
 <!--/ Popup-->
 
 <!-- Cookie -->
-<!-- <div class="cookie-alert cookie-alert--js">
+<div class="cookie-alert cookie-alert--js">
    <div class="cookie-alert__container">
       <div class="cookie-alert__left">
          <p>
@@ -1359,7 +1373,7 @@
          <button type="button" class="cookie-alert__btn cookie-alert__btn--js">Ок. Согласен!</button>
       </div>
    </div>
-</div> -->
+</div>
 <!-- / Cookie -->
 
 
@@ -1372,6 +1386,6 @@
 
 </html>
 
-<!-- <svg class="icon">
-	<use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
-</svg>  -->
+<!-- <svg class="icon activities__icon icon--stroke">
+   <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+</svg> -->
