@@ -1,5 +1,12 @@
 .footer {
    padding-bottom: 60px;
+   &--210 {
+      padding-bottom: 210px;
+   }
+
+   &--170 {
+      padding-bottom: 170px;
+   }
    &-main {
       border-top: 1px solid #CCD7E1;
       padding-top: 20px;
@@ -99,11 +106,14 @@
       }
    }
 
-   @media screen and (min-width: 768px) {
+   @media screen and (min-width: 576px) {
       padding-bottom: 80px;
+      &--170 {
+         padding-bottom: 145px;
+      }
    }
 
-   @media screen and (min-width: 1360px) {
+   @media screen and (min-width: 1024px) {
       padding-bottom: 0;
    }
 }

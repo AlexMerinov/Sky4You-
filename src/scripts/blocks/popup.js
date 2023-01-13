@@ -26,7 +26,6 @@ window.app.PopupModal = () => {
       const popups = document.querySelectorAll('.go-js-popup');
       if (!popups) return;
       popups.forEach((popup) => {
-         // const popupCatalog = popup.querySelector('.catalog');
 
          const closeModalPopup = () => {
             popup.classList.remove('body__popup--active');

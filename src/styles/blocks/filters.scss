@@ -47,7 +47,7 @@
 
       .box-overflow {
          &__hidden {
-            &:nth-child(n+7) {
+            &:nth-child(n+6) {
                display: none;
             }
          }
@@ -379,6 +379,7 @@
 }
 
 .sub-catalog {
+   max-height: 0;
     .choice-box {
         &__header {
             border-bottom: 1px solid $background;

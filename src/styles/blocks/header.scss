@@ -4,7 +4,7 @@
    top: 0;
    left: 0;
    width: 100%;
-   z-index: 20;
+   z-index: 30;
    &-top {
       padding: 5px 0;
       border-bottom: 1px solid $background;
@@ -31,7 +31,7 @@
 
       @media screen and (min-width: 1024px) {
          background-color: $primary;
-         padding: 10px 0;
+         padding: 9px 0;
 
          &__logo.logo {
             display: none;
@@ -55,6 +55,9 @@
       }
       &--hide {
          top: -19px;
+         @media screen and (min-width: 768px) {
+            top: -13px;
+         }
       }
       &__wrapper {
          display: flex;
@@ -369,7 +372,10 @@
 
 .contacts-h {
    &__phone {
-      margin-left: 30px;
+      margin-left: 10px;
+      @media screen and (min-width: 1024px) {
+         margin-left: 30px;
+      }
    }
 }
 
@@ -397,9 +403,11 @@
 
    &__btn {
       position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
+      top: 2px;
+      right: 2px;
+      height: calc(100% - 4px);
+      width: 40px;
+      background-color: #f1f6fb;
 
       .icon {
          width: 15px;

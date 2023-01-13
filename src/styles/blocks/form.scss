@@ -22,6 +22,7 @@
       overflow-x: hidden;
       height: 100%;
       padding-bottom: 240px;
+      padding-top: 5px;
       @media screen and (min-width: 1024px) {
          padding-bottom: 160px;
       }
@@ -63,9 +64,22 @@
       padding-left: 12px;
       padding-right: 12px;
       margin-bottom: 15px;
+
+      &--no-padding {
+         padding: 0;
+         .field__label {
+            left: 6px;
+         }
+      }
       @media screen and (min-width: 768px) {
          padding-left: 22px;
          padding-right: 22px;
+         &--no-padding {
+            padding: 0;
+            .field__label {
+               left: 10px;
+            }
+         }
       }
       @media screen and (min-width: 1024px) {
          margin-bottom: 30px;
@@ -74,29 +88,14 @@
       }
    }
 
-   // &__consent {
-   //    padding-left: 6px;
-   //    @media screen and (min-width: 768px) {
-   //       padding-left: 10px;
-   //    }
-   // }
 
    &__chapter {
-      // padding-left: 12px;
       margin-bottom: 20px;
       .label-choice {
          &__custom {
             border: 1px solid #99afc3;
          }
       }
-
-      // @media screen and (min-width: 768px) {
-      //    padding-left: 20px;
-      // }
-
-      // @media screen and (min-width: 1024px) {
-      //    padding-left: 40px;
-      // }
    }
 
    &__subtitle {
@@ -124,20 +123,6 @@
          margin-left: 0;
          margin-right: 0;
       }
-   }
-
-   &__body {
-      // padding-left: 12px;
-      padding-right: 12px;
-      margin-bottom: -15px;
-      // @media screen and (min-width: 768px) {
-      //    padding-left: 20px;
-      //    padding-right: 20px;
-      // }
-      // @media screen and (min-width: 1024px) {
-      //    padding-left: 40px;
-      //    padding-right: 40px;
-      // }
    }
 
    &__buttons {
@@ -312,12 +297,15 @@
 
       position: absolute;
       top: 50%;
-      left: 5px;
+      left: 0;
       transform: translateY(-50%);
       transition: all 0.3s linear;
 
-      @media screen and (min-width: 768px) {
-         left: 10px;
+      &--left {
+         left: 6px;
+         @media screen and (min-width: 768px) {
+            left: 10px;
+         }
       }
    }
 

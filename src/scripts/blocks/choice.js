@@ -3,6 +3,8 @@ window.app.Choice = () => {
    const boxQuantitys = document.querySelectorAll('.js-choice-box');
    if (!boxQuantitys) return;
 
+   const body = document.querySelector('.body');
+
    boxQuantitys.forEach((boxQuantity) => {
       let dropBtn = boxQuantity.querySelector('.choice-box__btn');
       let choiceList = boxQuantity.querySelector('.choice-box__list');
@@ -29,8 +31,6 @@ window.app.Choice = () => {
                   if (thisAnchor.checked) {
                      let activeAnchor = this.querySelector('.choice-box__name').textContent;
                      let choiceTitleName = this.closest('.choice-box').querySelector('.choice-box__title');
-                     console.log(choiceTitleName);
-                     console.log(activeAnchor);
                      choiceTitleName.textContent = activeAnchor;
                      boxQuantity.classList.remove('choice-box--active');
                      dropBtn.classList.remove('choice-box__btn--active');
@@ -41,6 +41,7 @@ window.app.Choice = () => {
                   }
                }
             })
+
          } else {
             choiceList.style.maxHeight = 0;
             dropBtn.classList.remove('field__btn--active');

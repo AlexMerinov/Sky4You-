@@ -40,17 +40,48 @@
                   <div class="header-top__contacts contacts-h">
                      <span class="address contacts-h__address">г. Калининград, ул. Челнокова, д. 58</span>
                      <a href="tel:+7(4012)376432" class="contacts-h__phone phone">+7 (4012) 37-64-32</a>
+
+                     <div class="language">
+                        <div class="choice-box js-choice-box">
+                           <div class="choice-box__header">
+                              <span class="choice-box__title">
+                                 RU
+                              </span>
+                              <button type="button" class="choice-box__btn choice-box__btn--active">
+                                 <svg class="icon">
+                                    <use xlink:href="svg-sprite/svg-sprite.svg#arrow-down"></use>
+                                 </svg>
+                              </button>
+                           </div>
+                           <ul class="choice-box__list">
+                              <li class="go-js-choice-item choice-box__item">
+                                 <label class="choice-box__label choice-element">
+                                    <span class="choice-box__name">EN</span>
+                                    <input class="choice-box__input" name="count" type="radio">
+                                 </label>
+                              </li>
+                              <li class="go-js-choice-item choice-box__item">
+                                 <label class="choice-box__label choice-element">
+                                    <span class="choice-box__name">RU</span>
+                                    <input class="choice-box__input" name="count" type="radio">
+                                 </label>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+
                   </div>
                </div>
             </div>
          </div>
+
          <div class="header-bot">
             <div class="container">
                <div class="header-bot__wrapper">
                   <a href="/" class="header-bot__logo logo">
                      <img src="images/logo.png" alt="logo" />
                   </a>
-                  <button class="btn header-bot__catalog">
+                  <button class="btn header-bot__catalog go-js-open-popup" data-popup-name="popup_cat">
                      <svg class="icon icon--catalog">
                         <use xlink:href="svg-sprite/svg-sprite.svg#katalog"></use>
                      </svg>
@@ -66,11 +97,11 @@
                   </form>
                   <ul class="header-bot__activities activities">
                      <li class="activities__item">
-                        <button type="button" class="activities__btn">
+                        <button type="button" class="activities__btn go-js-open-popup" data-popup-name="popup_user">
                            <svg class="icon">
                               <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
                            </svg>
-                           <span class="activities__counter">0</span>
+                           <span class="activities__counter">12</span>
                         </button>
                      </li>
                      <li class="activities__item">
@@ -78,12 +109,12 @@
                            <svg class="icon">
                               <use xlink:href="svg-sprite/svg-sprite.svg#favorite"></use>
                            </svg>
-                           <span class="activities__counter">0</span>
+                           <span class="activities__counter">123</span>
                         </button>
                      </li>
                      <li class="activities__item">
-                        <button type="button" class="activities__btn">
-                           <svg class="icon">
+                        <button type="button" class="activities__btn go-js-open-popup" data-popup-name="popup_cart">
+                           <svg class="icon icon--stroke">
                               <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
                            </svg>
                            <span class="activities__counter">0</span>
@@ -218,6 +249,22 @@
                         </div>
                         <div class="col col--padding">
                            <div class="order-box__item order-item order-item--user">
+                              <div class="order-item__name">Длинное название профиля на несколько строк, для демонстрации</div>
+                              <div class="order-item__date"><span>Дата обновления:</span> 23 окт. 2021</div>
+                              <span class="order-item__status order-item__status--user">физическое лицо</span>
+                              <div class="order-item__pagination">
+                                 <a href="#" class="order-item__link">подробнее</a>
+                                 <button type="button" class="order-item__btn">
+                                    <svg class="icon">
+                                       <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                                    </svg>
+                                    <span class="order-item__label">удалить профиль</span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col col--padding">
+                           <div class="order-box__item order-item order-item--user">
                               <div class="order-item__name">ОАО "Летаем"</div>
                               <div class="order-item__date"><span>Дата обновления:</span> 23 окт. 2021</div>
                               <span class="order-item__status order-item__status--user">физическое лицо</span>
@@ -282,180 +329,7 @@
       <!-- / Main -->
 
       <!-- Footer -->
-      <footer id="section-footer" class="page__footer footer section">
-         <div class="footer-main">
-            <div class="container">
-               <div class="footer-main__wrapper">
-                  <nav class="footer-main__nav footer-nav">
-                     <div class="footer-nav__col">
-                        <ul class="footer-list">
-                           <li class="footer-subheader footer-main__subheader">
-                              КАТАЛОГ САМОЛЕТОВ
-                           </li>
-                           <li class="footer-list__item">
-                              <a href="#">Однодвигательные</a>
-                           </li>
-                           <li class="footer-list__item">
-                              <a href="#">Многодвигательные</a>
-                           </li>
-                           <li class="footer-list__item"><a href="#">Бизнес джет</a></li>
-                           <li class="footer-list__item"><a href="#">Вертолет</a></li>
-                           <li class="footer-list__item">
-                              <a href="#">Ультралегкие</a>
-                           </li>
-                           <li class="footer-list__item"><a href="#">Винтажные</a></li>
-                        </ul>
-                     </div>
-                     <div class="footer-nav__col">
-                        <ul class="footer-list">
-                           <li class="footer-subheader footer-main__subheader">
-                              КОМПАНИЯ
-                           </li>
-                           <li class="footer-list__item">
-                              <a href="#">Спецпредложения</a>
-                           </li>
-                           <li class="footer-list__item">
-                              <a href="#">О компании</a>
-                           </li>
-                           <li class="footer-list__item">
-                              <a href="#">Искать</a>
-                           </li>
-                           <li class="footer-list__item">
-                              <a href="#">Личный кабинет</a>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="footer-nav__col">
-                        <ul class="contact-list">
-                           <li class="footer-subheader footer-main__subheader">
-                              НАШИ КОНТАКТЫ
-                           </li>
-                           <li class="contact-list__item">
-                              <div class="icon-item contact-list__icon">
-                                 <svg class="icon icon--pin">
-                                    <use xlink:href="svg-sprite/svg-sprite.svg#map-pin"></use>
-                                 </svg>
-                              </div>
-                              <a href="#">Россия, г. Калининград, ул. Челнокова, д.58</a>
-                           </li>
-                           <li class="contact-list__item">
-                              <div class="icon-item contact-list__icon">
-                                 <svg class="icon icon--male">
-                                    <use xlink:href="svg-sprite/svg-sprite.svg#mail"></use>
-                                 </svg>
-                              </div>
-                              <a href="mailto:info@sky4you.info">info@sky4you.info</a>
-                           </li>
-                           <li class="contact-list__item">
-                              <div class="icon-item contact-list__icon">
-                                 <svg class="icon icon--phone">
-                                    <use xlink:href="svg-sprite/svg-sprite.svg#phone"></use>
-                                 </svg>
-                              </div>
-                              <a href="tel:+7(4012)376432">+7 (4012) 37-64-32</a>
-                           </li>
-                        </ul>
-                     </div>
-                  </nav>
-                  <div class="footer-main__social social-nav">
-                     <div class="social-nav__col">
-                        <ul class="social-list social-nav__list">
-                           <li class="footer-subheader footer-main__subheader">
-                              МЕССЕНДЖЕРЫ
-                           </li>
-                           <li class="social-list__item">
-                              <a href="#">
-                                 <div class="icon-item social-list__icon">
-                                    <svg class="icon icon--vb">
-                                       <use xlink:href="svg-sprite/svg-sprite.svg#viber"></use>
-                                    </svg>
-                                 </div>
-                              </a>
-                           </li>
-                           <li class="social-list__item">
-                              <a href="#">
-                                 <div class="icon-item social-list__icon">
-                                    <svg class="icon icon--ws">
-                                       <use xlink:href="svg-sprite/svg-sprite.svg#whatsapp"></use>
-                                    </svg>
-                                 </div>
-                              </a>
-                           </li>
-                           <li class="social-list__item">
-                              <a href="#">
-                                 <div class="icon-item social-list__icon">
-                                    <svg class="icon icon--tg">
-                                       <use xlink:href="svg-sprite/svg-sprite.svg#telegram"></use>
-                                    </svg>
-                                 </div>
-                              </a>
-                           </li>
-                        </ul>
-                        <div class="social-inst">
-                           <div class="footer-subheader footer-main__subheader">
-                              МЫ В СОЦ.СЕТЯХ
-                           </div>
-                           <a href="#">
-                              <div class="icon-item">
-                                 <svg class="icon icon--inst">
-                                    <use xlink:href="svg-sprite/svg-sprite.svg#instagram"></use>
-                                 </svg>
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-                     <div class="social-nav__col">
-                        <div class="footer-male social-nav__male">
-                           <div class="footer-subheader footer-main__subheader">
-                              ПОДПИСЫВАЙТЕСЬ НА НОВОСТИ
-                           </div>
-                           <form class="male-form" action="" method="get">
-                              <input type="text" class="male-form__input" placeholder="E-mail" />
-                              <button type="button" class="male-form__btn">
-                                 <svg class="icon">
-                                    <use xlink:href="svg-sprite/svg-sprite.svg#arrow-with-tail"></use>
-                                 </svg>
-                              </button>
-                              <div class="male-form__error error">
-                                 <div class="error__header">
-                                    <span>Ошибка</span>
-                                    <button type="button">
-                                       <svg class="icon">
-                                          <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
-                                       </svg>
-                                    </button>
-                                 </div>
-                                 <div class="error__info">Сообщение об ошибке</div>
-                              </div>
-                           </form>
-                        </div>
-                        <div class="footer-web">
-                           <a href="#" class="footer-web__link">
-                              <div class="footer-subheader footer-main__subheader">
-                                 ПЕРЕЙТИ НА ОСНОВНОЙ САЙТ
-                              </div>
-                              <picture class="footer-web__logo">
-                                 <img src="images/logo.png" alt="logo-web" />
-                              </picture>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-         <div class="footer-bot">
-            <div class="container">
-               <div class="footer-bot__wrapper">
-                  <span class="footer-bot__item">© 2021 Все права защищены. Sky4you</span>
-                  <span class="footer-bot__item">Политика конфиденциальности</span>
-                  <span class="footer-bot__plastilin">Разработка сайта:
-                     <a href="https://plastilin-art.ru/">Пластилин-Арт</a></span>
-               </div>
-            </div>
-         </div>
-      </footer>
+      @@include('footer-local.html')
       <!-- / Footer -->
    </div>
 </div>
@@ -469,7 +343,7 @@
          <ul class="activities activities--popups">
             <!--Popup btn item-->
             <li class="activities__item">
-               <a href="/" class="activities__btn">
+               <a href="main.html" class="activities__btn">
                   <svg class="icon activities__icon">
                      <use xlink:href="svg-sprite/svg-sprite.svg#home"></use>
                   </svg>
@@ -502,11 +376,11 @@
 
             <!--Popup btn item-->
             <li class="activities__item">
-               <a href="#" class="activities__btn">
+               <a href="person-favorit.html" class="activities__btn">
                   <svg class="icon activities__icon">
                      <use xlink:href="svg-sprite/svg-sprite.svg#favorite"></use>
                   </svg>
-                  <span class="activities__counter">0</span>
+                  <span class="activities__counter">12</span>
                   <span>Избранное</span>
                </a>
             </li>
@@ -515,7 +389,7 @@
             <!--Popup btn item-->
             <li class="activities__item go-js-open-popup" data-popup-name="popup_cart">
                <button type="button" class="activities__btn">
-                  <svg class="icon activities__icon">
+                  <svg class="icon activities__icon icon--stroke">
                      <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
                   </svg>
                   <span class="activities__counter">0</span>

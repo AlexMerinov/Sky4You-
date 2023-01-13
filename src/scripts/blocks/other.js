@@ -153,6 +153,41 @@ window.app.otherFunction = () => {
       }
    });
 
+
+   //открытие каталога по ховеру 
+   const openCatalogs = document.querySelectorAll('.go-js-hover');
+   if (!openCatalogs) return;
+
+   openCatalogs.forEach((openCatalog) => {
+
+      const catalogWrapper = openCatalog.querySelector('.catalog-box-hidden');
+
+      if (document.documentElement.clientWidth > 1024) {
+
+         catalogWrapper.addEventListener("mouseenter", (event) => {
+            openCatalog.classList.add('sidebar-main__catalog--active');
+
+            if (openCatalog.classList.contains('sidebar-main__catalog--active')) {
+               catalogWrapper.style.maxHeight = catalogWrapper.scrollHeight + "px";
+            } else if (document.documentElement.clientWidth > 1360) {
+               catalogWrapper.style.maxHeight = 370 + "px";
+            } else if (document.documentElement.clientWidth > 1024) {
+               catalogWrapper.style.maxHeight = 223 + "px";
+            }
+         });
+
+         catalogWrapper.addEventListener("mouseleave", (event) => {
+            openCatalog.classList.remove('sidebar-main__catalog--active');
+            if (document.documentElement.clientWidth > 1360) {
+               catalogWrapper.style.maxHeight = 370 + "px";
+            } else if (document.documentElement.clientWidth > 1024) {
+               catalogWrapper.style.maxHeight = 223 + "px";
+            }
+         });
+      }
+
+   })
+
 };
 
 window.app.otherFunction();

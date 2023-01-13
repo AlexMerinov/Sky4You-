@@ -6,11 +6,37 @@ window.app.openBurger = () => {
 
    if (burger) {
       let menu   = document.querySelector('.nav-menu');
+      let body = document.querySelector('body');
+
+      const closeMobileMenu = () => {
+         menu.classList.remove('nav-menu--active');
+         body.classList.remove('lock');
+      }
+
       burger.addEventListener('click', () => {
          menu.classList.toggle('nav-menu--active');
+         body.classList.add('lock');
       });
+
+      //закрытие по кнопке
       menuClose.addEventListener('click', () => {
-         menu.classList.remove('nav-menu--active');
+         closeMobileMenu();
+      });
+
+      // закрытие по ESC 
+      document.body.addEventListener('keyup', function (e) {
+         let key = e.keyCode;
+
+         if (key == 27) {
+            closeMobileMenu();
+         };
+      }, false);
+
+      //закрытие по подложке
+      menu.addEventListener('click', (e) => {
+         if (e.target === menu) {
+            closeMobileMenu();
+         }
       });
   }
 

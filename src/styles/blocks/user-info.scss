@@ -77,6 +77,8 @@
    @media screen and (min-width: 1024px) {
       &__link {
          margin-top: 30px;
+         width: max-content;
+         min-width: 255px;
 
          &:hover {
             background-color: $hover;
@@ -114,14 +116,22 @@
       display: flex;
       flex-direction: column;
       margin-bottom: 10px;
+      &--phone {
+         @media screen and (min-width: 1360px) {
+            order: 3;
+         }
+      }
    }
 
    &__row {
       display: flex;
       flex-wrap: wrap;
       .user-person__box {
-         flex: 1 1 auto;
-         width: 50%;
+         width: 100%;
+         @media screen and (min-width: 1360px) {
+            flex: 1 1 auto;
+            width: 50%;
+         }
       }
    }
    @media screen and (min-width: 768px) {
