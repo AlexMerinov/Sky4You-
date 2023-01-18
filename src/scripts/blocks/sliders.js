@@ -10,7 +10,7 @@ window.app.Sliders = () => {
             spaceBetween: 20,
          },
 
-         1360: {
+         1024: {
             slidesPerView: 1,
             pagination: {
                el: '.banner-slider__pagination',

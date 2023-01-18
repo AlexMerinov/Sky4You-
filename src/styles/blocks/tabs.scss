@@ -10,7 +10,8 @@
 .tabs-box {
     max-width: 977px;
     &__pagination {
-        margin-bottom: 22px;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
         @media screen and (min-width: 1360px) {
             margin-bottom: 37px;
         }

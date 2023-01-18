@@ -186,7 +186,18 @@ window.app.otherFunction = () => {
          });
       }
 
-   })
+   });
+
+
+   //выбрать способ оплаты
+   const checkedCards = document.querySelectorAll('.go-js-checked');
+   if (!checkedCards) return;
+
+   checkedCards.forEach((checkedCard) => {
+      checkedCard.addEventListener('click', () => {
+         checkedCard.querySelector('.label-choice__input').checked = "true";
+      });
+   });
 
 };
 
