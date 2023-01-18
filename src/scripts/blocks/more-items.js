@@ -10,9 +10,12 @@ window.app.moreItems = () => {
          overflowBox.classList.toggle('box-overflow--active');
          btnMore.classList.toggle('more-items--active');
          if (overflowBox.classList.contains('box-overflow--active')) {
-            btnMore.innerText = "Скрыть";
+            btnMore.innerText = "Показать основное";
+            overflowBox.style.maxHeight = overflowBox.scrollHeight + "px";
+
          } else {
             btnMore.innerText = "Показать ещё";
+            overflowBox.style.maxHeight = overflowBox.scrollHeight + "px";
          }
       });
    });

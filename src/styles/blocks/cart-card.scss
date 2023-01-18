@@ -96,6 +96,7 @@
 .value-sum {
    display: flex;
    flex-direction: column;
+   justify-content: center;
    width: 100%;
    padding: 19px 12px;
    font-size: 16px;
@@ -113,6 +114,18 @@
    @media screen and (min-width: 768px) {
       padding: 20px 35px;
       height: 100px;
+   }
+
+   &:after {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 100%;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: $secondary;
    }
 }
 

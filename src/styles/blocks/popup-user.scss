@@ -39,10 +39,9 @@
       padding-left: 12px;
       padding-right: 12px;
       flex-basis: content;
-      overflow: auto;
       @media screen and (min-width: 768px) {
          display: flex;
-         flex-wrap: wrap;
+         flex-direction: column;
          padding-left: 22px;
          padding-right: 22px;
 
@@ -51,6 +50,8 @@
       @media screen and (min-width: 1024px) {
          padding-left: 40px;
          padding-right: 40px;
+         flex-direction: column;
+         flex: 1 1 auto;
 
          .form-box__buttons {
             flex-wrap: wrap;

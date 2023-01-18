@@ -96,7 +96,7 @@
          margin-bottom: 10px;
       }
 
-      @media screen and (min-width: 1360px) {
+      @media screen and (min-width: 1024px) {
          &:hover {
             color: $secondary;
          }
@@ -172,6 +172,30 @@
          line-height: 22px;
       }
 
+   }
+
+   &__count {
+      display: none;
+   }
+
+   &__btns {
+      width: 100%;
+      flex: 1 1 auto;
+
+      .count {
+         max-width: 170px;
+         width: 100%;
+      }
+
+      &--active {
+         .product-card__btn {
+            display: none;
+         }
+
+         .product-card__count {
+            display: flex;
+         }
+      }
       @media screen and (min-width: 1360px) {
          margin-right: 10px;
          order: -1;
@@ -259,8 +283,10 @@
       }
 
       .product-card__desc {
+         display: block;
          font-size: 14px;
          line-height: 19px;
+         color: $primary;
 
          span {
             display: inline-block;

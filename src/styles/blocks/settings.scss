@@ -58,15 +58,13 @@ body {
          }
       }
       @media screen and (min-width: 1024px) {
+         padding: 9px 19px;
          span {
             display: block;
             margin-left: 10px;
          }
          &:hover {
-            color: $hover;
-            .icon {
-               fill: $hover;
-            }
+            background-color: $background;
          }
       }
    }
@@ -1078,7 +1076,6 @@ button {
          }
       }
       
-
       &__list {
          width: 100%;
          position: absolute;
@@ -1125,10 +1122,40 @@ button {
             }
          }
       }
+
+      &__header {
+         &:active {
+            .choice-box__title {
+               color: $hover;
+            }
+      
+            .choice-box__btn {
+               .icon {
+                  stroke: $hover;
+               }
+            }
+         }
+      }
    }
 
    @media screen and (min-width: 1024px) {
       padding-left: 30px;
+
+      .choice-box {
+         &__header {
+            &:hover {
+               .choice-box__title {
+                  color: $hover;
+               }
+   
+               .choice-box__btn {
+                  .icon {
+                     stroke: $hover;
+                  }
+               }
+            }
+         }
+      }
    }
 }
 
