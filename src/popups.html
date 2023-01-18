@@ -109,7 +109,7 @@
                </svg>
             </button>
          </div>
-         <div class="popup-user__wrapper">
+         <div class="popup__body">
             <div class="popup-user__desc popup-user__desc--bgnone">
                Все товары будут удалены
             </div>
@@ -135,7 +135,7 @@
                </svg>
             </button>
          </div>
-         <div class="popup-user__wrapper">
+         <div class="popup__body">
             <div class="popup-user__desc popup-user__desc--bgnone">
                Вы уверены, что хотите удалить профиль «ООО Аэрофлот» безвозвратно?
             </div>
@@ -161,32 +161,32 @@
                </svg>
             </button>
          </div>
-         <div class="popup-user__desc">
-            Пожалуйста, заполните все обязательные поля для входа
-         </div>
-         <form action="" class="popup-user__form form-box">
-            <div class="form-box__wrapper">
-               <div class="row row-cols-1 row-cols-sm-2 row-cols-l-1">
-                  <div class="field form-box__field col">
-                     <label>
-                        <input type="text" class="field__input" placeholder=" " />
-                        <span class="field__label field__label--left req">e-mail</span>
-                     </label>
+         <div class="popup__body">
+            <div class="popup-user__desc">
+               Пожалуйста, заполните все обязательные поля для входа
+            </div>
+            <form action="" class="popup-user__form form-box">
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-l-1">
+                     <div class="field form-box__field col">
+                        <label>
+                           <input type="text" class="field__input" placeholder=" " />
+                           <span class="field__label field__label--left req">e-mail</span>
+                        </label>
+                     </div>
+                     <div class="field form-box__field col">
+                        <label>
+                           <input type="text" class="field__input" placeholder=" " />
+                           <span class="field__label field__label--left req">пароль</span>
+                        </label>
+                     </div>
                   </div>
-                  <div class="field form-box__field col">
-                     <label>
-                        <input type="text" class="field__input" placeholder=" " />
-                        <span class="field__label field__label--left req">пароль</span>
-                     </label>
-                  </div>
+                  <a href="#" class="form-box__link-pas">Забыли пароль?</a>
+               <div class="form-box__buttons">
+                  <a href="#" class="form-box__link">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
+                  <button class="form-box__btn">ВОЙТИ</button>
                </div>
-               <a href="#" class="form-box__link-pas">Забыли пароль?</a>
-            </div>
-            <div class="form-box__buttons">
-               <a href="#" class="form-box__link">ЗАРЕГЕСТРИРОВАТЬСЯ</a>
-               <button class="form-box__btn">ВОЙТИ</button>
-            </div>
-         </form>
+            </form>
+         </div>
       </div>
    </div>
 </div>
@@ -281,7 +281,7 @@
 
 <div class="body__popup popup go-js-popup" id="popup-reg" data-popup-name="popup_reg">
    <div class="popup__box">
-      <div class="popup__window popup-reg">
+      <div class="popup__window popup__window--md popup-reg">
          <div class="popup-window-h">
             <span class="popup-window-h__title">Регистрация</span>
             <button type="button" class="close-btn go-js-close-modal">
@@ -678,7 +678,7 @@
 
 <div class="body__popup popup go-js-popup" id="popup-cart" data-popup-name="popup_cart">
    <div class="popup__box">
-      <div class="popup__window popup-cart">
+      <div class="popup__window popup__window--lg popup-cart">
          <div class="popup-window-h">
             <span class="popup-window-h__title">Корзина</span>
             <button type="button" class="close-btn go-js-close-modal">
@@ -687,75 +687,96 @@
                </svg>
             </button>
          </div>
-         <div class="popup-cart__body popup-window-b popup-window-b--on">
-            <div class="popup-cart__wrapper">
-               <div class="popup-cart__box">
-                  <div class="cart-card">
-                     <a href="#" class="cart-card__preview">
-                        <img src="images/content/product.png" alt="product">
-                     </a>
-                     <div class="cart-card__content">
-                        <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112 длинное
-                           название
-                           товара, занимающее несколько строк в корзине</a>
-                        <div class="cart-card__price value-price">
-                           <div class="count value-price__count">
-                              <button type="button" class="count__btn count__btn--down">
-                                 <span></span>
-                              </button>
-                              <input type="text" class="count__input" min="1" max="100" value="1">
-                              <button type="button" class="count__btn count__btn--up">
-                                 <span></span>
-                              </button>
-                           </div>
-                           <div class="value-price__result">6 900 ₽</div>
-                        </div>
+         <div class="popup__body popup__body--p212">
+            <div class="cart-card">
+               <a href="#" class="cart-card__preview">
+                  <img src="images/content/product.png" alt="product">
+               </a>
+               <div class="cart-card__content">
+                  <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112 длинное
+                     название
+                     товара, занимающее несколько строк в корзине</a>
+                  <div class="cart-card__price value-price">
+                     <div class="count value-price__count">
+                        <button type="button" class="count__btn count__btn--down">
+                           <span></span>
+                        </button>
+                        <input type="text" class="count__input" min="1" max="100" value="1">
+                        <button type="button" class="count__btn count__btn--up">
+                           <span></span>
+                        </button>
                      </div>
-                     <button type="button" class="cart-card__delete">
-                        <svg class="icon">
-                           <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
-                        </svg>
-                     </button>
-                  </div>
-                  <div class="cart-card">
-                     <a href="#" class="cart-card__preview">
-                        <img src="images/content/product.png" alt="product">
-                     </a>
-                     <div class="cart-card__content">
-                        <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112</a>
-                        <div class="cart-card__price value-price">
-                           <div class="count value-price__count">
-                              <button type="button" class="count__btn count__btn--down">
-                                 <span></span>
-                              </button>
-                              <input type="text" class="count__input" min="1" max="100" value="1">
-                              <button type="button" class="count__btn count__btn--up">
-                                 <span></span>
-                              </button>
-                           </div>
-                           <div class="value-price__result">6 900 ₽</div>
-                        </div>
-                     </div>
-                     <button type="button" class="cart-card__delete">
-                        <svg class="icon">
-                           <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
-                        </svg>
-                     </button>
+                     <div class="value-price__result">6 900 ₽</div>
                   </div>
                </div>
-            </div>
-            <div class="popup-cart__footer">
-               <div class="value-sum">
-                  <span>Итого:</span>
-                  <div class="value-sum__count">16 350 ₽</div>
-               </div>
-               <button type="button" class="design-btn">
+               <button type="button" class="cart-card__delete">
                   <svg class="icon">
-                     <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+                     <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
                   </svg>
-                  оформить ЗАКАЗ
                </button>
             </div>
+            <div class="cart-card">
+               <a href="#" class="cart-card__preview">
+                  <img src="images/content/product.png" alt="product">
+               </a>
+               <div class="cart-card__content">
+                  <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112</a>
+                  <div class="cart-card__price value-price">
+                     <div class="count value-price__count">
+                        <button type="button" class="count__btn count__btn--down">
+                           <span></span>
+                        </button>
+                        <input type="text" class="count__input" min="1" max="100" value="1">
+                        <button type="button" class="count__btn count__btn--up">
+                           <span></span>
+                        </button>
+                     </div>
+                     <div class="value-price__result">6 900 ₽</div>
+                  </div>
+               </div>
+               <button type="button" class="cart-card__delete">
+                  <svg class="icon">
+                     <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                  </svg>
+               </button>
+            </div>
+            <div class="cart-card">
+               <a href="#" class="cart-card__preview">
+                  <img src="images/content/product.png" alt="product">
+               </a>
+               <div class="cart-card__content">
+                  <a href="#" class="cart-card__name">Фильтр масла TEMPEST. Номер производителя AA48112</a>
+                  <div class="cart-card__price value-price">
+                     <div class="count value-price__count">
+                        <button type="button" class="count__btn count__btn--down">
+                           <span></span>
+                        </button>
+                        <input type="text" class="count__input" min="1" max="100" value="1">
+                        <button type="button" class="count__btn count__btn--up">
+                           <span></span>
+                        </button>
+                     </div>
+                     <div class="value-price__result">6 900 ₽</div>
+                  </div>
+               </div>
+               <button type="button" class="cart-card__delete">
+                  <svg class="icon">
+                     <use xlink:href="svg-sprite/svg-sprite.svg#delete"></use>
+                  </svg>
+               </button>
+            </div>
+         </div>
+         <div class="popup-cart__footer">
+            <div class="value-sum">
+               <span>Итого:</span>
+               <div class="value-sum__count">16 350 ₽</div>
+            </div>
+            <button type="button" class="design-btn">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+               </svg>
+               оформить ЗАКАЗ
+            </button>
          </div>
          <div class="popup-cart__body popup-window-b popup-window-b--off">
             <h2 class="popup-window-b__title">Корзина пуста</h2>
@@ -778,7 +799,7 @@
                </svg>
             </button>
          </div>
-         <div class="popup__body">
+         <div class="popup__body popup__body--p140">
             <div class="reviews-rating">
                <span class="reviews-rating__name">Ваша оценка</span>
                <div class="rating-stars reviews-rating__stars">
@@ -847,7 +868,7 @@
                </svg>
             </button>
          </div>
-         <div class="popup-user__wrapper">
+         <div class="popup__body">
             <div class="popup-user__desc popup-user__desc--bgnone">
                После выхода вам будет недоступно отслеживание статуса своих заказов.
             </div>
@@ -864,7 +885,7 @@
 
 <div class="body__popup popup go-js-popup" id="person-reduct" data-popup-name="popup_person-reduct">
    <div class="popup__box">
-      <div class="popup__window popup-reg">
+      <div class="popup__window popup__window--md popup-reg">
          <div class="popup-window-h">
             <span class="popup-window-h__title">Редактирование данных</span>
             <button type="button" class="close-btn go-js-close-modal">
@@ -873,8 +894,8 @@
                </svg>
             </button>
          </div>
-         <form action="" class="popup-reg__form form-box">
-            <div class="form-box__wrapper">
+         <div class="popup__body">
+            <form action="" class="popup-reg__form form-box">
                <div class="form-box__section">
                   <h3 class="form-box__subtitle">Контактная информация</h3>
                   <div class="form-box__body row">
@@ -939,12 +960,12 @@
                      </div>
                   </div>
                </div>
-            </div>
             <div class="form-box__buttons">
                <button type="button" class="form-box__link">отменить</button>
                <button class="form-box__btn">сохранить</button>
             </div>
          </form>
+         </div>
       </div>
    </div>
 </div>
@@ -963,62 +984,59 @@
                </svg>
             </button>
          </div>
-         <div class="popup-cart__body popup-window-b popup-window-b--on">
-            <div class="popup-cart__wrapper popup-cart__wrapper--big">
-               <div class="product-order popup-cart__product-order">
-                  <picture class="product-order__image">
-                     <img src="images/content/product.png" alt="product">
-                  </picture>
-                  <div class="product-order__desc">
-                     <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
-                     <div class="product-order__info">
-                        <span class="product-order__count">2 шт</span>
-                        <span class="product-order__price">6 900 ₽</span>
-                     </div>
+         <div class="popup__body popup__body--p212lg">
+            <div class="product-order popup-cart__product-order">
+               <picture class="product-order__image">
+                  <img src="images/content/product.png" alt="product">
+               </picture>
+               <div class="product-order__desc">
+                  <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
+                  <div class="product-order__info">
+                     <span class="product-order__count">2 шт</span>
+                     <span class="product-order__price">6 900 ₽</span>
                   </div>
-                  <div class="product-order__sum">13 800 ₽</div>
                </div>
-               <div class="product-order popup-cart__product-order">
-                  <picture class="product-order__image">
-                     <img src="images/content/product.png" alt="product">
-                  </picture>
-                  <div class="product-order__desc">
-                     <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
-                     <div class="product-order__info">
-                        <span class="product-order__count">2 шт</span>
-                        <span class="product-order__price">6 900 ₽</span>
-                     </div>
-                  </div>
-                  <div class="product-order__sum">13 800 ₽</div>
-               </div>
-               <div class="product-order popup-cart__product-order">
-                  <picture class="product-order__image">
-                     <img src="images/content/product.png" alt="product">
-                  </picture>
-                  <div class="product-order__desc">
-                     <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
-                     <div class="product-order__info">
-                        <span class="product-order__count">2 шт</span>
-                        <span class="product-order__price">6 900 ₽</span>
-                     </div>
-                  </div>
-                  <div class="product-order__sum">13 800 ₽</div>
-               </div>
-               <div class="product-order popup-cart__product-order">
-                  <picture class="product-order__image">
-                     <img src="images/content/product.png" alt="product">
-                  </picture>
-                  <div class="product-order__desc">
-                     <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
-                     <div class="product-order__info">
-                        <span class="product-order__count">2 шт</span>
-                        <span class="product-order__price">6 900 ₽</span>
-                     </div>
-                  </div>
-                  <div class="product-order__sum">13 800 ₽</div>
-               </div>
+               <div class="product-order__sum">13 800 ₽</div>
             </div>
-
+            <div class="product-order popup-cart__product-order">
+               <picture class="product-order__image">
+                  <img src="images/content/product.png" alt="product">
+               </picture>
+               <div class="product-order__desc">
+                  <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
+                  <div class="product-order__info">
+                     <span class="product-order__count">2 шт</span>
+                     <span class="product-order__price">6 900 ₽</span>
+                  </div>
+               </div>
+               <div class="product-order__sum">13 800 ₽</div>
+            </div>
+            <div class="product-order popup-cart__product-order">
+               <picture class="product-order__image">
+                  <img src="images/content/product.png" alt="product">
+               </picture>
+               <div class="product-order__desc">
+                  <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
+                  <div class="product-order__info">
+                     <span class="product-order__count">2 шт</span>
+                     <span class="product-order__price">6 900 ₽</span>
+                  </div>
+               </div>
+               <div class="product-order__sum">13 800 ₽</div>
+            </div>
+            <div class="product-order popup-cart__product-order">
+               <picture class="product-order__image">
+                  <img src="images/content/product.png" alt="product">
+               </picture>
+               <div class="product-order__desc">
+                  <span class="product-order__name">Фильтр масла 08-01269 - AA48109 TEMPEST</span>
+                  <div class="product-order__info">
+                     <span class="product-order__count">2 шт</span>
+                     <span class="product-order__price">6 900 ₽</span>
+                  </div>
+               </div>
+               <div class="product-order__sum">13 800 ₽</div>
+            </div>
             <div class="popup-cart__footer popup-cart__footer--cancel">
                <div class="value-sum">
                   <span>Итого:</span>
