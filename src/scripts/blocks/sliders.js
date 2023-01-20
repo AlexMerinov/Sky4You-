@@ -24,6 +24,17 @@ window.app.Sliders = () => {
       slidesPerView: 1,
       spaceBetween: 10,
 
+      pagination: {
+         el: '.db-sl-parent-pagination',
+         clickable: true,
+      },
+
+      breakpoints: {
+         576: {
+            pagination: false,
+         },
+      },
+
       thumbs: {
          swiper: {
             el: '.db-sl-child',
@@ -38,17 +49,6 @@ window.app.Sliders = () => {
             },
          }
       },
-
-      pagination: {
-         el: '.db-sl-parent-pagination',
-         clickable: true,
-      },
-
-      breakpoints: {
-         1360: {
-            pagination: false,
-         },
-      }
    });
 
    const initSliders = () => {

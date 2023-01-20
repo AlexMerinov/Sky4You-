@@ -8,8 +8,31 @@
       <!-- / Header -->
       <!-- Main -->
       <main class="page__main main">
+         <ul>
+            <li>
+               <button type="button" class="btn btn--green go-js-board" data-notification="notification_order-on">подтвердить заказ</button>
+            </li>
+            <li>
+               <button type="button" class="btn btn--green go-js-board" data-notification="notification_order-off">отменить заказ</button>
+            </li>
+            <li>
+               <button type="button" class="btn btn--green go-js-board" data-notification="notification_review">Спасибо за отзыв</button>
+            </li>
+            <li>
+               <button type="button" class="btn btn--green go-js-board" data-notification="notification_message">Сообщение отправленн</button>
+            </li>
+         </ul>
          <div class="container art-box">
-            <div class="artboard artboard--active">
+            <div class="artboard" data-notification="notification_order-on">
+               <div class="artboard__title">Ваш заказ подтвержден</div>
+               <div class="artboard__desc">№ 345-964</div>
+               <button class="artboard__close js-art-close">
+                  <svg class="icon">
+                     <use xlink:href="svg-sprite/svg-sprite.svg#close"></use>
+                  </svg>
+               </button>
+            </div>
+            <div class="artboard" data-notification="notification_order-off">
                <div class="artboard__title">Заказ отменен</div>
                <div class="artboard__desc">№ 345-964</div>
                <button class="artboard__close js-art-close">
@@ -18,7 +41,7 @@
                   </svg>
                </button>
             </div>
-            <div class="artboard artboard--active">
+            <div class="artboard" data-notification="notification_review">
                <div class="artboard__title">Спасибо за отзыв!</div>
                <div class="artboard__desc">Мы очень ценим Ваше мнение</div>
                <button class="artboard__close js-art-close">
@@ -27,7 +50,7 @@
                   </svg>
                </button>
             </div>
-            <div class="artboard artboard--active">
+            <div class="artboard" data-notification="notification_message">
                <div class="artboard__title">Сообщение отправлено</div>
                <div class="artboard__desc">Наши специалисты свяжутся с вами в ближайшее время</div>
                <button class="artboard__close js-art-close">
