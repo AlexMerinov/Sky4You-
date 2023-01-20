@@ -48,6 +48,19 @@ window.app.Choice = () => {
             dropBtn.classList.remove('field__btn--active');
          }
       }
+
+      //закрытие сортировки по клику вне элемента
+      document.addEventListener('click', e => {
+         let target = e.target;
+         let thisBoxQuantity = target == boxQuantity || boxQuantity.contains(target);
+         let boxQuantityActive = boxQuantity.classList.contains('choice-box--active');
+         
+         if (!thisBoxQuantity && boxQuantityActive) {
+            boxQuantity.classList.remove('choice-box--active');
+            dropBtn.classList.remove('choice-box__btn--active');
+            choiceList.style.maxHeight = 0;
+         }
+       })
    });
 
 };

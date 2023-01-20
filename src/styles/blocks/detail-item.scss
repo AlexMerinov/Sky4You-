@@ -204,6 +204,13 @@
     }
 }
 
+.db-sl-child__btn.swiper-button-disabled {
+   pointer-events: none;
+   .icon {
+      stroke: $text2;
+   }
+}
+
 .col-desc {
     &__subtitle {
         font-size: 16px;

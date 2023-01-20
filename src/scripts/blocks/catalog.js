@@ -14,11 +14,7 @@ window.app.Catalog = () => {
             subList.classList.remove('active');
          });
       } else {
-         const btnOpenCatalog = catalogItem.firstElementChild.querySelector('.go-js-drop-catalog');
-         if (!btnOpenCatalog) return;
-         btnOpenCatalog.addEventListener('click', listOpen);
-
-         function listOpen(e) {
+         const listOpen = () => {
             let listHeader = btnOpenCatalog.parentNode;
             listHeader.classList.toggle('cat-header--active');
             btnOpenCatalog.classList.toggle('cat-header__btn--active');
@@ -29,10 +25,31 @@ window.app.Catalog = () => {
 
             if (subList.classList.contains('active')) {
                subList.style.maxHeight = subList.scrollHeight + "px";
+               // subList.style.maxHeight = "max-content";
             } else {
                subList.style.maxHeight = 0;
             }
          }
+
+         //открытие у элементов фильтра
+         if (catalogItem.classList.contains('filters__catalog-item')) {
+            const headerClick = catalogItem.querySelector('.cat-header');
+
+            headerClick.addEventListener("click", (event) => {
+               listOpen();
+            });
+
+            const btnOpenCatalog = catalogItem.querySelector('.go-js-drop-catalog');
+            btnOpenCatalog.addEventListener("click", (event) => {
+               listOpen();
+            });
+         }
+
+         //открытие элементов списка
+         const btnOpenCatalog = catalogItem.querySelector('.go-js-drop-catalog');
+         btnOpenCatalog.addEventListener("click", (event) => {
+            listOpen();
+         });
       }
    });
 

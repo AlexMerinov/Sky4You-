@@ -73,6 +73,14 @@
             width: 50%;
          }
       }
+      &--resize {
+         @media screen and (min-width: 768px) {
+            align-self: flex-end;
+         }
+         @media screen and (min-width: 1024px) {
+            align-self: stretch;
+         }
+      }
       @media screen and (min-width: 1024px) {
          padding-top: 20px;
          max-width: 75%;
@@ -170,7 +178,6 @@
       }
    }
 
-
    &__close {
       width: 20px;
       height: 20px;
@@ -229,6 +236,9 @@
       overflow-x: hidden;
       overflow-y: auto;
       padding-bottom: 180px;
+      &--p80 {
+         padding-bottom: 80px;
+      }
       &--p212 {
          padding-bottom: 212px;
       }

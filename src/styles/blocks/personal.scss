@@ -39,6 +39,32 @@
       }
    }
 
+   &__info {
+      padding: 10px 12px;
+      background-color: $background;
+      border-bottom: 1px solid #e0edfb;
+      border-top: 1px solid #e0edfb;
+
+      @media screen and (min-width: 768px) {
+         padding-left: 22px;
+      }
+   }
+
+   &__name {
+      font-size: 16px;
+      line-height: 22px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $primary;
+   }
+
+   &__birthday {
+      font-size: 15px;
+      line-height: 21px;
+      font-weight: 400;
+      color: $text2;
+   }
+
    @media screen and (min-width: 1024px) {
       margin-bottom: 47px;
       &__link {
@@ -557,6 +583,16 @@
       @media screen and (min-width: 768px) {
          font-size: 30px;
          line-height: 41px;
+      }
+   }
+}
+
+#popup-user-on {
+   .person-box {
+      &__link {
+         @media screen and (min-width: 768px) {
+            padding-left: 22px;
+         }
       }
    }
 }
