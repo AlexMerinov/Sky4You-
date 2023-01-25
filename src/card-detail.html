@@ -156,12 +156,23 @@
                   <div class="add-cart">
                      <span class="add-cart__price">6 900 ₽</span>
                      <div class="add-cart__elem">
-                        <button type="button" class="cart-btn add-cart__btn">
-                           <svg class="cart-btn__icon">
-                              <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
-                           </svg>
-                           В КОРЗИНУ
-                        </button>
+                        <div class="go-js-add-cart add-cart__btns">
+                           <div class="count add-cart__count">
+                              <button type="button" class="count__btn count__btn--down">
+                                 <span></span>
+                              </button>
+                              <input type="text" class="count__input" min="1" max="100" value="1">
+                              <button type="button" class="count__btn count__btn--up">
+                                 <span></span>
+                              </button>
+                           </div>
+                           <button type="button" class="cart-btn add-btn add-cart__btn">
+                              <svg class="cart-btn__icon">
+                                 <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+                              </svg>
+                              В КОРЗИНУ
+                           </button>
+                        </div>
                         <div class="product-favorite">
                            <label>
                               <input type="checkbox" name="favorite" />

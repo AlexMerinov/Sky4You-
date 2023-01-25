@@ -26,7 +26,6 @@ window.app.openBurger = () => {
       // закрытие по ESC 
       document.body.addEventListener('keyup', function (e) {
          let key = e.keyCode;
-
          if (key == 27) {
             closeMobileMenu();
          };
@@ -38,7 +37,7 @@ window.app.openBurger = () => {
             closeMobileMenu();
          }
       });
-  }
+   }
 
 };
 

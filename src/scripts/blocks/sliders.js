@@ -58,8 +58,8 @@ window.app.Sliders = () => {
 
       sliders.forEach((slider) => {
 
-         const sliderBest = slider.querySelector('.slider-best');
-         const sliderView = slider.querySelector('.slider-view');
+         const sliderBest     = slider.querySelector('.slider-best');
+         const sliderView     = slider.querySelector('.slider-view');
          const sliderDelivery = slider.querySelector('.slider-delivery');
          const navArrows = {
             navigation: {

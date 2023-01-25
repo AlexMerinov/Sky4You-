@@ -3,8 +3,6 @@ window.app.Choice = () => {
    const boxQuantitys = document.querySelectorAll('.js-choice-box');
    if (!boxQuantitys) return;
 
-   // const body = document.querySelector('.body');
-
    boxQuantitys.forEach((boxQuantity) => {
       let dropBtn = boxQuantity.querySelector('.choice-box__btn');
       let choiceList = boxQuantity.querySelector('.choice-box__list');

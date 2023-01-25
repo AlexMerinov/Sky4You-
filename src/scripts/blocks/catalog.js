@@ -4,13 +4,13 @@ window.app.Catalog = () => {
 
    catalogItems.forEach((catalogItem) => {
       if (catalogItem.classList.contains('go-js-hover-catalog') && document.documentElement.clientWidth > 1024) {
+         let subList = catalogItem.querySelector('.sub-catalog');
+
          catalogItem.addEventListener('mouseenter', e => {
-            let subList = catalogItem.querySelector('.sub-catalog');
             subList.classList.add('active');
          });
 
          catalogItem.addEventListener('mouseleave', e => {
-            let subList = catalogItem.querySelector('.sub-catalog');
             subList.classList.remove('active');
          });
       } else {
@@ -25,7 +25,6 @@ window.app.Catalog = () => {
 
             if (subList.classList.contains('active')) {
                subList.style.maxHeight = subList.scrollHeight + "px";
-               // subList.style.maxHeight = "max-content";
             } else {
                subList.style.maxHeight = 0;
             }

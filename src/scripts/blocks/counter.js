@@ -18,25 +18,18 @@ window.app.Counter = () => {
    });
 
    //смена кнопки на счетчик 
-   const counterCarts = document.querySelectorAll('.product-card__btns');
-
-   counterCarts.forEach((counterCart) => {
-      let addCartBtn = counterCart.querySelector('.product-card__btn');
-      addCartBtn.addEventListener('click', () =>  {
-         counterCart.classList.add('product-card__btns--active');
-
-         counters.forEach((counter) => {
-            let quantityValue = counter.querySelector('.count__input');
-            let valueBtnsMunus = counter.querySelector('.count__btn--down');
-            quantityValue.value = 1;
-      
-            valueBtnsMunus.addEventListener('click', function () {
-               if (+quantityValue.value < 1) {
-                  counterCart.classList.remove('product-card__btns--active');
-               }
-            });
-         });
-      })  
+   document.addEventListener('click', function(event) {
+      if (event.target.classList.contains('add-btn')) {
+         event.target.closest('.go-js-add-cart').classList.add('go-js-add-cart--active');
+         event.target.closest('.go-js-add-cart').querySelector('.count__input').value = 1;
+      } else if (event.target.classList.contains('count__btn--down')) {
+         let value = event.target.closest('.count').querySelector('.count__input').value;
+         if (+value < 1) {
+            event.target.closest('.go-js-add-cart').classList.remove('go-js-add-cart--active');
+         }
+      } else {
+         return;
+      }
    });
 
    const saveDrafts = document.querySelectorAll('.save-draft');

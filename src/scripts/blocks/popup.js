@@ -1,10 +1,10 @@
 window.app.PopupModal = () => {
-   const body = document.querySelector('body');
+   const body          = document.querySelector('body');
    const paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
-   const header = document.querySelector('.header');
-
-   const popupButtons = document.querySelectorAll('.go-js-open-popup');
+   const header        = document.querySelector('.header');
+   const popupButtons  = document.querySelectorAll('.go-js-open-popup');
    if (!popupButtons) return;
+
    popupButtons.forEach((popupButton) => {
       popupButton.addEventListener("click", (event) => {
          openPopup(popupButton.dataset.popupName);
@@ -14,6 +14,7 @@ window.app.PopupModal = () => {
 
    const popupHoverButtons = document.querySelectorAll('.go-js-open-popup-hover');
    if (!popupHoverButtons) return;
+   
    if (document.documentElement.clientWidth > 1024) {
       popupHoverButtons.forEach((popupHoverButton) => {
          popupHoverButton.addEventListener("mouseenter", (event) => {

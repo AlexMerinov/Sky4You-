@@ -187,15 +187,6 @@
          width: 100%;
       }
 
-      &--active {
-         .product-card__btn {
-            display: none;
-         }
-
-         .product-card__count {
-            display: flex;
-         }
-      }
       @media screen and (min-width: 1360px) {
          margin-right: 10px;
          order: -1;
@@ -322,6 +313,31 @@
       }
    }
 
+}
+
+.go-js-add-cart {
+
+   .count {
+      display: none;
+   }
+
+   &--active {
+      .product-card__btn {
+         display: none;
+      }
+
+      .product-card__count {
+         display: flex;
+      }
+
+      .add-cart__btn {
+         display: none;
+      }
+
+      .count {
+         display: flex;
+      }
+   }
 }
 
 .product-favorite {
