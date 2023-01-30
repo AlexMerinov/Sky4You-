@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
   <g id="clock" transform="translate(-2 -2)">
-    <path id="Контур_43" data-name="Контур 43" d="M23,13A10,10,0,1,1,13,3,10,10,0,0,1,23,13Z" fill="none" stroke="#003668" stroke-linejoin="round" stroke-width="2"/>
-    <path id="Контур_44" data-name="Контур 44" d="M18,9v6l5,3" transform="translate(-5 -2)" fill="none" stroke="#003668" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_43" data-name="Path 43" d="M13,2a11,11,0,0,1,7.778,18.778A11,11,0,0,1,5.222,5.222,10.928,10.928,0,0,1,13,2Zm0,20a9,9,0,1,0-9-9A9.01,9.01,0,0,0,13,22Z" fill="#003668"/>
+    <path id="Path_44" data-name="Path 44" d="M22.486,18.857l-5-3A1,1,0,0,1,17,15V9h2v5.434l4.514,2.709Z" transform="translate(-5 -2)" fill="#003668"/>
   </g>
 </svg>

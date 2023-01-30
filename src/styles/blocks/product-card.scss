@@ -68,7 +68,7 @@
             }
       }
 
-      @media screen and (min-width: 1360px) {
+      @media screen and (min-width: 1024px) {
          &:hover {
             background-color: $primary;
             .icon {
@@ -107,7 +107,7 @@
       display: flex;
       margin-bottom: 10px;
       flex: 0 0 auto;
-      @media screen and (min-width: 1360px) {
+      @media screen and (min-width: 1024spx) {
          margin-bottom: 0;
       }
    }
@@ -118,7 +118,7 @@
          display: block;
          padding-bottom: 10px;
       }
-      @media screen and (min-width: 1360px) {
+      @media screen and (min-width: 1024px) {
          display: block;
          font-size: 16px;
          line-height: 24px;
